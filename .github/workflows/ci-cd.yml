@@ -86,6 +86,23 @@ jobs:
             cp .env.test.example .env.test 2>/dev/null || echo ".env.test already exists or no template"
           fi
 
+      - name: Run migrations
+        working-directory: backend
+        run: node ace migration:run --force
+        env:
+          NODE_ENV: test
+          APP_KEY: test-app-key-for-ci-cd-pipeline
+          HOST: localhost
+          LOG_LEVEL: info
+          SESSION_DRIVER: cookie
+          DB_HOST: localhost
+          DB_PORT: 5432
+          DB_USER: test_user
+          DB_PASSWORD: test_password
+          DB_DATABASE: test_db
+          REDIS_HOST: localhost
+          REDIS_PORT: 6379
+
       - name: Run tests
         working-directory: backend
         run: npm run test
@@ -247,11 +264,11 @@ jobs:
           build-args: |
             NEXT_PUBLIC_APP_NAME=${{ secrets.NEXT_PUBLIC_APP_NAME || 'ONCC-V1' }}
             NEXT_PUBLIC_APP_DESCRIPTION=${{ secrets.NEXT_PUBLIC_APP_DESCRIPTION || 'Gestion des chaînes d approvisionnement' }}
-            NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
+            NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL || 'http://localhost:3333' }}
             NEXT_PUBLIC_API_VERSION=${{ secrets.NEXT_PUBLIC_API_VERSION || 'v1' }}
             NEXT_PUBLIC_INDEXEDDB_NAME=${{ secrets.NEXT_PUBLIC_INDEXEDDB_NAME || 'oncc_db' }}
-            NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }}
-            NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}
+            NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL || 'http://localhost:3000' }}
+            NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET || 'fallback-secret-for-build-only-change-in-production' }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           platforms: linux/amd64,linux/arm64
