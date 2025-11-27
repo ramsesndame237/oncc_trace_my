@@ -78,11 +78,23 @@ jobs:
         working-directory: backend
         run: npm run typecheck
 
+      - name: Setup test environment
+        working-directory: backend
+        run: |
+          if [ ! -f .env.test ]; then
+            echo "Creating .env.test from .env.test template"
+            cp .env.test.example .env.test 2>/dev/null || echo ".env.test already exists or no template"
+          fi
+
       - name: Run tests
         working-directory: backend
         run: npm run test
         env:
           NODE_ENV: test
+          APP_KEY: test-app-key-for-ci-cd-pipeline
+          HOST: localhost
+          LOG_LEVEL: info
+          SESSION_DRIVER: cookie
           DB_HOST: localhost
           DB_PORT: 5432
           DB_USER: test_user
@@ -224,16 +236,10 @@ jobs:
             type=sha,prefix={{branch}}-
             type=raw,value=latest,enable={{is_default_branch}}
 
-      - name: Copy backend types for Docker build
-        run: |
-          mkdir -p frontend/.backend-cache
-          cp backend/app/types/user_roles.ts frontend/.backend-cache/
-          cp backend/app/types/cacao_types.ts frontend/.backend-cache/
-
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./frontend
+          context: .
           file: ./frontend/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}

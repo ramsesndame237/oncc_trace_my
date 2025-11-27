@@ -8,18 +8,19 @@ RUN apk add --no-cache libc6-compat curl
 WORKDIR /app
 
 # Copier les fichiers de configuration
-COPY package*.json ./
+COPY frontend/package*.json ./
 
 # Stage de dependances et de build
 FROM base AS builder
 RUN npm ci --include=dev
 
 # Copier tout le code source du frontend
-COPY . .
+COPY frontend/ .
 
 # Copier les fichiers backend nécessaires pour la génération de types
-# Note: Ces fichiers doivent être fournis via build args ou volumes en CI/CD
 RUN mkdir -p .backend-cache
+COPY backend/app/types/user_roles.ts .backend-cache/user_roles.ts
+COPY backend/app/types/cacao_types.ts .backend-cache/cacao_types.ts
 
 # Générer les types TypeScript depuis les fichiers backend
 RUN npm run generate:types
