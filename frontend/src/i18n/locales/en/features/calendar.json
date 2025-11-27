@@ -1,0 +1,232 @@
+{
+  "title": "Calendars",
+  "singular": "Calendar",
+  "fields": {
+    "code": "Code",
+    "type": "Type",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "eventTime": "Event time",
+    "location": "Place",
+    "locationCode": "Location code",
+    "campaign": "Campaign",
+    "convention": "Convention",
+    "conventionSignatureDate": "Convention signature date",
+    "opa": "OPA",
+    "status": "Status",
+    "expectedSalesCount": "Expected sales count"
+  },
+  "types": {
+    "MARCHE": "Market",
+    "ENLEVEMENT": "Collection"
+  },
+  "statuses": {
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "form": {
+    "messages": {
+      "updateSuccess": "Calendar updated successfully",
+      "updateSuccessOffline": "Calendar update saved. It will be synced when you are online."
+    }
+  },
+  "forms": {
+    "edit": {
+      "title": "Edit market calendar"
+    },
+    "marketAdd": {
+      "createTitle": "Create market calendar",
+      "editTitle": "Edit market calendar",
+      "step": "Step",
+      "step1": {
+        "title": "Market information",
+        "sectionTitle": "General information",
+        "opa": "OPA",
+        "startDate": "Market date",
+        "endDate": "End date",
+        "eventTime": "Time",
+        "locationCode": "Location",
+        "location": "Place",
+        "validation": {
+          "opaRequired": "OPA is required",
+          "startDateRequired": "Market date is required",
+          "startDateMustBeAfterToday": "Market date must be strictly after today",
+          "startDateMaxOneYear": "Market date cannot be selected beyond one year in the future",
+          "endDateRequired": "End date is required",
+          "endDateMustBeAfterStartDate": "End date must be after start date",
+          "maxDurationExceeded": "The interval between dates cannot exceed one year (365 days)",
+          "eventTimeRequired": "Time is required",
+          "locationCodeRequired": "Location is required",
+          "locationRequired": "Place is required"
+        }
+      },
+      "step2": {
+        "title": "Summary",
+        "marketInformation": "Market information",
+        "details": "Details",
+        "confirmMessage": "I confirm that all the information entered is accurate and complete",
+        "confirmRequired": "You must confirm the information to continue"
+      }
+    },
+    "pickupAdd": {
+      "createTitle": "Create collection calendar",
+      "editTitle": "Edit collection calendar",
+      "step": "Step",
+      "step1": {
+        "title": "Collection information",
+        "sectionTitle": "General information",
+        "opa": "PO",
+        "convention": "Convention",
+        "startDate": "Collection date",
+        "endDate": "End date",
+        "eventTime": "Time",
+        "locationCode": "Location",
+        "location": "Place",
+        "validation": {
+          "opaRequired": "PO is required",
+          "conventionRequired": "Convention is required",
+          "startDateRequired": "Collection date is required",
+          "startDateMustBeAfterToday": "Collection date must be strictly after today",
+          "startDateMaxOneYear": "Collection date cannot be selected beyond one year in the future",
+          "endDateRequired": "End date is required",
+          "endDateMustBeAfterStartDate": "End date must be after start date",
+          "maxDurationExceeded": "The interval between dates cannot exceed one year (365 days)",
+          "eventTimeRequired": "Time is required",
+          "locationCodeRequired": "Location is required",
+          "locationRequired": "Place is required"
+        }
+      },
+      "step2": {
+        "title": "Summary",
+        "pickupInformation": "Collection information",
+        "details": "Details",
+        "confirmMessage": "I confirm that all the information entered is accurate and complete",
+        "confirmRequired": "You must confirm the information to continue"
+      }
+    },
+    "pickupEdit": {
+      "title": "Edit collection calendar"
+    },
+    "messages": {
+      "unsavedChanges": "Do you really want to leave? All unsaved changes will be lost."
+    }
+  },
+  "view": {
+    "title": "Calendar details",
+    "eventInfo": "Event information",
+    "locationInfo": "Location information",
+    "relationsInfo": "Relations",
+    "metadata": "Metadata",
+    "createdAt": "Created on",
+    "updatedAt": "Updated on",
+    "otherInfo": "Other information",
+    "notFound": "Calendar not found",
+    "notFoundDescription": "The calendar was not found",
+    "invalidId": "Invalid calendar ID",
+    "loadingDetails": "Loading calendar details...",
+    "backToList": "Back to list",
+    "history": "History"
+  },
+  "table": {
+    "title": "Calendar list",
+    "searchPlaceholder": "Search for a calendar...",
+    "noCalendars": "No calendars found",
+    "noCalendarsForSearch": "No calendars found for \"{{search}}\"",
+    "columns": {
+      "code": "Code",
+      "marketDate": "Market Date",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "localisation": "Location",
+      "location": "Location",
+      "place": "Place",
+      "opa": "OPA",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "relativeDates": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "tomorrow": "Tomorrow",
+      "inDays": "in {{count}} days",
+      "inDay": "in 1 day"
+    }
+  },
+  "page": {
+    "title": "Calendars",
+    "loading": "Loading calendars page...",
+    "editTitle": "Edit calendar",
+    "createTitle": "Create calendar"
+  },
+  "actions": {
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "updateExpectedSalesCount": "Update sales count",
+    "saving": "Saving...",
+    "save": "Save",
+    "saveChanges": "Save changes",
+    "retry": "Retry"
+  },
+  "messages": {
+    "processing": "Calendar is being processed...",
+    "createProcessing": "Calendar is being processed...",
+    "updateProcessing": "Calendar is being processed...",
+    "loadError": "Error loading calendars",
+    "loadByIdError": "Error loading calendar",
+    "createError": "An error occurred while creating the calendar",
+    "updateError": "An error occurred while updating the calendar",
+    "requiresInternet": "This operation requires an internet connection."
+  },
+  "validation": {
+    "codeRequired": "Code is required",
+    "typeRequired": "Event type is required",
+    "startDateRequired": "Start date is required",
+    "startDateAfterToday": "Start date must be strictly greater than today",
+    "startDateMaxOneYear": "Start date cannot be selected beyond one year in the future",
+    "endDateRequired": "End date is required",
+    "endDateAfterStart": "End date must be after start date",
+    "dateRangeMaxOneYear": "The interval between dates cannot exceed one year (365 days)",
+    "campaignRequired": "Campaign is required",
+    "conventionRequired": "A convention is required for ENLEVEMENT event type"
+  },
+  "modals": {
+    "changeStatus": {
+      "activateTitle": "Open Calendar",
+      "deactivateTitle": "Close Calendar",
+      "activateDescription": "You are about to open this calendar. This calendar will become available for operations.",
+      "deactivateDescription": "You are about to close this calendar. This calendar will no longer be available for operations.",
+      "confirmInstruction": "To confirm, enter the calendar code:",
+      "codeLabel": "Calendar Code",
+      "codePlaceholder": "Enter the calendar code",
+      "codeRequired": "Calendar code is required",
+      "codeMismatch": "The entered code does not match the calendar code",
+      "currentStatus": "Current status",
+      "newStatus": "New status",
+      "confirmAction": "Confirm",
+      "cancel": "Cancel",
+      "successActivated": "Calendar successfully opened",
+      "successDeactivated": "Calendar successfully closed",
+      "errorActivation": "Error opening calendar",
+      "errorDeactivation": "Error closing calendar"
+    },
+    "updateExpectedSalesCount": {
+      "title": "Update Expected Sales Count",
+      "description": "You are about to update the expected sales count for this market calendar.",
+      "confirmInstruction": "To confirm, enter the calendar code:",
+      "codeLabel": "Calendar Code",
+      "codePlaceholder": "Enter the calendar code",
+      "expectedSalesCountLabel": "Expected Sales Count",
+      "expectedSalesCountPlaceholder": "Enter the expected sales count",
+      "codeRequired": "Calendar code is required",
+      "codeMismatch": "The entered code does not match the calendar code",
+      "expectedSalesCountRequired": "Expected sales count is required",
+      "expectedSalesCountMin": "Expected sales count must be greater than or equal to 0",
+      "currentValue": "Current value",
+      "newValue": "New value",
+      "confirmAction": "Confirm",
+      "cancel": "Cancel",
+      "success": "Expected sales count updated successfully",
+      "error": "Error updating expected sales count"
+    }
+  }
+}

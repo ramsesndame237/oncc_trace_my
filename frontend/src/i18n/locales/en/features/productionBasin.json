@@ -1,0 +1,95 @@
+{
+  "form": {
+    "editBasin": "Edit production basin",
+    "createBasin": "Production basin details",
+    "basinName": "Basin name",
+    "description": "Description",
+    "associatedLocations": "Associated location",
+    "selectLocationsDescription": "Select the locations associated with this production basin"
+  },
+  "view": {
+    "title": "Production basin details",
+    "basinName": "Basin name",
+    "description": "Description",
+    "createdAt": "Created at",
+    "locations": "Locations",
+    "assignedUsers": "Assigned users",
+    "history": "History",
+    "notFound": "Basin not found",
+    "notFoundDescription": "The requested production basin was not found",
+    "invalidId": "Invalid basin ID",
+    "loadingDetails": "Loading production basin...",
+    "loadingBasinInfo": "Loading basin information...",
+    "backToList": "Back to list"
+  },
+  "actions": {
+    "edit": "Edit",
+    "saving": "Saving...",
+    "save": "Save",
+    "saveChanges": "Save changes",
+    "retry": "Retry",
+    "cancel": "Cancel"
+  },
+  "messages": {
+    "updateError": "An error occurred while updating the basin",
+    "createError": "An error occurred while creating the basin"
+  },
+  "toast": {
+    "processing": "Production basin is being processed...",
+    "created": "Production basin created",
+    "createdDescription": "The production basin has been created successfully",
+    "updated": "Production basin updated",
+    "updatedDescription": "The production basin has been updated successfully"
+  },
+  "errors": {
+    "loadFailed": "Error loading basins",
+    "createFailed": "Error creating basin",
+    "updateFailed": "Error updating basin"
+  },
+  "table": {
+    "title": "Production basins",
+    "noBasins": "No production basins found.",
+    "noBasinsForSearch": "No production basins found for \"{{search}}\".",
+    "searchPlaceholder": "Search for a production basin...",
+    "columns": {
+      "basinName": "Basin name",
+      "locationsCount": "Number of locations",
+      "fullName": "Full name",
+      "username": "Username",
+      "role": "Role",
+      "name": "Name",
+      "hierarchy": "Hierarchy",
+      "viewDetails": "View details",
+      "seeDetails": "See details"
+    },
+    "emptyMessages": {
+      "noLocations": "No locations associated with this basin",
+      "noUsers": "No users assigned to this basin"
+    }
+  },
+  "page": {
+    "title": "Production basins",
+    "loading": "Loading basins page...",
+    "editTitle": "Edit production basin"
+  },
+  "syncErrors": {
+    "locationConflicts": {
+      "title": "Location conflicts detected",
+      "count_one": "{{count}} location conflict",
+      "count_other": "{{count}} location conflicts",
+      "modifyBasin": "Edit basin"
+    },
+    "hierarchicalConflicts": {
+      "title": "Hierarchical conflicts detected",
+      "regionDepartment": "region-department",
+      "departmentDistrict": "department-district",
+      "count_one": "{{count}} hierarchical conflict ({{type}})",
+      "count_other": "{{count}} hierarchical conflicts ({{type}})",
+      "attemptToAdd": "Attempting to add:",
+      "departmentsInConflict": "Departments in conflict:",
+      "districtsInConflict": "Districts in conflict:",
+      "alreadyIn": "already in:",
+      "modifyBasin": "Edit this basin"
+    }
+  }
+}

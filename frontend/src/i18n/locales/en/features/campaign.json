@@ -1,0 +1,86 @@
+{
+  "form": {
+    "editCampaign": "Edit campaign",
+    "createCampaign": "Create new campaign",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "startDatePlaceholder": "",
+    "endDatePlaceholder": ""
+  },
+  "view": {
+    "title": "Campaign details",
+    "campaignCode": "Campaign code",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "duration": "Duration",
+    "days": "days",
+    "history": "History",
+    "notFound": "Campaign not found",
+    "notFoundDescription": "The requested campaign was not found",
+    "invalidId": "Invalid campaign ID",
+    "loadingDetails": "Loading campaign...",
+    "loadingInfo": "Loading campaign information...",
+    "backToList": "Back to list",
+    "error": "Error"
+  },
+  "actions": {
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "edit": "Edit",
+    "saving": "Saving...",
+    "save": "Save",
+    "saveChanges": "Save changes",
+    "retry": "Retry",
+    "cancel": "Cancel"
+  },
+  "messages": {
+    "activationSuccess": "Campaign activated successfully",
+    "activationError": "Error during activation",
+    "deactivationSuccess": "Campaign deactivated successfully",
+    "deactivationError": "Error during deactivation",
+    "updateError": "An error occurred while updating the campaign",
+    "createError": "An error occurred while creating the campaign",
+    "cannotDeactivateLastCampaign": "You cannot deactivate this campaign as it is the only campaign in the system.",
+    "processing": "Campaign is being processed...",
+    "operationSuccess": "Campaign {{operation}} operation successful",
+    "operationError": "Error during campaign {{operation}} operation"
+  },
+  "table": {
+    "title": "Campaign list",
+    "noCampaigns": "No campaigns found.",
+    "noCampaignsForSearch": "No campaigns found for \"{{search}}\".",
+    "searchPlaceholder": "Search by campaign code...",
+    "columns": {
+      "code": "Code",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "statusLabels": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "viewDetails": "View details"
+  },
+  "page": {
+    "title": "Campaigns",
+    "loading": "Loading campaigns page...",
+    "editTitle": "Edit campaign",
+    "createTitle": "Create campaign"
+  },
+  "modals": {
+    "action": {
+      "activateTitle": "Activate campaign",
+      "deactivateTitle": "Deactivate campaign",
+      "activateDescription": "This action will activate the campaign. To confirm, please enter the campaign code:",
+      "deactivateDescription": "This action will permanently deactivate the campaign. To confirm, please enter the campaign code:",
+      "campaignCodeLabel": "Campaign code",
+      "campaignCodePlaceholder": "Enter \"{{campaignCode}}\"",
+      "activateButton": "Activate",
+      "deactivateButton": "Deactivate",
+      "activating": "Activating...",
+      "deactivating": "Deactivating..."
+    }
+  }
+}

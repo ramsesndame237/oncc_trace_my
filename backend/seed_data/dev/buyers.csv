@@ -1,0 +1,3 @@
+givenName,familyName,resourceType,isActive,localizationId,cni_number,profession_card_number,social_raison,gender,accountGivenName,accountFamilyName,accountEmail,accountPhone
+Koffi,Kouadio,BUYER,TRUE,LT0401,"123456789","987654321",AgriBiz,M,Kouakoua,Kouafa,kouakoua@byer.com,+222123456789
+Aissatou,Diop,BUYER,TRUE,LT0401,"234567890","876543219",DiopTrading,F,Diopa,Diopfa,diopa@byer.com,+222123456701

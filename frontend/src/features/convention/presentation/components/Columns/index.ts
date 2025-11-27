@@ -1,0 +1,1 @@
+export { createProductColumns } from "./productColumns";

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfert de produits effectué - {{ appName }}</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        line-height: 1.6;
+        color: #333333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+      }
+      h1 {
+        color: #3B82F6;
+        font-size: 24px;
+        margin: 0;
+      }
+      .content {
+        margin: 30px 0;
+      }
+      .message {
+        background-color: #EFF6FF;
+        border-left: 4px solid #3B82F6;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+      .info-box {
+        background-color: #f9fafb;
+        border: 1px solid #e5e7eb;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+      .info-row {
+        display: flex;
+        margin: 10px 0;
+      }
+      .info-label {
+        font-weight: bold;
+        min-width: 180px;
+        color: #6b7280;
+      }
+      .info-value {
+        color: #111827;
+      }
+      .products-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+      .products-table th {
+        background-color: #f3f4f6;
+        padding: 10px;
+        text-align: left;
+        font-weight: bold;
+        color: #374151;
+        border-bottom: 2px solid #e5e7eb;
+      }
+      .products-table td {
+        padding: 10px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .products-table tr:last-child td {
+        border-bottom: none;
+      }
+      .button {
+        display: inline-block;
+        background-color: #3B82F6;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 6px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        text-align: center;
+        color: #6b7280;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>✅ Transfert de produits enregistré</h1>
+      </div>
+
+      <div class="content">
+        <p>Bonjour <strong>{{ userName }}</strong>,</p>
+
+        <div class="message">
+          <p>
+            Votre transfert de produits de type <strong>STANDARD</strong> depuis votre magasin <strong>{{ senderStoreName }}</strong> a été enregistré avec succès.
+          </p>
+          <p style="margin-top: 10px;">
+            Ce transfert est destiné à <strong>{{ receiverActorName }}</strong> ({{ receiverStoreName }}).
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3 style="margin-top: 0; color: #3B82F6;">📋 Détails du transfert</h3>
+
+          <div class="info-row">
+            <span class="info-label">Code du transfert :</span>
+            <span class="info-value">{{ transferCode }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-label">Date du transfert :</span>
+            <span class="info-value">{{ transferDate }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-label">Magasin expéditeur :</span>
+            <span class="info-value">{{ senderStoreName }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-label">Destinataire :</span>
+            <span class="info-value">{{ receiverActorName }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-label">Magasin de réception :</span>
+            <span class="info-value">{{ receiverStoreName }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-label">Campagne :</span>
+            <span class="info-value">{{ campaignCode }}</span>
+          </div>
+        </div>
+
+        @if(driverFullName)
+        <div class="info-box">
+          <h3 style="margin-top: 0; color: #3B82F6;">🚛 Informations du chauffeur</h3>
+
+          <div class="info-row">
+            <span class="info-label">Nom du chauffeur :</span>
+            <span class="info-value">{{ driverFullName }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-label">Immatriculation :</span>
+            <span class="info-value">{{ driverVehicleRegistration }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-label">Permis de conduire :</span>
+            <span class="info-value">{{ driverLicenseNumber }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-label">Feuille de route :</span>
+            <span class="info-value">{{ driverRouteSheetCode }}</span>
+          </div>
+        </div>
+        @end
+
+        <div class="info-box">
+          <h3 style="margin-top: 0; color: #3B82F6;">📦 Produits transférés</h3>
+
+          <table class="products-table">
+            <thead>
+              <tr>
+                <th>Type de produit</th>
+                <th style="text-align: right;">Quantité</th>
+                <th>Unité</th>
+              </tr>
+            </thead>
+            <tbody>
+              @each(product in products)
+                <tr>
+                  <td>{{ product.productType }}</td>
+                  <td style="text-align: right;">{{ product.quantity }}</td>
+                  <td>{{ product.unit }}</td>
+                </tr>
+              @end
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Vous pouvez consulter les détails complets de ce transfert depuis votre espace.
+        </p>
+
+        <div style="text-align: center;">
+          <a href="{{ appUrl }}" class="button">Consulter le transfert</a>
+        </div>
+
+        <p>
+          Si vous avez des questions, n'hésitez pas à contacter notre support :
+        </p>
+        <p>
+          <strong>Email :</strong> <a href="mailto:{{ supportEmail }}">{{ supportEmail }}</a>
+          @if(supportPhone)
+            <br><strong>Téléphone :</strong> {{ supportPhone }}
+          @end
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>&copy; {{ year }} {{ appName }}. Tous droits réservés.</p>
+        <p style="font-size: 12px; color: #9ca3af; margin-top: 10px;">
+          Cet email a été envoyé automatiquement. Merci de ne pas y répondre directement.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

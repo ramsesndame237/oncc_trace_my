@@ -1,0 +1,69 @@
+{
+  "table": {
+    "columns": {
+      "user": "Utilisateur",
+      "action": "Action",
+      "date": "Date",
+      "actions": "Actions"
+    },
+    "empty": "Aucun log d'audit trouvé",
+    "tooltip": {
+      "viewChanges": "Voir les modifications"
+    },
+    "retry": "Réessayer"
+  },
+  "modal": {
+    "title": "Détails de l'action",
+    "labels": {
+      "user": "Utilisateur :",
+      "date": "Date :",
+      "ip": "IP :",
+      "system": "Système"
+    },
+    "sections": {
+      "changes": "Changements effectués",
+      "createdValues": "Valeurs créées",
+      "deletedValues": "Valeurs supprimées"
+    },
+    "fields": {
+      "oldValue": "Ancienne valeur :",
+      "newValue": "Nouvelle valeur :"
+    },
+    "messages": {
+      "noChanges": "Aucun changement détaillé disponible pour cette action.",
+      "createAction": "Action de création",
+      "deleteAction": "Action de suppression",
+      "noData": "Aucune donnée disponible pour cette action."
+    }
+  },
+  "actions": {
+    "create": "Création",
+    "update": "Mise à jour",
+    "delete": "Suppression",
+    "validate": "Validation",
+    "reject": "Rejet",
+    "activate": "Activation",
+    "deactivate": "Désactivation",
+    "associate_campaign": "Association à la campagne",
+    "dissociate_campaign": "Dissociation de la campagne",
+    "draft": "Brouillon",
+    "admin_info_update": "Mise à jour admin",
+    "admin_password_reset": "Réinitialisation mot de passe",
+    "add_parcel": "Ajout de parcelle",
+    "update_parcel": "Modification de parcelle",
+    "activate_parcel": "Activation de parcelle",
+    "deactivate_parcel": "Désactivation de parcelle",
+    "add_document": "Ajout de document",
+    "update_document": "Mise à jour de document",
+    "remove_document": "Suppression de document",
+    "change_status": "Changement de statut",
+    "add_producer": "Ajout de producteur",
+    "remove_producer": "Retrait de producteur",
+    "add_buyer": "Ajout d'acheteur mandataire",
+    "remove_buyer": "Retrait d'acheteur mandataire",
+    "add_occupant": "Ajout d'occupant",
+    "remove_occupant": "Retrait d'occupant",
+    "update_status": "Mise à jour du statut",
+    "update_products": "Modification des produits"
+  }
+}

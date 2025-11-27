@@ -1,0 +1,155 @@
+{
+  "page": {
+    "title": "File d'attente de synchronisation",
+    "description": "Gérez les opérations en attente de synchronisation avec le serveur"
+  },
+  "list": {
+    "errorTitle": "Erreur lors du chargement",
+    "refreshPage": "Actualiser la page",
+    "noOperationsDefault": "Aucune opération en file d'attente. Toutes les données sont synchronisées !",
+    "noOperationsType": "Aucune opération trouvée pour le type \"{{type}}\".",
+    "noOperationsFailed": "Aucune opération échouée trouvée.",
+    "noOperationsPending": "Aucune opération en attente trouvée."
+  },
+  "table": {
+    "record": "Enregistrement",
+    "status": "Statut",
+    "createdAt": "Créé le",
+    "operations": "Opérations"
+  },
+  "status": {
+    "failed": "Échec",
+    "pending": "En attente",
+    "attempts": "{{count}} tentative",
+    "attempts_plural": "{{count}} tentatives",
+    "syncError": "Erreur de synchronisation"
+  },
+  "entityTypes": {
+    "productionBasin": "Bassin de production",
+    "campaign": "Campagne",
+    "location": "Localisation",
+    "user": "Utilisateur",
+    "store": "Magasin",
+    "actor": "Acteur",
+    "parcel": "Parcelle",
+    "convention": "Convention",
+    "document": "Document",
+    "calendar": "Calendrier",
+    "product-transfer": "Transfert de produit",
+    "transaction": "Transaction",
+    "entity": "Entité"
+  },
+  "operations": {
+    "create": "de création",
+    "update": "de mise à jour",
+    "delete": "de suppression",
+    "create_bulk": "de création en lot",
+    "create_parcel": "de création de parcelles",
+    "update_parcel": "de mise à jour de parcelle",
+    "operation": "opération"
+  },
+  "sync": {
+    "successTitle": "{{entityName}} : opération {{operationName}} réussie",
+    "errorTitle": "{{entityName}} : Erreur lors de l'opération {{operationName}}"
+  },
+  "mobile": {
+    "code": "Code:"
+  },
+  "actions": {
+    "modify": "Modifier",
+    "retry": "Réessayer",
+    "delete": "Supprimer",
+    "viewDetails": "Voir détails"
+  },
+  "entityInfo": {
+    "detailsTitle": "Détails de l'entité",
+    "fields": {
+      "type": "Type",
+      "name": "Nom",
+      "onccId": "ID ONCC",
+      "status": "Statut",
+      "code": "Code",
+      "signature": "Signature",
+      "location": "Lieu",
+      "date": "Date",
+      "period": "Période",
+      "description": "Description",
+      "storeType": "Type",
+      "capacity": "Capacité",
+      "username": "Username",
+      "role": "Rôle",
+      "email": "Email",
+      "phone": "Téléphone",
+      "amount": "Montant",
+      "producersAdded": "Producteurs ajoutés",
+      "buyersAdded": "Acheteurs ajoutés"
+    },
+    "actorTypes": {
+      "PRODUCER": "Producteur",
+      "PRODUCERS": "OPA",
+      "BUYER": "Acheteur",
+      "EXPORTER": "Exportateur",
+      "TRANSFORMER": "Transformateur"
+    },
+    "calendarTypes": {
+      "MARCHE": "Marché",
+      "ENLEVEMENT": "Enlèvement"
+    },
+    "transactionTypes": {
+      "SALE": "Vente",
+      "PURCHASE": "Achat"
+    },
+    "storeTypes": {
+      "EXPORT": "Export",
+      "GROUPING": "Groupage",
+      "GROUPING_AND_MACHINING": "Groupage et Usinage"
+    },
+    "userRoles": {
+      "admin": "Administrateur",
+      "manager": "Gestionnaire",
+      "field_agent": "Agent de terrain",
+      "store_manager": "Gestionnaire de magasin",
+      "accountant": "Comptable",
+      "analyst": "Analyste",
+      "auditor": "Auditeur"
+    },
+    "statuses": {
+      "active": "Actif",
+      "inactive": "Inactif",
+      "blocked": "Bloqué"
+    }
+  },
+  "deleteModal": {
+    "titleSingle": "Supprimer l'opération",
+    "titleMultiple": "Supprimer {{count}} opérations",
+    "descriptionSingle": "Cette action supprimera définitivement l'opération pour <b>{{name}}</b>. Pour confirmer, veuillez copier et coller l'ID suivant : <SelectableText>{{entityId}}</SelectableText>",
+    "descriptionMultiple": "Vous êtes sur le point de supprimer <b>{{count}} opérations</b> de la file d'attente. Cette action est irréversible. Pour confirmer, veuillez saisir le nombre d'opérations.",
+    "confirmLabel": "Tapez pour confirmer",
+    "confirmPlaceholder": "Saisissez \"{{value}}\"",
+    "confirmError": "La saisie ne correspond pas à la valeur attendue.",
+    "deleteButton": "Supprimer",
+    "deleting": "Suppression...",
+    "operationsCount": "{{count}} opérations"
+  },
+  "toast": {
+    "error": "Erreur",
+    "loadError": "Erreur lors du chargement des opérations",
+    "loadErrorDefault": "Erreur lors du chargement des opérations outbox",
+    "deleteSuccess": "Suppression réussie",
+    "deleteSuccessDescription": "L'opération a été supprimée avec succès",
+    "deleteError": "Erreur de suppression",
+    "deleteErrorDefault": "Erreur lors de la suppression",
+    "retryInfo": "Tentative de synchronisation",
+    "retryInfoDescription": "L'opération a été ajoutée à la file de synchronisation",
+    "retryError": "Erreur lors de la nouvelle tentative",
+    "syncSuccess": "Synchronisation",
+    "syncSuccessDescription": "Tentative de synchronisation effectuée",
+    "syncSuccessEntityType": "Synchronisation des {{entityType}} effectuée",
+    "syncSuccessGeneral": "Synchronisation générale effectuée",
+    "syncError": "Erreur de synchronisation",
+    "syncErrorDefault": "Erreur lors de la synchronisation",
+    "userNotConnected": "Utilisateur non connecté",
+    "operationNotFound": "Opération introuvable",
+    "accessDenied": "Accès non autorisé à cette opération"
+  }
+}

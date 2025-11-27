@@ -1,0 +1,5 @@
+area,parcelCode,actorId,localizationId,isActive,isPolygon,type,createdAt,updatedAt,coordinates
+5,P123,101,LT0401,TRUE,FALSE,ACTIVE,2025-03-14T10:00:00Z,2025-03-14T10:00:00Z,"[{""latitude"": 3.848, ""longitude"": 11.502}, {""latitude"": 3.849, ""longitude"": 11.503}, {""latitude"": 3.850, ""longitude"": 11.504}, {""latitude"": 3.851, ""longitude"": 11.505}]"
+8,P456,102,LT0401,TRUE,TRUE,PENDING,2025-03-14T10:00:00Z,2025-03-14T10:00:00Z,"[{""latitude"": 4.234, ""longitude"": 12.345}, {""latitude"": 4.235, ""longitude"": 12.346}, {""latitude"": 4.236, ""longitude"": 12.347}, {""latitude"": 4.237, ""longitude"": 12.348}]"
+12,P789,103,LT0401,TRUE,TRUE,ACTIVE,2025-03-14T10:00:00Z,2025-03-14T10:00:00Z,"[{""latitude"": 5.123, ""longitude"": 13.456}, {""latitude"": 5.124, ""longitude"": 13.457}, {""latitude"": 5.125, ""longitude"": 13.458}, {""latitude"": 5.126, ""longitude"": 13.459}]"
+10,P987,104,LT0401,TRUE,FALSE,INACTIVE,2025-03-14T10:00:00Z,2025-03-14T10:00:00Z,"[{""latitude"": 6.567, ""longitude"": 14.678}, {""latitude"": 6.568, ""longitude"": 14.679}, {""latitude"": 6.569, ""longitude"": 14.680}, {""latitude"": 6.570, ""longitude"": 14.681}]"

@@ -1,0 +1,50 @@
+{
+  "search": {
+    "placeholder": "Search for a location..."
+  },
+  "table": {
+    "name": "Name",
+    "code": "Code",
+    "hierarchy": "Hierarchy",
+    "type": "Type",
+    "noLocations": "No locations found.",
+    "noLocationsSearch": "No locations found for \"{{search}}\"."
+  },
+  "hierarchy": {
+    "region": "Region",
+    "department": "Department",
+    "district": "District",
+    "village": "Village",
+    "loading": "Loading..."
+  },
+  "form": {
+    "locationLabel": "Location",
+    "locationsLabel": "Locations",
+    "regionLabel": "Region",
+    "departmentLabel": "Department",
+    "districtLabel": "District",
+    "selectRegion": "Choose a region",
+    "selectDepartment": "Choose a department",
+    "selectDistrict": "Choose a district"
+  },
+  "validation": {
+    "regionRequired": "Region is required",
+    "departmentRequired": "Department is required",
+    "districtRequired": "District is required"
+  },
+  "empty": {
+    "noRegions": "No regions available",
+    "noDepartments": "No departments available",
+    "noDistricts": "No districts available"
+  },
+  "actions": {
+    "addRegion": "+ Add region",
+    "addDepartment": "+ Add department",
+    "addDistrict": "+ Add district"
+  },
+  "selector": {
+    "selectedLocations": "Selected locations:",
+    "loading": "Loading...",
+    "offlineMode": "Offline mode - Local data only"
+  }
+}

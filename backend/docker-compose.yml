@@ -1,0 +1,79 @@
+services:
+  # Service AdonisJS Backend
+  api:
+    image: api_prod:latest
+    build:
+      context: .
+      network: host
+      target: production
+      args:
+        - BUILDKIT_INLINE_CACHE=1
+    container_name: api_prod
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - DEPLOY_MODE=${DEPLOY_MODE:-qa}
+      - PORT=${PORT:-3333}
+      - HOST=${HOST:-0.0.0.0}
+      - APP_KEY=${APP_KEY}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - TZ=${TZ:-UTC}
+      # Configuration PostgreSQL externe
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT:-5432}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_DATABASE=${DB_DATABASE}
+      # Configuration Redis externe
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+      - REDIS_PASSWORD=${REDIS_PASSWORD:-}
+      # Configuration MinIO externe
+      - MINIO_ENDPOINT=${MINIO_ENDPOINT}
+      - MINIO_PORT=${MINIO_PORT:-9000}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+      - MINIO_USE_SSL=${MINIO_USE_SSL:-true}
+      - MINIO_BUCKET=${MINIO_BUCKET:-sgpn-documents}
+      # Configuration application
+      - RUN_SEEDERS=${RUN_SEEDERS:-false}
+      - SEED_MODE=${SEED_MODE:-production}
+      - RESET_DATABASE=${RESET_DATABASE:-false}
+      - DEFAULT_PASSWORD=${DEFAULT_PASSWORD}
+      # Configuration session
+      - SESSION_DRIVER=${SESSION_DRIVER:-redis}
+      # Configuration email
+      - MAIL_MAILER=${MAIL_MAILER:-smtp}
+      # Configuration email (SMTP/SendGrid)
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY}
+      - SENDER_EMAIL=${SENDER_EMAIL}
+      - SENDER_NAME=${SENDER_NAME}
+      # Configuration application branding
+      - APP_NAME=${APP_NAME:-ONCC TRACE}
+      - SUPPORT_EMAIL=${SUPPORT_EMAIL:-support@oncc.cm}
+      - SUPPORT_PHONE=${SUPPORT_PHONE:-}
+      - FRONTEND_URL=${FRONTEND_URL}
+      # Configuration QA
+      - QA_DEFAULT_OTP=${QA_DEFAULT_OTP:-}
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-3333}:${PORT:-3333}"
+    volumes:
+      - uploads_data:/app/uploads
+      - logs_data:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test:
+        ["CMD", "curl", "-f", "http://localhost:${PORT:-3333}/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  uploads_data:
+  logs_data:

@@ -1,0 +1,3 @@
+givenName,familyName,resourceType,isActive,localizationId,company_name,company_creation_date,social_reason,head_office,transformer_number,accountGivenName,accountFamilyName,accountEmail,accountPhone
+Jean-Michel,Njike,TRANSFORMER,TRUE,LT0401,Njike Energie,2015-06-12,Production d'électricité,Douala,TRF-001,Paul,exporter,paul@exporter.com,"67890102234"
+Brigitte,Mbala,TRANSFORMER,TRUE,LT0401,Mbala Systems,2018-09-25,Transformation agroalimentaire,Yaoundé,TRF-002,Jacques,exporter,jacques@exporter.com,"62789101234"

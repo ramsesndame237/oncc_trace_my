@@ -1,0 +1,3 @@
+givenName,familyName,resourceType,isActive,localizationId,phone,date_of_birth,place_of_birth,cni_number,cicc_number,gender
+John,Doe,PRODUCER,TRUE,LT0401,678900987,1980-01-01T00:00:00Z,NdogBong,123456789,987654321,M
+Jane,Smith,PRODUCER,TRUE,LT0401,78658900,1985-01-01T00:00:00Z,Bamenda,987654321,123456789,F

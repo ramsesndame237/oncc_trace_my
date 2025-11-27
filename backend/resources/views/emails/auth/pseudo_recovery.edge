@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Récupération de pseudo - {{ appName }}
+    </title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c5530;
+        margin-bottom: 10px;
+      }
+      
+      .title {
+        color: #2c5530;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .content {
+        margin-bottom: 30px;
+      }
+      
+      .pseudo-box {
+        background-color: #e8f5e8;
+        border-left: 4px solid #4CAF50;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+        text-align: center;
+      }
+      
+      .pseudo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c5530;
+        margin: 10px 0;
+        font-family: 'Courier New', monospace;
+        background-color: #f0f8f0;
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block;
+      }
+      
+      .footer {
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+      }
+      
+      .warning {
+        background-color: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          {{ appName }}
+        </div>
+        <h1 class="title">
+          🔑 Récupération de votre pseudo
+        </h1>
+      </div>
+
+      <div class="content">
+        <p>
+          Bonjour <strong>{{ userName }}</strong>,
+        </p>
+
+        <p>
+          Vous avez demandé la récupération de votre pseudo pour accéder à votre compte {{ appName }}.
+        </p>
+
+        <div class="pseudo-box">
+          <p>
+            <strong>Votre pseudo est :</strong>
+          </p>
+          <div class="pseudo">
+            {{ username }}
+          </div>
+        </div>
+
+        <p>
+          Vous pouvez maintenant utiliser ce pseudo pour vous connecter à votre compte {{ appName }}.
+        </p>
+
+        <div class="warning">
+          <strong>⚠️ Important :</strong>
+          <ul>
+            <li>
+              Conservez ce pseudo en lieu sûr
+            </li>
+            <li>
+              Ne le partagez avec personne
+            </li>
+            <li>
+              Si vous n'avez pas demandé cette récupération, contactez immédiatement le support
+            </li>
+          </ul>
+        </div>
+
+        <h3>
+          🔐 Mot de passe oublié ?
+        </h3>
+        <p>
+          Si vous avez également oublié votre mot de passe, vous pouvez utiliser la fonction "Mot de passe oublié" sur la page de connexion avec votre adresse email.
+        </p>
+
+        <h3>
+          📞 Besoin d'aide ?
+        </h3>
+        <p>
+          Si vous avez des questions ou rencontrez des difficultés, n'hésitez pas à contacter notre équipe support :
+        </p>
+        <p>
+          <strong>Email :</strong> <a href="mailto:{{ supportEmail }}">{{ supportEmail }}</a>
+          @if(supportPhone)
+            <br><strong>Téléphone :</strong> {{ supportPhone }}
+          @end
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>
+          &copy; {{ year }} {{ appName }}. Tous droits réservés.
+        </p>
+        <p>
+          Cet email a été envoyé automatiquement, merci de ne pas y répondre.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

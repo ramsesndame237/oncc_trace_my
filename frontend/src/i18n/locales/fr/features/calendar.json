@@ -1,0 +1,229 @@
+{
+  "title": "Calendriers",
+  "singular": "Calendrier",
+  "fields": {
+    "code": "Code",
+    "type": "Type",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "eventTime": "Heure de l'événement",
+    "location": "Lieu",
+    "locationCode": "Code de localisation",
+    "campaign": "Campagne",
+    "convention": "Convention",
+    "conventionSignatureDate": "Date de signature de la convention",
+    "opa": "OPA",
+    "status": "Statut",
+    "expectedSalesCount": "Nombre de ventes attendues"
+  },
+  "types": {
+    "MARCHE": "Marché",
+    "ENLEVEMENT": "Enlèvement"
+  },
+  "statuses": {
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+  "forms": {
+    "marketAdd": {
+      "createTitle": "Créer un calendrier de marché",
+      "editTitle": "Modifier le calendrier de marché",
+      "step": "Étape",
+      "step1": {
+        "title": "Informations du marché",
+        "sectionTitle": "Informations générales",
+        "opa": "OPA",
+        "startDate": "Date du marché",
+        "endDate": "Date de fin",
+        "eventTime": "Heure",
+        "locationCode": "Localisation",
+        "location": "Lieu",
+        "validation": {
+          "opaRequired": "L'OPA est requise",
+          "startDateRequired": "La date du marché est requise",
+          "startDateMustBeAfterToday": "La date du marché doit être strictement supérieure à aujourd'hui",
+          "startDateMaxOneYear": "La date du marché ne peut pas être sélectionnée au-delà d'un an dans le futur",
+          "endDateRequired": "La date de fin est requise",
+          "endDateMustBeAfterStartDate": "La date de fin doit être postérieure à la date de début",
+          "maxDurationExceeded": "L'intervalle entre les dates ne peut pas dépasser un an (365 jours)",
+          "eventTimeRequired": "L'heure est requise",
+          "locationCodeRequired": "La localisation est requise",
+          "locationRequired": "Le lieu est requis"
+        }
+      },
+      "step2": {
+        "title": "Récapitulatif",
+        "marketInformation": "Informations du marché",
+        "details": "Détails",
+        "confirmMessage": "Je confirme que toutes les informations saisies sont exactes et complètes",
+        "confirmRequired": "Vous devez confirmer les informations pour continuer"
+      }
+    },
+    "pickupAdd": {
+      "createTitle": "Créer un calendrier d'enlèvement",
+      "editTitle": "Modifier le calendrier d'enlèvement",
+      "step": "Étape",
+      "step1": {
+        "title": "Informations de l'enlèvement",
+        "sectionTitle": "Informations générales",
+        "opa": "OPA",
+        "convention": "Convention",
+        "startDate": "Date d'enlèvement",
+        "endDate": "Date de fin",
+        "eventTime": "Heure",
+        "locationCode": "Localisation",
+        "location": "Lieu",
+        "validation": {
+          "opaRequired": "L'OPA est requise",
+          "conventionRequired": "La convention est requise",
+          "startDateRequired": "La date d'enlèvement est requise",
+          "startDateMustBeAfterToday": "La date d'enlèvement doit être strictement supérieure à aujourd'hui",
+          "startDateMaxOneYear": "La date d'enlèvement ne peut pas être sélectionnée au-delà d'un an dans le futur",
+          "endDateRequired": "La date de fin est requise",
+          "endDateMustBeAfterStartDate": "La date de fin doit être postérieure à la date de début",
+          "maxDurationExceeded": "L'intervalle entre les dates ne peut pas dépasser un an (365 jours)",
+          "eventTimeRequired": "L'heure est requise",
+          "locationCodeRequired": "La localisation est requise",
+          "locationRequired": "Le lieu est requis"
+        }
+      },
+      "step2": {
+        "title": "Récapitulatif",
+        "pickupInformation": "Informations de l'enlèvement",
+        "details": "Détails",
+        "confirmMessage": "Je confirme que toutes les informations saisies sont exactes et complètes",
+        "confirmRequired": "Vous devez confirmer les informations pour continuer"
+      }
+    },
+    "pickupEdit": {
+      "title": "Modifier le calendrier d'enlèvement"
+    },
+    "messages": {
+      "unsavedChanges": "Voulez-vous vraiment quitter ? Toutes les modifications non enregistrées seront perdues."
+    }
+  },
+  "form": {
+    "messages": {
+      "updateSuccess": "Calendrier mis à jour avec succès",
+      "updateSuccessOffline": "Modification du calendrier enregistrée. Elle sera synchronisée lorsque vous serez en ligne."
+    }
+  },
+  "view": {
+    "title": "Détails du calendrier",
+    "eventInfo": "Informations sur l'événement",
+    "locationInfo": "Informations de localisation",
+    "relationsInfo": "Relations",
+    "metadata": "Métadonnées",
+    "createdAt": "Créé le",
+    "updatedAt": "Modifié le",
+    "otherInfo": "Autres informations",
+    "notFound": "Calendrier non trouvé",
+    "notFoundDescription": "Le calendrier n'a pas été trouvé",
+    "invalidId": "ID calendrier invalide",
+    "loadingDetails": "Chargement des détails du calendrier...",
+    "backToList": "Retour à la liste",
+    "history": "Historique"
+  },
+  "table": {
+    "title": "Liste des calendriers",
+    "searchPlaceholder": "Rechercher un calendrier...",
+    "noCalendars": "Aucun calendrier trouvé",
+    "noCalendarsForSearch": "Aucun calendrier trouvé pour \"{{search}}\"",
+    "columns": {
+      "code": "Code",
+      "marketDate": "Date de marché",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "localisation": "Localisation",
+      "location": "Localisation",
+      "place": "Lieu",
+      "opa": "OPA",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "relativeDates": {
+      "today": "Aujourd'hui",
+      "yesterday": "Hier",
+      "tomorrow": "Demain",
+      "inDays": "dans {{count}} jours",
+      "inDay": "dans 1 jour"
+    }
+  },
+  "page": {
+    "title": "Calendriers",
+    "loading": "Chargement de la page calendriers...",
+    "editTitle": "Modifier un calendrier",
+    "createTitle": "Créer un calendrier"
+  },
+  "actions": {
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "updateExpectedSalesCount": "Modifier le nombre de ventes",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "saveChanges": "Enregistrer les modifications",
+    "retry": "Réessayer"
+  },
+  "messages": {
+    "processing": "Calendrier en cours de traitement...",
+    "createProcessing": "Calendrier en cours de traitement...",
+    "updateProcessing": "Calendrier en cours de traitement...",
+    "loadError": "Erreur lors du chargement des calendriers",
+    "loadByIdError": "Erreur lors du chargement du calendrier",
+    "createError": "Une erreur est survenue lors de la création du calendrier",
+    "updateError": "Une erreur est survenue lors de la modification du calendrier",
+    "requiresInternet": "Cette opération nécessite une connexion internet."
+  },
+  "validation": {
+    "codeRequired": "Le code est requis",
+    "typeRequired": "Le type d'événement est requis",
+    "startDateRequired": "La date de début est requise",
+    "startDateAfterToday": "La date de début doit être strictement supérieure à aujourd'hui",
+    "startDateMaxOneYear": "La date de début ne peut pas être sélectionnée au-delà d'un an dans le futur",
+    "endDateRequired": "La date de fin est requise",
+    "endDateAfterStart": "La date de fin doit être postérieure à la date de début",
+    "dateRangeMaxOneYear": "L'intervalle entre les dates ne peut pas dépasser un an (365 jours)",
+    "campaignRequired": "La campagne est requise",
+    "conventionRequired": "Une convention est requise pour les événements de type ENLEVEMENT"
+  },
+  "modals": {
+    "changeStatus": {
+      "activateTitle": "Ouvrir le calendrier",
+      "deactivateTitle": "Fermer le calendrier",
+      "activateDescription": "Vous êtes sur le point d'ouvrir ce calendrier. Ce calendrier sera disponible pour les opérations.",
+      "deactivateDescription": "Vous êtes sur le point de fermer ce calendrier. Ce calendrier ne sera plus disponible pour les opérations.",
+      "confirmInstruction": "Pour confirmer, saisissez le code du calendrier :",
+      "codeLabel": "Code du calendrier",
+      "codePlaceholder": "Saisissez le code du calendrier",
+      "codeRequired": "Le code du calendrier est requis",
+      "codeMismatch": "Le code saisi ne correspond pas au code du calendrier",
+      "currentStatus": "Statut actuel",
+      "newStatus": "Nouveau statut",
+      "confirmAction": "Confirmer",
+      "cancel": "Annuler",
+      "successActivated": "Calendrier ouvert avec succès",
+      "successDeactivated": "Calendrier fermé avec succès",
+      "errorActivation": "Erreur lors de l'ouverture du calendrier",
+      "errorDeactivation": "Erreur lors de la fermeture du calendrier"
+    },
+    "updateExpectedSalesCount": {
+      "title": "Modifier le nombre de ventes attendues",
+      "description": "Vous êtes sur le point de modifier le nombre de ventes attendues pour ce calendrier de marché.",
+      "confirmInstruction": "Pour confirmer, saisissez le code du calendrier :",
+      "codeLabel": "Code du calendrier",
+      "codePlaceholder": "Saisissez le code du calendrier",
+      "expectedSalesCountLabel": "Nombre de ventes attendues",
+      "expectedSalesCountPlaceholder": "Saisissez le nombre de ventes attendues",
+      "codeRequired": "Le code du calendrier est requis",
+      "codeMismatch": "Le code saisi ne correspond pas au code du calendrier",
+      "expectedSalesCountRequired": "Le nombre de ventes attendues est requis",
+      "expectedSalesCountMin": "Le nombre de ventes doit être supérieur ou égal à 0",
+      "currentValue": "Valeur actuelle",
+      "newValue": "Nouvelle valeur",
+      "confirmAction": "Confirmer",
+      "cancel": "Annuler",
+      "success": "Nombre de ventes attendues mis à jour avec succès",
+      "error": "Erreur lors de la mise à jour du nombre de ventes attendues"
+    }
+  }
+}

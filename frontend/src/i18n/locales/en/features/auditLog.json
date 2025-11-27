@@ -1,0 +1,69 @@
+{
+  "table": {
+    "columns": {
+      "user": "User",
+      "action": "Action",
+      "date": "Date",
+      "actions": "Actions"
+    },
+    "empty": "No audit logs found",
+    "tooltip": {
+      "viewChanges": "View changes"
+    },
+    "retry": "Retry"
+  },
+  "modal": {
+    "title": "Action details",
+    "labels": {
+      "user": "User:",
+      "date": "Date:",
+      "ip": "IP:",
+      "system": "System"
+    },
+    "sections": {
+      "changes": "Changes made",
+      "createdValues": "Created values",
+      "deletedValues": "Deleted values"
+    },
+    "fields": {
+      "oldValue": "Old value:",
+      "newValue": "New value:"
+    },
+    "messages": {
+      "noChanges": "No detailed changes available for this action.",
+      "createAction": "Creation action",
+      "deleteAction": "Deletion action",
+      "noData": "No data available for this action."
+    }
+  },
+  "actions": {
+    "create": "Creation",
+    "update": "Update",
+    "delete": "Deletion",
+    "validate": "Validation",
+    "reject": "Rejection",
+    "activate": "Activation",
+    "deactivate": "Deactivation",
+    "associate_campaign": "Associate to campaign",
+    "dissociate_campaign": "Dissociate from campaign",
+    "draft": "Draft",
+    "admin_info_update": "Admin update",
+    "admin_password_reset": "Password reset",
+    "add_parcel": "Add parcel",
+    "update_parcel": "Update parcel",
+    "activate_parcel": "Activate parcel",
+    "deactivate_parcel": "Deactivate parcel",
+    "add_document": "Add document",
+    "update_document": "Update document",
+    "remove_document": "Remove document",
+    "change_status": "Status change",
+    "add_producer": "Add producer",
+    "remove_producer": "Remove producer",
+    "add_buyer": "Add mandate buyer",
+    "remove_buyer": "Remove mandate buyer",
+    "add_occupant": "Add occupant",
+    "remove_occupant": "Remove occupant",
+    "update_status": "Status update",
+    "update_products": "Update products"
+  }
+}

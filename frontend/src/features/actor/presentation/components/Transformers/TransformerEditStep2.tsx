@@ -1,0 +1,228 @@
+"use client";
+
+import { FormInput, FormPhoneInput } from "@/components/forms";
+import { Icon } from "@/components/icon";
+import { BaseCard } from "@/components/modules/base-card";
+import { SyncErrorAlert } from "@/components/modules/sync-error-alert";
+import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
+import { db } from "@/core/infrastructure/database/db";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useSearchParams } from "next/navigation";
+import React, { useCallback, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { useTransformerFormStore } from "../../../infrastructure/store/transformerFormStore";
+import { useTransformerFormNavigation } from "../../hooks/useTransformerFormNavigation";
+import {
+  createStep2ManagerInfoSchema,
+  type Step2ManagerInfoData,
+} from "../../schemas/transformer-validation-schemas";
+import TransformerFormLayout from "./TransformerFormLayout";
+
+export default function TransformerEditStep2() {
+  const { t } = useTranslation(["actor", "common"]);
+  const searchParams = useSearchParams();
+  const entityId = searchParams.get("entityId");
+  const editOffline = searchParams.has("editOffline");
+
+  const {
+    formData,
+    updateStep2Data,
+    setStepValidation,
+    setCurrentStep,
+    saveProgress,
+  } = useTransformerFormStore();
+
+  const { navigateToNext, navigateToPrevious } =
+    useTransformerFormNavigation();
+  const [isNavigating, setIsNavigating] = useState(false);
+  const [isLoadingOfflineData, setIsLoadingOfflineData] = useState(false);
+
+  // Réinitialiser isNavigating quand le composant est monté (après PinGuard par exemple)
+  useEffect(() => {
+    setIsNavigating(false);
+  }, []);
+
+  // Form setup
+  const form = useForm({
+    resolver: zodResolver(createStep2ManagerInfoSchema(t)),
+    defaultValues: {
+      managerFamilyName: formData.step2?.managerFamilyName || "",
+      managerGivenName: formData.step2?.managerGivenName || "",
+      managerPhone: formData.step2?.managerPhone || "",
+      managerEmail: formData.step2?.managerEmail || "",
+    },
+    mode: "onChange",
+    criteriaMode: "firstError",
+    shouldFocusError: true,
+  });
+
+  // Charger les données depuis pendingOperations si en mode offline
+  useEffect(() => {
+    const loadOfflineData = async () => {
+      if (entityId && editOffline) {
+        setIsLoadingOfflineData(true);
+        try {
+          const pendingOperation = await db.pendingOperations
+            .where("entityId")
+            .equals(entityId)
+            .first();
+
+          if (pendingOperation && pendingOperation.payload) {
+            const payload = pendingOperation.payload as Record<string, unknown>;
+            const managerInfo = (payload.managerInfo as Record<string, unknown>) || {};
+
+            // Pré-remplir le formulaire avec les données du payload
+            const step2Data: Step2ManagerInfoData = {
+              managerFamilyName: (managerInfo.managerFamilyName as string) || "",
+              managerGivenName: (managerInfo.managerGivenName as string) || "",
+              managerPhone: (managerInfo.managerPhone as string) || "",
+              managerEmail: (managerInfo.managerEmail as string) || "",
+            };
+
+            // Mettre à jour le store
+            updateStep2Data(step2Data);
+
+            // Réinitialiser le formulaire avec les nouvelles données
+            form.reset(step2Data);
+          }
+        } catch (error) {
+          console.error(
+            "Erreur lors du chargement des données offline:",
+            error
+          );
+        } finally {
+          setIsLoadingOfflineData(false);
+        }
+      }
+    };
+
+    loadOfflineData();
+  }, [entityId, editOffline, form, updateStep2Data]);
+
+  const { isValid } = form.formState;
+
+  React.useEffect(() => {
+    setCurrentStep(2);
+  }, [setCurrentStep]);
+
+  // Observer les changements de données
+  useEffect(() => {
+    const subscription = form.watch((data) => {
+      updateStep2Data(data as Step2ManagerInfoData);
+      saveProgress(); // Auto-save
+    });
+    return () => subscription.unsubscribe();
+  }, [form, updateStep2Data, saveProgress]);
+
+  // Observer la validation
+  useEffect(() => {
+    setStepValidation(2, isValid);
+  }, [isValid, setStepValidation]);
+
+  const handleNext = useCallback(async () => {
+    const isValid = await form.trigger();
+    if (isValid && !isNavigating) {
+      setIsNavigating(true);
+      navigateToNext();
+    }
+  }, [form, isNavigating, navigateToNext]);
+
+  const handlePrevious = useCallback(() => {
+    navigateToPrevious();
+  }, [navigateToPrevious]);
+
+  // Boutons du footer
+  const footerButtons = [
+    <Button
+      key="next"
+      type="button"
+      onClick={handleNext}
+      disabled={!isValid || isNavigating}
+      className="flex items-center space-x-2"
+    >
+      <span>{t("common:actions.next")}</span>
+    </Button>,
+  ];
+
+  // Header avec titre et description
+  const headerContent = (
+    <div className="space-y-2">
+      <h1 className="text-xl font-medium text-gray-900">
+        {t("transformer.sections.manager")}
+      </h1>
+    </div>
+  );
+
+  return (
+    <TransformerFormLayout className="lg:flex items-start lg:space-x-4">
+      <div className="py-3">
+        <Button variant="link" onClick={handlePrevious}>
+          <Icon name="ArrowLeft" />
+          <span>{t("common:actions.back")}</span>
+        </Button>
+      </div>
+      <BaseCard
+        title={headerContent}
+        footer={footerButtons}
+        className="w-full flex-1"
+      >
+        {/* Alerte d'erreur de synchronisation */}
+        {editOffline && entityId && (
+          <SyncErrorAlert entityId={entityId} entityType="actor" />
+        )}
+
+        {isLoadingOfflineData && (
+          <div className="p-4 text-center text-muted-foreground">
+            {t("form.loadingData")}
+          </div>
+        )}
+
+        <Form {...form}>
+          <form className="space-y-8" id="transformer-step2-form">
+            {/* Nom du gérant */}
+            <div className="lg:w-1/2">
+              <FormInput
+                form={form}
+                name="managerFamilyName"
+                label={t("transformer.fields.managerLastName")}
+                required
+              />
+            </div>
+
+            {/* Prénom du gérant */}
+            <div className="lg:w-1/2">
+              <FormInput
+                form={form}
+                name="managerGivenName"
+                label={t("transformer.fields.managerFirstName")}
+                required
+              />
+            </div>
+
+            {/* Email du gérant */}
+            <div className="lg:w-1/2">
+              <FormInput
+                form={form}
+                name="managerEmail"
+                label={t("transformer.fields.managerEmail")}
+                type="email"
+                required
+              />
+            </div>
+
+            {/* Téléphone du gérant */}
+            <div className="lg:w-1/2">
+              <FormPhoneInput
+                form={form}
+                name="managerPhone"
+                label={t("transformer.fields.managerPhone")}
+              />
+            </div>
+          </form>
+        </Form>
+      </BaseCard>
+    </TransformerFormLayout>
+  );
+}

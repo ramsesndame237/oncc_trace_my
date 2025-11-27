@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Nouvelle convention créée - {{ appName }}
+    </title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        line-height: 1.6;
+        color: #333333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      .logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        color: #10B981;
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .content {
+        margin: 30px 0;
+      }
+
+      .message {
+        background-color: #f0fdf4;
+        border-left: 4px solid #10B981;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+
+      .info-box {
+        background-color: #f9fafb;
+        padding: 20px;
+        border-radius: 6px;
+        margin: 20px 0;
+      }
+
+      .info-box h3 {
+        margin-top: 0;
+        color: #4b5563;
+      }
+
+      .info-box p {
+        margin: 10px 0;
+      }
+
+      .convention-info {
+        background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 8px;
+        margin: 25px 0;
+        text-align: center;
+      }
+
+      .convention-info h2 {
+        margin: 0 0 15px 0;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .convention-info p {
+        margin: 8px 0;
+        font-size: 16px;
+      }
+
+      .products-section {
+        margin: 25px 0;
+      }
+
+      .products-section h3 {
+        color: #4b5563;
+        margin-bottom: 15px;
+      }
+
+      .products-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+
+      .products-table th {
+        background-color: #f3f4f6;
+        padding: 12px;
+        text-align: left;
+        font-weight: bold;
+        color: #374151;
+        border-bottom: 2px solid #e5e7eb;
+      }
+
+      .products-table td {
+        padding: 12px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .products-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .products-table tr:hover {
+        background-color: #f9fafb;
+      }
+
+      .partner-section {
+        background-color: #eff6ff;
+        border-left: 4px solid #3b82f6;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+
+      .partner-section h3 {
+        margin-top: 0;
+        color: #1e40af;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: #3b82f6;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 6px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+
+      .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        text-align: center;
+        color: #6b7280;
+        font-size: 14px;
+      }
+
+      .contact-info {
+        margin: 15px 0;
+      }
+
+      .highlight {
+        background-color: #dbeafe;
+        border-left: 4px solid #3b82f6;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+
+      ul {
+        margin: 15px 0;
+        padding-left: 25px;
+      }
+
+      ul li {
+        margin: 8px 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+
+        .convention-info h2 {
+          font-size: 22px;
+        }
+
+        .products-table {
+          font-size: 14px;
+        }
+
+        .products-table th,
+        .products-table td {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>
+          📋 Nouvelle convention créée
+        </h1>
+      </div>
+
+      <div class="content">
+        <p>
+          Bonjour <strong>{{ userName }}</strong>,
+        </p>
+
+        <div class="message">
+          <p>
+            Une nouvelle convention a été créée sur la plateforme {{ appName }}. Veuillez la consulter pour prendre connaissance des détails et des engagements associés.
+          </p>
+        </div>
+
+        <div class="convention-info">
+          <h2>📄 {{ conventionCode }}</h2>
+          <p>
+            <strong>Date de signature :</strong> {{ signatureDate }}
+          </p>
+        </div>
+
+        <div class="products-section">
+          <h3>
+            📦 Produits inclus
+          </h3>
+          <table class="products-table">
+            <thead>
+              <tr>
+                <th>Code produit</th>
+                <th>Nom</th>
+                <th>Quantité</th>
+                <th>Unité</th>
+              </tr>
+            </thead>
+            <tbody>
+              @each(product in products)
+                <tr>
+                  <td>{{ product.code }}</td>
+                  <td>{{ product.name }}</td>
+                  <td>{{ product.quantity }}</td>
+                  <td>{{ product.unit }}</td>
+                </tr>
+              @end
+            </tbody>
+          </table>
+        </div>
+
+        <div class="partner-section">
+          <h3>
+            🤝 Partenaire
+          </h3>
+          <p>
+            <strong>Nom :</strong> {{ partnerName }}
+          </p>
+          <p>
+            <strong>Type :</strong> {{ partnerType }}
+          </p>
+        </div>
+
+        <div class="highlight">
+          <h3 style="margin-top: 0;">
+            📋 Actions recommandées
+          </h3>
+          <ul>
+            <li>
+              Consulter les détails de la convention et vérifier toutes les informations
+            </li>
+            <li>
+              Vérifier la liste des produits et les quantités associées
+            </li>
+            <li>
+              Préparer les opérations commerciales selon les termes de la convention
+            </li>
+            <li>
+              Contacter le support en cas de questions ou de clarifications nécessaires
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          Cette convention définit le cadre de vos opérations commerciales. Nous vous invitons à en prendre connaissance dans les plus brefs délais.
+        </p>
+
+        <div style="text-align: center;">
+          <a href="{{ appUrl }}/conventions/{{ conventionCode }}" class="button">Consulter la convention</a>
+        </div>
+
+        <div class="info-box">
+          <h3>
+            ℹ️ Informations importantes
+          </h3>
+          <p>
+            <strong>Convention créée par :</strong> {{ createdBy }}
+          </p>
+          <p style="margin-top: 15px; font-size: 14px; color: #6b7280;">
+            Toute l'équipe {{ appName }} reste à votre disposition pour vous accompagner.
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <p>
+            Pour toute question ou assistance, contactez-nous :
+          </p>
+          <p>
+            <strong>Email :</strong> <a href="mailto:{{ supportEmail }}">{{ supportEmail }}</a>
+          </p>
+          @if(supportPhone)
+
+          <p>
+            <strong>Téléphone :</strong> {{ supportPhone }}
+          </p>
+
+          @end
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          &copy; {{ year }} {{ appName }}. Tous droits réservés.
+        </p>
+        <p style="font-size: 12px; color: #9ca3af; margin-top: 10px;">
+          Cet email a été envoyé automatiquement. Merci de ne pas y répondre directement.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

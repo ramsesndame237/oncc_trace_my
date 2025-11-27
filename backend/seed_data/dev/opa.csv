@@ -1,0 +1,3 @@
+familyName,resourceType,isActive,localizationId,opa_name,social_raison,date_of_creation,entreprise_local,managerGivenName,managerFamilyName,managerEmail,managerPhone
+"Coopérative Agro-Bio",OPA,TRUE,LT0401,"Agro-Bio","SARL Agro-Bio","2005-06-15","Bafoussam","Jean","manager","jean@manager.com","6789012301"
+"Union des Cultivateurs",OPA,TRUE,LT0401,"Cultivateurs Union","Union Agricole","2010-09-22","Yaoundé","Pierre","manager","pierre@manager.com","6789076734"

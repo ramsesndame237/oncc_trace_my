@@ -1,0 +1,180 @@
+{
+  "form": {
+    "editStore": "Edit warehouse",
+    "createStore": "Create new warehouse",
+    "storeName": "Warehouse name",
+    "storeCode": "Warehouse code",
+    "storeType": "Warehouse type",
+    "capacity": "Capacity",
+    "surfaceArea": "Surface area",
+    "location": "Warehouse address",
+    "selectStoreType": "Select a warehouse type",
+    "noTypesAvailable": "No types available"
+  },
+  "storeTypes": {
+    "EXPORT": "Export",
+    "GROUPING": "Grouping",
+    "GROUPING_AND_MACHINING": "Grouping and machining"
+  },
+  "view": {
+    "title": "Warehouse details",
+    "generalInfo": "General information",
+    "characteristics": "Characteristics",
+    "systemInfo": "System information",
+    "occupants": "Occupants",
+    "history": "History",
+    "otherInfo": "Other information",
+    "storeName": "Warehouse name",
+    "code": "Code",
+    "storeType": "Warehouse type",
+    "location": "Location",
+    "capacity": "Capacity",
+    "surfaceArea": "Surface area",
+    "createdAt": "Created at",
+    "updatedAt": "Last updated",
+    "notFound": "Warehouse not found",
+    "notFoundDescription": "The warehouse was not found",
+    "invalidId": "Invalid warehouse ID",
+    "loadingDetails": "Loading warehouse details...",
+    "backToList": "Back to list",
+    "error": "Error"
+  },
+  "actions": {
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "edit": "Edit",
+    "saving": "Saving...",
+    "save": "Save",
+    "saveChanges": "Save changes",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "activateTooltipOffline": "Connection required to activate the warehouse",
+    "deactivateTooltipOffline": "Connection required to deactivate the warehouse",
+    "activateTooltip": "Activate the warehouse",
+    "deactivateTooltip": "Deactivate the warehouse"
+  },
+  "messages": {
+    "activationSuccess": "Warehouse activated successfully",
+    "activationError": "Error during activation",
+    "deactivationSuccess": "Warehouse deactivated successfully",
+    "deactivationError": "Error during deactivation",
+    "updateError": "An error occurred while updating the warehouse",
+    "createError": "An error occurred while creating the warehouse"
+  },
+  "table": {
+    "title": "Warehouse list",
+    "noStores": "No warehouses found.",
+    "noStoresForSearch": "No warehouses found for \"{{search}}\".",
+    "searchPlaceholder": "Search for a warehouse...",
+    "columns": {
+      "name": "Name",
+      "code": "Code",
+      "type": "Type",
+      "status": "Status",
+      "stores": "Warehouses",
+      "actions": "Actions"
+    },
+    "statusLabels": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "viewDetails": "View details"
+  },
+  "page": {
+    "title": "Warehouses",
+    "loading": "Loading warehouses page...",
+    "editTitle": "Edit warehouse",
+    "createTitle": "Create warehouse"
+  },
+  "modals": {
+    "changeStatus": {
+      "activateTitle": "Activate warehouse",
+      "deactivateTitle": "Deactivate warehouse",
+      "activateDescription": "This action will activate the warehouse for the current campaign.",
+      "deactivateDescription": "This action will deactivate the warehouse for the current campaign.",
+      "confirmInstruction": "To confirm, please enter the warehouse code:",
+      "storeCodeLabel": "Warehouse code",
+      "storeCodePlaceholder": "Enter \"{{storeCode}}\"",
+      "activateButton": "Activate",
+      "deactivateButton": "Deactivate",
+      "confirmButton": "Confirm",
+      "cancelButton": "Cancel"
+    },
+    "removeOccupant": {
+      "title": "Remove occupant",
+      "description": "This action will remove the occupant from this warehouse. This operation is reversible.",
+      "confirmInstruction": "To confirm, please enter the occupant ID:",
+      "occupantIdLabel": "Occupant ID",
+      "occupantIdPlaceholder": "Enter \"{{occupantId}}\"",
+      "confirmButton": "Remove",
+      "cancelButton": "Cancel"
+    }
+  },
+  "units": {
+    "tons": "Tons",
+    "squareMeters": "m²"
+  },
+  "occupants": {
+    "manageButton": "Manage occupants",
+    "table": {
+      "columns": {
+        "name": "Name",
+        "contact": "Contact",
+        "status": "Status"
+      },
+      "empty": "No occupants registered for this warehouse"
+    },
+    "manage": {
+      "title": "Manage occupants for {{storeName}}",
+      "pageTitle": "Manage occupants",
+      "description": "Select actors to add as occupants of this warehouse.",
+      "currentOccupants": "Current occupants",
+      "availableActors": "Available actors",
+      "actorsAvailable": "actor(s) available",
+      "searchPlaceholder": "Search by name, ONCC code or type...",
+      "selectedCount": "{{count}} selected",
+      "addSelected": "Add {{count}} occupant(s)",
+      "adding": "Adding...",
+      "processing": "Processing...",
+      "noAvailableActors": "No actors available to add",
+      "noResultsForSearch": "No actors found for \"{{search}}\"",
+      "columns": {
+        "name": "Name",
+        "onccId": "ONCC Code",
+        "location": "Location"
+      },
+      "addingOccupants": "Adding {{count}} occupant(s)...",
+      "occupantAdded": "{{name}} added successfully",
+      "occupantAddFailed": "Failed to add {{name}}",
+      "addedSummary": "{{success}}/{{total}} occupant(s) added successfully",
+      "addFailedSummary": "{{failed}}/{{total}} occupant(s) could not be added"
+    },
+    "actions": {
+      "removeOccupant": "Remove this occupant"
+    },
+    "success": {
+      "occupantRemoved": "Occupant removed successfully"
+    },
+    "errors": {
+      "loadFailed": "Error loading occupants",
+      "missingOccupantId": "Missing occupant ID",
+      "removeOccupantFailed": "Error removing occupant"
+    }
+  },
+  "actorTypes": {
+    "PRODUCER": "Producer",
+    "TRANSFORMER": "Transformer",
+    "PRODUCERS": "OPA",
+    "BUYER": "Buyer",
+    "EXPORTER": "Exporter"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "validation": {
+    "occupantIdRequired": "Occupant ID is required",
+    "occupantIdMismatch": "The entered ID does not match the occupant ID"
+  },
+  "missingEntityId": "Missing warehouse ID"
+}

@@ -1,0 +1,192 @@
+{
+  "page": {
+    "title": "Conventions"
+  },
+  "table": {
+    "searchPlaceholder": "Rechercher une convention...",
+    "noConventions": "Aucune convention enregistrée",
+    "noConventionsForSearch": "Aucune convention trouvée pour \"{{search}}\"",
+    "columns": {
+      "code": "Code",
+      "buyerExporter": "Exportateur/Acheteur",
+      "opa": "OPA",
+      "signatureDate": "Date de signature",
+      "status": "Statut"
+    }
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "associated": "Associée",
+    "notAssociated": "Non associée"
+  },
+  "form": {
+    "title": "Nouvelle convention",
+    "editTitle": "Modifier la convention",
+    "unsavedChangesWarning": "Vous avez des modifications non enregistrées. Voulez-vous vraiment quitter ?",
+    "cancelButton": "Annuler",
+    "step1": {
+      "cardTitle": "Informations de base",
+      "cardDescription": "Sélectionnez l'exportateur/acheteur, l'OPA et la date de signature",
+      "buyerExporter": "Exportateur / Acheteur",
+      "selectBuyerExporter": "Sélectionner un exportateur ou acheteur",
+      "opa": "OPA (Producteur)",
+      "selectOpa": "Sélectionner une OPA",
+      "signatureDate": "Date de signature",
+      "stepIndicator": "Étape {{current}} sur {{total}}",
+      "validation": {
+        "allFieldsRequired": "Tous les champs sont requis",
+        "buyerExporterRequired": "L'exportateur/acheteur est requis",
+        "producerRequired": "L'OPA est requise",
+        "signatureDateRequired": "La date de signature est requise"
+      }
+    },
+    "step2": {
+      "cardTitle": "Informations contractuelles",
+      "cardDescription": "Ajoutez les produits de la convention",
+      "addProductTitle": "Ajouter un produit",
+      "quality": "Qualité",
+      "selectQuality": "Choisir une qualité",
+      "standard": "Standard de cacao",
+      "selectStandard": "Choisir un standard",
+      "weight": "Poids",
+      "enterWeight": "Entrer le poids unitaire en Kg",
+      "bags": "Nbr. de sacs",
+      "enterBags": "Entrer nombre de sacs",
+      "humidity": "Taux d'humidité",
+      "enterHumidity": "ex: 7.5",
+      "pricePerKg": "Prix du Kg",
+      "enterPrice": "Entrer le prix",
+      "addButton": "Ajouter",
+      "productList": "Liste des produits",
+      "qualityOptions": {
+        "grade1": "Grade 1",
+        "grade2": "Grade 2",
+        "hs": "HS"
+      },
+      "standardOptions": {
+        "certifie": "Certifié",
+        "excellent": "Excellent",
+        "fin": "Fin",
+        "conventionnel": "Conventionnel"
+      },
+      "tableHeaders": {
+        "quality": "Qualité",
+        "standard": "Standard",
+        "weight": "Poids",
+        "bags": "Nbr. de sacs",
+        "humidity": "Humidité",
+        "pricePerKg": "Prix du Kg",
+        "actions": "Actions"
+      },
+      "validation": {
+        "invalidProduct": "Veuillez remplir tous les champs correctement",
+        "atLeastOneProduct": "Vous devez ajouter au moins un produit",
+        "qualityRequired": "La qualité est requise",
+        "standardRequired": "Le standard est requis",
+        "weightRequired": "Le poids est requis et doit être supérieur à 0",
+        "bagsRequired": "Le nombre de sacs est requis et doit être supérieur à 0",
+        "humidityInvalid": "Le taux d'humidité doit être entre 0 et 100",
+        "priceRequired": "Le prix par Kg est requis"
+      }
+    },
+    "step3": {
+      "cardTitle": "Documents",
+      "cardDescription": "Ajoutez les documents de la convention",
+      "contract": "Contrat d'achat",
+      "contractDescription": "Document obligatoire de la convention",
+      "identificationDocs": "Documents d'identification",
+      "identificationDocsDescription": "Documents d'identification de l'acheteur/exportateur (optionnel)",
+      "selectFile": "Sélectionner un fichier",
+      "selectFiles": "Sélectionner des fichiers",
+      "addMore": "Ajouter un autre document",
+      "uploadContractPrompt": "Glissez-déposez votre contrat ici ou cliquez pour sélectionner",
+      "uploadIdentificationPrompt": "Glissez-déposez vos documents ici ou cliquez pour sélectionner",
+      "uploadedFiles": "Fichiers téléchargés",
+      "validation": {
+        "contractRequired": "Le contrat d'achat est obligatoire",
+        "pdfOnly": "Seuls les fichiers PDF sont acceptés pour le contrat",
+        "fileTooLarge": "Le fichier est trop volumineux",
+        "invalidFileType": "Type de fichier non valide. Utilisez PDF, JPG ou PNG",
+        "fileRequired": "Le fichier est requis"
+      }
+    },
+    "summary": {
+      "cardTitle": "Récapitulatif",
+      "cardDescription": "Vérifiez les informations avant de créer la convention",
+      "basicInfo": "Informations de base",
+      "products": "produit(s)",
+      "productsCount": "Nombre de produits",
+      "productsTitle": "Produits de la convention",
+      "totalWeight": "Poids total",
+      "totalAmount": "Montant total",
+      "documents": "Documents",
+      "attachmentsTitle": "Pièces jointes",
+      "addAttachment": "Ajouter une pièce jointe",
+      "noAttachments": "Aucune pièce jointe",
+      "confirm": "Créer la convention",
+      "submitting": "Création en cours...",
+      "success": "Convention créée avec succès",
+      "error": "Erreur lors de la création de la convention",
+      "validation": {
+        "confirmCheckbox": "Je confirme que toutes les informations saisies sont exactes et complètes",
+        "confirmRequired": "Vous devez confirmer les informations pour continuer"
+      }
+    }
+  },
+  "view": {
+    "invalidId": "Identifiant de convention invalide",
+    "backToList": "Retour à la liste",
+    "loadingDetails": "Chargement des détails de la convention...",
+    "notFound": "Convention non trouvée",
+    "notFoundDescription": "La convention demandée n'existe pas ou a été supprimée.",
+    "conventionTitle": "Détails de la convention",
+    "associatedCampaigns": "Campagnes associées",
+    "metadata": "Métadonnées",
+    "createdAt": "Créée le",
+    "updatedAt": "Modifiée le",
+    "history": "Historique",
+    "otherInfo": "Autres informations"
+  },
+  "messages": {
+    "loadError": "Erreur lors du chargement des conventions",
+    "loadByIdError": "Erreur lors du chargement de la convention",
+    "createdSuccessOnline": "Convention créée avec succès",
+    "createdSuccessOffline": "Convention enregistrée. Elle sera synchronisée lorsque vous serez en ligne",
+    "creationError": "Erreur lors de la création de la convention",
+    "processing": "Traitement en cours...",
+    "updateSuccess": "Convention mise à jour avec succès",
+    "updateError": "Erreur lors de la mise à jour de la convention",
+    "updatedSuccessOnline": "Convention mise à jour avec succès",
+    "updatedSuccessOffline": "Convention mise à jour. Elle sera synchronisée lorsque vous serez en ligne"
+  },
+  "modals": {
+    "associateCampaign": {
+      "title": "Associer à la campagne active",
+      "description": "Vous êtes sur le point d'associer cette convention à la campagne <strong>{{campaignName}}</strong>.",
+      "noCampaignDescription": "Aucune campagne active n'est disponible pour le moment.",
+      "noCampaignError": "Aucune campagne active trouvée. Veuillez activer une campagne avant d'associer des conventions.",
+      "confirmInstruction": "Pour confirmer, veuillez saisir l'ID de la convention :",
+      "campaignLabel": "Campagne active",
+      "conventionIdLabel": "ID de la convention",
+      "conventionIdPlaceholder": "Saisissez {{conventionId}}",
+      "confirmButton": "Associer à la campagne",
+      "cancelButton": "Annuler",
+      "loadingCampaign": "Chargement de la campagne active..."
+    },
+    "dissociateCampaign": {
+      "title": "Dissocier de la campagne",
+      "description": "Vous êtes sur le point de dissocier cette convention de la campagne <strong>{{campaignName}}</strong>.",
+      "confirmInstruction": "Pour confirmer, veuillez saisir l'ID de la convention :",
+      "campaignLabel": "Campagne associée",
+      "conventionIdLabel": "ID de la convention",
+      "conventionIdPlaceholder": "Saisissez {{conventionId}}",
+      "confirmButton": "Dissocier de la campagne",
+      "cancelButton": "Annuler"
+    }
+  },
+  "validation": {
+    "conventionIdRequired": "L'ID de la convention est requis",
+    "conventionIdMismatch": "L'ID saisi ne correspond pas à l'ID de la convention"
+  }
+}

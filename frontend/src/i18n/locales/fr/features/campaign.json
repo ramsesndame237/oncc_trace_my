@@ -1,0 +1,86 @@
+{
+  "form": {
+    "editCampaign": "Modifier la campagne",
+    "createCampaign": "Créer une nouvelle campagne",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "startDatePlaceholder": "",
+    "endDatePlaceholder": ""
+  },
+  "view": {
+    "title": "Détails de la campagne",
+    "campaignCode": "Code de la campagne",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "duration": "Durée",
+    "days": "jours",
+    "history": "Historique",
+    "notFound": "Campagne non trouvée",
+    "notFoundDescription": "La campagne demandée n'a pas été trouvée",
+    "invalidId": "ID de campagne invalide",
+    "loadingDetails": "Chargement de la campagne...",
+    "loadingInfo": "Chargement des informations de la campagne...",
+    "backToList": "Retour à la liste",
+    "error": "Erreur"
+  },
+  "actions": {
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "edit": "Modifier",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "saveChanges": "Enregistrer les modifications",
+    "retry": "Réessayer",
+    "cancel": "Annuler"
+  },
+  "messages": {
+    "activationSuccess": "Campagne activée avec succès",
+    "activationError": "Erreur lors de l'activation",
+    "deactivationSuccess": "Campagne désactivée avec succès",
+    "deactivationError": "Erreur lors de la désactivation",
+    "updateError": "Une erreur est survenue lors de la modification de la campagne",
+    "createError": "Une erreur est survenue lors de la création de la campagne",
+    "cannotDeactivateLastCampaign": "Vous ne pouvez pas désactiver cette campagne car elle est la seule campagne présente dans le système.",
+    "processing": "Campagne en cours de traitement...",
+    "operationSuccess": "Opération {{operation}} de la campagne réussie",
+    "operationError": "Erreur lors de l'opération {{operation}} de la campagne"
+  },
+  "table": {
+    "title": "Liste des campagnes",
+    "noCampaigns": "Aucune campagne trouvée.",
+    "noCampaignsForSearch": "Aucune campagne trouvée pour \"{{search}}\".",
+    "searchPlaceholder": "Rechercher par code de campagne...",
+    "columns": {
+      "code": "Code",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "statusLabels": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "viewDetails": "Voir détails"
+  },
+  "page": {
+    "title": "Campagnes",
+    "loading": "Chargement de la page de campagnes...",
+    "editTitle": "Éditer une campagne",
+    "createTitle": "Créer une campagne"
+  },
+  "modals": {
+    "action": {
+      "activateTitle": "Activer la campagne",
+      "deactivateTitle": "Désactiver la campagne",
+      "activateDescription": "Cette action activera la campagne. Pour confirmer, veuillez saisir le code de la campagne :",
+      "deactivateDescription": "Cette action désactivera définitivement la campagne. Pour confirmer, veuillez saisir le code de la campagne :",
+      "campaignCodeLabel": "Code de la campagne",
+      "campaignCodePlaceholder": "Saisissez \"{{campaignCode}}\"",
+      "activateButton": "Activer",
+      "deactivateButton": "Désactiver",
+      "activating": "Activation...",
+      "deactivating": "Désactivation..."
+    }
+  }
+}

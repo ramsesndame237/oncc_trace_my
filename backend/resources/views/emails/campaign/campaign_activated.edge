@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Nouvelle campagne activée - {{ appName }}
+    </title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        line-height: 1.6;
+        color: #333333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      .logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        color: #10B981;
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .content {
+        margin: 30px 0;
+      }
+
+      .message {
+        background-color: #f0fdf4;
+        border-left: 4px solid #10B981;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+
+      .info-box {
+        background-color: #f9fafb;
+        padding: 20px;
+        border-radius: 6px;
+        margin: 20px 0;
+      }
+
+      .info-box h3 {
+        margin-top: 0;
+        color: #4b5563;
+      }
+
+      .info-box p {
+        margin: 10px 0;
+      }
+
+      .campaign-info {
+        background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 8px;
+        margin: 25px 0;
+        text-align: center;
+      }
+
+      .campaign-info h2 {
+        margin: 0 0 15px 0;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .campaign-info p {
+        margin: 8px 0;
+        font-size: 16px;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: #10B981;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 6px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+
+      .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        text-align: center;
+        color: #6b7280;
+        font-size: 14px;
+      }
+
+      .contact-info {
+        margin: 15px 0;
+      }
+
+      .highlight {
+        background-color: #fef3c7;
+        border-left: 4px solid #f59e0b;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+
+      ul {
+        margin: 15px 0;
+        padding-left: 25px;
+      }
+
+      ul li {
+        margin: 8px 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+
+        .campaign-info h2 {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>
+          🎉 Nouvelle campagne activée
+        </h1>
+      </div>
+
+      <div class="content">
+        <p>
+          Bonjour <strong>{{ userName }}</strong>,
+        </p>
+
+        <div class="message">
+          <p>
+            Nous avons le plaisir de vous informer qu'une nouvelle campagne vient d'être <strong>activée</strong> sur la plateforme {{ appName }}.
+          </p>
+        </div>
+
+        <div class="campaign-info">
+          <h2>📅 {{ campaign.code }}</h2>
+          <p>
+            <strong>Date de début :</strong> {{ campaign.startDate }}
+          </p>
+          <p>
+            <strong>Date de fin :</strong> {{ campaign.endDate }}
+          </p>
+          <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">
+            Statut : <strong>ACTIVE</strong>
+          </p>
+        </div>
+
+        <div class="highlight">
+          <h3 style="margin-top: 0;">
+            📋 À quoi cela vous engage ?
+          </h3>
+          <ul>
+            <li>
+              Toutes les opérations effectuées seront désormais liées à cette nouvelle campagne
+            </li>
+            <li>
+              Vérifiez que vos données sont à jour avant de commencer vos activités
+            </li>
+            <li>
+              Les rapports et statistiques seront générés pour cette campagne
+            </li>
+            <li>
+              Assurez-vous de bien comprendre les objectifs et les procédures de cette campagne
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          Cette activation marque le début d'une nouvelle période de collecte et de suivi. Nous comptons sur votre collaboration pour assurer le succès de cette campagne.
+        </p>
+
+        <div style="text-align: center;">
+          <a href="{{ appUrl }}" class="button">Accéder à {{ appName }}</a>
+        </div>
+
+        <div class="info-box">
+          <h3>
+            ℹ️ Informations importantes
+          </h3>
+          <p>
+            <strong>Date d'activation :</strong> {{ activationDate }}
+          </p>
+          <p>
+            <strong>Activée par :</strong> {{ activatedBy }}
+          </p>
+          <p style="margin-top: 15px; font-size: 14px; color: #6b7280;">
+            Toute l'équipe {{ appName }} reste à votre disposition pour vous accompagner durant cette campagne.
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <p>
+            Pour toute question ou assistance, contactez-nous :
+          </p>
+          <p>
+            <strong>Email :</strong> <a href="mailto:{{ supportEmail }}">{{ supportEmail }}</a>
+          </p>
+          @if(supportPhone)
+
+          <p>
+            <strong>Téléphone :</strong> {{ supportPhone }}
+          </p>
+
+          @end
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          &copy; {{ year }} {{ appName }}. Tous droits réservés.
+        </p>
+        <p style="font-size: 12px; color: #9ca3af; margin-top: 10px;">
+          Cet email a été envoyé automatiquement. Merci de ne pas y répondre directement.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

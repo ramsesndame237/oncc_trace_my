@@ -1,0 +1,59 @@
+{
+  "page": {
+    "loading": "Loading dashboard..."
+  },
+  "header": {
+    "title": "Dashboard",
+    "subtitle": "Welcome to your dashboard"
+  },
+  "welcome": {
+    "greeting": "Welcome, {{firstName}} {{lastName}}!",
+    "role": "Role",
+    "username": "@{{username}}",
+    "lastLogin": "Last login",
+    "firstLogin": "First login"
+  },
+  "stats": {
+    "loading": "Loading statistics...",
+    "error": "Loading error",
+    "title": "Basin Performance Indicators",
+    "subtitle": "Data updated on {{date}} - Key indicators to drive daily performance of the production basin",
+    "consult": "View",
+    "viewReports": "View reports"
+  },
+  "basin": {
+    "totalActorsZone": "Total number of actors registered in the zone",
+    "totalActorsBasin": "Total number of actors registered in the basin",
+    "marketShare": "Basin market share in national production",
+    "totalProduction": "Total basin production"
+  },
+  "admin": {
+    "generalStats": "General Statistics",
+    "generalStatsSubtitle": "Global overview of system data",
+    "totalStores": "Total stores",
+    "activeStoresPercentage": "{{percentage}}% active stores",
+    "users": "Users",
+    "activeUsers": "{{count}} active users",
+    "activeUsersDescription": "Active system users",
+    "productionBasins": "Production Basins",
+    "activeBasins": "{{count}} active basins",
+    "basinsConfigured": "Configured basins",
+    "currentCampaign": "Current Campaign",
+    "campaignStatus": "Campaign Status",
+    "campaignActive": "Active",
+    "campaignInactive": "Inactive",
+    "campaignCurrentState": "Current campaign state",
+    "trend": {
+      "active": "{{active}}/{{total}}",
+      "activeLabel": "active",
+      "thisMonth": "this month"
+    }
+  },
+  "quickActions": {
+    "title": "Quick Actions",
+    "manageUsers": "Manage users",
+    "manageUsersDescription": "Add, edit or delete users",
+    "manageBasins": "Manage basins",
+    "manageBasinsDescription": "Configure production basins"
+  }
+}

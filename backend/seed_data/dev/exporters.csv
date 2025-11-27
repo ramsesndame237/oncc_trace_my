@@ -1,0 +1,3 @@
+familyName,givenName,resourceType,isActive,localizationId,profesionnal_number,rccm_number,code_exporter_number,declaration_number,accountGivenName,accountFamilyName,accountEmail,accountPhone
+"Nguele","Blaise","EXPORTER",TRUE,"LT0401","12456789","123456789","987654321","123456789","Paul","exporter","paul@exporter.com","6789011234"
+"Kamga","Jean","EXPORTER",TRUE,"LT0402","12456789","987654321","123456789","987654321","Jacques","exporter","jacques@exporter.com","6789000034"

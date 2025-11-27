@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bienvenue - Gestionnaire d'acteur {{ appName }}
+    </title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      }
+      
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #2E8B57;
+      }
+      
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #2E8B57;
+        margin-bottom: 10px;
+      }
+      
+      .subtitle {
+        color: #8B4513;
+        font-size: 14px;
+        margin: 0;
+      }
+      
+      .content {
+        margin-bottom: 30px;
+      }
+      
+      .welcome-box {
+        background: linear-gradient(135deg, #2E8B57, #3CB371);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 20px 0;
+      }
+      
+      .actor-info-box {
+        background: linear-gradient(135deg, #8B4513, #A0522D);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+      
+      .credentials-box {
+        background-color: #f8f9fa;
+        border: 2px solid #2E8B57;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+      
+      .password-warning {
+        background-color: #fff3cd;
+        border: 1px solid #ffeaa7;
+        color: #856404;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      
+      .cta-button {
+        display: inline-block;
+        background-color: #2E8B57;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      
+      .steps {
+        background-color: #e8f4fd;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+      
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        font-size: 12px;
+        color: #666;
+      }
+      
+      .contact-info {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      
+      .actor-type {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          {{ appName }}
+        </div>
+        <p class="subtitle">
+          Bienvenue, gestionnaire d'acteur
+        </p>
+      </div>
+
+      <div class="content">
+        <div class="welcome-box">
+          <h2>
+            🎉 Bienvenue {{ managerName }} !
+          </h2>
+          <p>
+            Vous êtes maintenant gestionnaire d'un acteur {{ appName }}
+          </p>
+        </div>
+
+        <div class="actor-info-box">
+          <h3>
+            🏢 Acteur sous votre gestion
+          </h3>
+          <p>
+            <strong>Nom :</strong>{{ actorInfo.name }}
+          </p>
+          <p>
+            <strong>Type :</strong>{{ actorInfo.type }}
+            <span class="actor-type">{{ actorInfo.type }}</span>
+          </p>
+          @if(actorInfo.location)
+            <p>
+              <strong>Localisation :</strong>{{ actorInfo.location }}
+            </p>
+          @endif
+        </div>
+
+        <p>
+          Un compte gestionnaire a été créé pour vous permettre de gérer cet acteur dans {{ appName }}.
+        </p>
+
+        <div class="credentials-box">
+          <h3>
+            🔑 Vos identifiants de connexion
+          </h3>
+          <p>
+            <strong>Nom d'utilisateur :</strong>
+            <code style="background-color: #e9ecef; padding: 4px 8px; border-radius: 4px; font-family: monospace;">{{ username }}</code>
+          </p>
+          <p>
+            <strong>Mot de passe temporaire :</strong>
+            <code style="background-color: #e9ecef; padding: 4px 8px; border-radius: 4px; font-family: monospace;">{{ tempPassword }}</code>
+          </p>
+          <p>
+            <strong>Rôle :</strong>Gestionnaire d'acteur
+          </p>
+        </div>
+
+        <div class="password-warning">
+          <strong>⚠️ Important :</strong>Pour des raisons de sécurité, vous devrez changer ce mot de passe temporaire lors de votre première connexion.
+        </div>
+
+        <div class="steps">
+          <h3>
+            📋 Prochaines étapes
+          </h3>
+          <ol>
+            <li>
+              Cliquez sur le bouton ci-dessous pour accéder à la plateforme
+            </li>
+            <li>
+              Connectez-vous avec vos identifiants
+            </li>
+            <li>
+              Vérifiez votre email pour le code OTP
+            </li>
+            <li>
+              Changez votre mot de passe temporaire
+            </li>
+            <li>
+              Configurez vos questions de sécurité
+            </li>
+            <li>
+              Accédez à la gestion de votre acteur
+            </li>
+          </ol>
+        </div>
+
+        <div style="text-align: center;">
+          <a href="{{ loginUrl }}" class="cta-button">🚀 Accéder à {{ appName }}</a>
+        </div>
+
+        <div class="contact-info">
+          <h3>
+            💬 Besoin d'aide ?
+          </h3>
+          <p>
+            Notre équipe support est là pour vous accompagner :
+          </p>
+          <p>
+            <strong>Email :</strong> <a href="mailto:{{ supportEmail }}">{{ supportEmail }}</a>
+          </p>
+          @if(supportPhone)
+
+          <p>
+            <strong>Téléphone :</strong> {{ supportPhone }}
+          </p>
+
+          @end
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          &copy; {{ year }} {{ appName }}. Tous droits réservés.
+        </p>
+        <p style="font-size: 10px; color: #999;">
+          Cet email a été envoyé automatiquement, merci de ne pas y répondre.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

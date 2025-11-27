@@ -1,0 +1,368 @@
+{
+  "page": {
+    "title": "Transactions"
+  },
+  "tabs": {
+    "sales": "Ventes",
+    "purchases": "Achats"
+  },
+  "list": {
+    "code": "Code",
+    "date": "Date",
+    "locationType": "Type de localisation",
+    "quantity": "Quantité",
+    "totalPrice": "Prix total",
+    "actions": "Actions",
+    "transaction": "Transaction",
+    "searchPlaceholder": "Rechercher une transaction...",
+    "noResults": "Aucune transaction trouvée"
+  },
+  "fields": {
+    "seller": "Vendeur",
+    "buyer": "Acheteur",
+    "principalExporter": "Exportateur principal",
+    "campaign": "Campagne",
+    "calendar": "Calendrier",
+    "convention": "Convention",
+    "transactionDate": "Date de transaction",
+    "locationType": "Type de localisation",
+    "status": "Statut",
+    "notes": "Notes"
+  },
+  "locationTypes": {
+    "MARKET": "Marché",
+    "CONVENTION": "Convention",
+    "OUTSIDE_MARKET": "Hors marché"
+  },
+  "statuses": {
+    "pending": "En attente",
+    "confirmed": "Confirmée",
+    "cancelled": "Annulée",
+    "pendingComplementary": "À compléter"
+  },
+  "transactionTypes": {
+    "SALE": "Vente",
+    "PURCHASE": "Achat"
+  },
+  "view": {
+    "transactionTitle": "Transaction",
+    "invalidId": "ID de la transaction invalide",
+    "backToList": "Retour à la liste",
+    "loadingDetails": "Chargement des détails de la transaction...",
+    "notFound": "Transaction non trouvée",
+    "notFoundDescription": "La transaction demandée n'existe pas ou a été supprimée.",
+    "basicInfo": "Informations de base",
+    "code": "Code",
+    "transactionType": "Type de transaction",
+    "locationType": "Type de localisation",
+    "transactionDate": "Date de transaction",
+    "campaignName": "Campagne",
+    "seller": "Vendeur",
+    "buyer": "Acheteur",
+    "principalExporter": "Exportateur principal",
+    "calendar": "Calendrier",
+    "calendarCode": "Code du calendrier",
+    "calendarDate": "Date",
+    "calendarLocation": "Lieu",
+    "calendarLocationCode": "Localisation",
+    "convention": "Convention",
+    "conventionCode": "Code de la convention",
+    "conventionSignatureDate": "Date de signature",
+    "actor": "Acteur",
+    "products": {
+      "title": "Produits",
+      "quality": "Qualité",
+      "standard": "Standard",
+      "weight": "Poids",
+      "bagCount": "Nombre de sacs",
+      "pricePerKg": "Prix/kg",
+      "totalPrice": "Prix total",
+      "totalWeight": "Poids total",
+      "totalAmount": "Montant total",
+      "empty": "Aucun produit"
+    },
+    "notes": "Notes",
+    "documents": "Documents",
+    "metadata": "Métadonnées",
+    "createdAt": "Créé le",
+    "updatedAt": "Mis à jour le",
+    "otherInfo": "Autres informations",
+    "history": "Historique"
+  },
+  "actions": {
+    "viewDetails": "Voir détails",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "createComplementary": "Compléter"
+  },
+  "errors": {
+    "fetchFailed": "Erreur lors du chargement des transactions",
+    "noCampaignActive": "Aucune campagne active trouvée. Veuillez vous assurer qu'une campagne est active avant de créer une transaction.",
+    "missingRequiredData": "Données requises manquantes. Veuillez remplir tous les champs obligatoires.",
+    "creationFailed": "La création de la transaction a échoué. Veuillez réessayer.",
+    "userNotConnected": "Utilisateur non connecté - impossible de créer une transaction sans userId",
+    "pendingOperationNotFound": "Opération pendante non trouvée pour cette transaction",
+    "notFoundOffline": "Transaction non trouvée en mode hors ligne",
+    "offlineRetrievalFailed": "Impossible de récupérer la transaction en mode hors ligne",
+    "statusUpdateFailed": "Échec de la mise à jour du statut de la transaction"
+  },
+  "messages": {
+    "confirmSuccess": "Transaction confirmée avec succès",
+    "cancelSuccess": "Transaction annulée avec succès"
+  },
+  "edit": {
+    "title": "Modifier la transaction",
+    "pageTitle": "Modification de transaction",
+    "salePageTitle": "Modifier la transaction de vente",
+    "purchasePageTitle": "Modifier la transaction d'achat",
+    "fields": {
+      "transactionDate": "Date de transaction",
+      "seller": "Vendeur",
+      "buyer": "Acheteur",
+      "principalExporter": "Exportateur principal",
+      "calendar": "Calendrier",
+      "convention": "Convention"
+    },
+    "validation": {
+      "transactionDateRequired": "La date de transaction est requise",
+      "sellerRequired": "Le vendeur est requis",
+      "buyerRequired": "L'acheteur est requis"
+    },
+    "messages": {
+      "updateSuccess": "Transaction mise à jour avec succès",
+      "updateError": "Erreur lors de la mise à jour de la transaction",
+      "productsUpdateSuccess": "Produits mis à jour avec succès",
+      "productsUpdateError": "Erreur lors de la mise à jour des produits"
+    },
+    "wrongTypeError": "Le type de transaction ne correspond pas",
+    "onlyPendingError": "Seule une transaction en attente peut être modifiée",
+    "productsPageTitle": "Modifier les produits de la transaction"
+  },
+  "modals": {
+    "status": {
+      "confirmTitle": "Confirmer la transaction",
+      "cancelTitle": "Annuler la transaction",
+      "confirmDescription": "Vous êtes sur le point de confirmer cette transaction. Cette action validera la transaction.",
+      "cancelDescription": "Vous êtes sur le point d'annuler cette transaction. Cette action est irréversible.",
+      "confirmInstruction": "Veuillez saisir le code de la transaction pour confirmer :",
+      "transactionCodeLabel": "Code de la transaction",
+      "transactionCodePlaceholder": "Saisissez {{transactionCode}}",
+      "confirmButton": "Confirmer",
+      "cancelButton": "Annuler",
+      "closeButton": "Fermer",
+      "validation": {
+        "required": "Le code de la transaction est requis",
+        "mismatch": "Le code de la transaction ne correspond pas"
+      }
+    }
+  },
+  "saleAdd": {
+    "createTitle": "Nouvelle vente",
+    "editTitle": "Modifier la vente",
+    "steps": {
+      "generalInfo": "Informations générales",
+      "products": "Produits",
+      "documents": "Documents",
+      "summary": "Récapitulatif"
+    },
+    "fields": {
+      "locationType": "Type de localisation",
+      "seller": "Vendeur",
+      "buyer": "Acheteur",
+      "principalExporter": "Exportateur principal",
+      "campaign": "Campagne",
+      "calendar": "Calendrier",
+      "convention": "Convention",
+      "conventionLabel": "Convention",
+      "pickup": "Enlèvement",
+      "transactionDate": "Date de transaction",
+      "quality": "Qualité",
+      "standard": "Standard",
+      "weight": "Poids (kg)",
+      "bagCount": "Nombre de sacs",
+      "pricePerKg": "Prix par kg",
+      "totalPrice": "Prix total",
+      "humidity": "Humidité (%)",
+      "producer": "Producteur",
+      "product": "Produit",
+      "notes": "Notes",
+      "confirmed": "Confirmé",
+      "addProduct": "Ajouter un produit",
+      "addProductTitle": "Ajouter un produit",
+      "productList": "Produits ajoutés",
+      "removeProduct": "Retirer",
+      "uploadDocuments": "Télécharger des documents",
+      "saleContract": "Contrat de vente",
+      "saleContractDescription": "Veuillez télécharger le contrat de vente signé (format PDF recommandé)"
+    },
+    "qualityOptions": {
+      "grade1": "Grade 1",
+      "grade2": "Grade 2",
+      "hs": "HS (Hors Standard)"
+    },
+    "standardOptions": {
+      "certifie": "Certifié",
+      "excellent": "Excellent",
+      "fin": "Fin",
+      "conventionnel": "Conventionnel"
+    },
+    "validation": {
+      "locationTypeRequired": "Le type de localisation est requis",
+      "sellerRequired": "Le vendeur est requis",
+      "buyerRequired": "L'acheteur est requis",
+      "campaignRequired": "La campagne est requise",
+      "calendarRequired": "Le calendrier est requis pour une transaction de type Marché ou Convention",
+      "conventionRequired": "La convention est requise pour une transaction de type Convention",
+      "pickupRequired": "L'enlèvement est requis pour une transaction de type Convention",
+      "transactionDateRequired": "La date de transaction est requise",
+      "sellerBuyerNotSame": "Le vendeur et l'acheteur ne peuvent pas être identiques",
+      "qualityRequired": "La qualité est requise",
+      "standardRequired": "Le standard est requis",
+      "weightRequired": "Le poids est requis",
+      "weightInvalidType": "Le poids doit être un nombre",
+      "weightPositive": "Le poids doit être positif",
+      "bagCountRequired": "Le nombre de sacs est requis",
+      "bagCountInvalidType": "Le nombre de sacs doit être un nombre",
+      "bagCountInteger": "Le nombre de sacs doit être un entier",
+      "bagCountPositive": "Le nombre de sacs doit être positif",
+      "pricePerKgRequired": "Le prix par kg est requis",
+      "pricePerKgInvalidType": "Le prix par kg doit être un nombre",
+      "pricePerKgPositive": "Le prix par kg doit être positif",
+      "totalPriceRequired": "Le prix total est requis",
+      "totalPriceInvalidType": "Le prix total doit être un nombre",
+      "totalPricePositive": "Le prix total doit être positif",
+      "humidityMinZero": "L'humidité doit être supérieure ou égale à 0",
+      "humidityMaxHundred": "L'humidité doit être inférieure ou égale à 100",
+      "atLeastOneProduct": "Au moins un produit est requis",
+      "confirmationRequired": "Vous devez confirmer pour continuer",
+      "saleContractRequired": "Le contrat de vente est requis"
+    },
+    "buttons": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "cancel": "Annuler",
+      "finish": "Terminer",
+      "save": "Enregistrer"
+    },
+    "messages": {
+      "unsavedChanges": "Vous avez des modifications non sauvegardées. Êtes-vous sûr de vouloir quitter ?",
+      "step1Description": "Renseignez les informations générales de la transaction",
+      "step2Description": "Ajoutez les produits concernés par cette transaction",
+      "step3Description": "Ajoutez les documents justificatifs (optionnel)",
+      "step4Description": "Vérifiez les informations avant de finaliser"
+    },
+    "summary": {
+      "product": "Produit",
+      "totalWeight": "Poids total",
+      "totalPrice": "Prix total",
+      "documentsCount": "Nombre de documents",
+      "documents": "document(s)",
+      "confirmInformation": "Je confirme que les informations saisies sont correctes"
+    }
+  },
+  "purchaseAdd": {
+    "createTitle": "Nouvel achat",
+    "editTitle": "Modifier l'achat",
+    "steps": {
+      "generalInfo": "Informations générales",
+      "products": "Produits",
+      "documents": "Documents",
+      "summary": "Récapitulatif"
+    },
+    "fields": {
+      "locationType": "Type de localisation",
+      "buyer": "Acheteur",
+      "seller": "Vendeur",
+      "principalExporter": "Exportateur principal",
+      "campaign": "Campagne",
+      "calendar": "Calendrier",
+      "convention": "Convention",
+      "conventionLabel": "Convention",
+      "pickup": "Enlèvement",
+      "transactionDate": "Date de transaction",
+      "quality": "Qualité",
+      "standard": "Standard",
+      "weight": "Poids (kg)",
+      "bagCount": "Nombre de sacs",
+      "pricePerKg": "Prix par kg",
+      "totalPrice": "Prix total",
+      "humidity": "Humidité (%)",
+      "product": "Produit",
+      "notes": "Notes",
+      "confirmed": "Confirmé",
+      "addProduct": "Ajouter un produit",
+      "addProductTitle": "Ajouter un produit",
+      "productList": "Produits ajoutés",
+      "removeProduct": "Retirer",
+      "uploadDocuments": "Télécharger des documents",
+      "purchaseContract": "Contrat d'achat",
+      "purchaseContractDescription": "Veuillez télécharger le contrat d'achat signé (format PDF recommandé)"
+    },
+    "qualityOptions": {
+      "grade1": "Grade 1",
+      "grade2": "Grade 2",
+      "hs": "HS (Hors Standard)"
+    },
+    "standardOptions": {
+      "certifie": "Certifié",
+      "excellent": "Excellent",
+      "fin": "Fin",
+      "conventionnel": "Conventionnel"
+    },
+    "validation": {
+      "locationTypeRequired": "Le type de localisation est requis",
+      "sellerRequired": "Le vendeur est requis",
+      "buyerRequired": "L'acheteur est requis",
+      "campaignRequired": "La campagne est requise",
+      "calendarRequired": "Le calendrier est requis pour une transaction de type Marché ou Convention",
+      "conventionRequired": "La convention est requise pour une transaction de type Convention",
+      "pickupRequired": "L'enlèvement est requis pour une transaction de type Convention",
+      "transactionDateRequired": "La date de transaction est requise",
+      "sellerBuyerNotSame": "Le vendeur et l'acheteur ne peuvent pas être identiques",
+      "qualityRequired": "La qualité est requise",
+      "standardRequired": "Le standard est requis",
+      "weightRequired": "Le poids est requis",
+      "weightInvalidType": "Le poids doit être un nombre",
+      "weightPositive": "Le poids doit être positif",
+      "bagCountRequired": "Le nombre de sacs est requis",
+      "bagCountInvalidType": "Le nombre de sacs doit être un nombre",
+      "bagCountInteger": "Le nombre de sacs doit être un entier",
+      "bagCountPositive": "Le nombre de sacs doit être positif",
+      "pricePerKgRequired": "Le prix par kg est requis",
+      "pricePerKgInvalidType": "Le prix par kg doit être un nombre",
+      "pricePerKgPositive": "Le prix par kg doit être positif",
+      "totalPriceRequired": "Le prix total est requis",
+      "totalPriceInvalidType": "Le prix total doit être un nombre",
+      "totalPricePositive": "Le prix total doit être positif",
+      "humidityMinZero": "L'humidité doit être supérieure ou égale à 0",
+      "humidityMaxHundred": "L'humidité doit être inférieure ou égale à 100",
+      "atLeastOneProduct": "Au moins un produit est requis",
+      "confirmationRequired": "Vous devez confirmer pour continuer",
+      "purchaseContractRequired": "Le contrat d'achat est requis"
+    },
+    "buttons": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "cancel": "Annuler",
+      "finish": "Terminer",
+      "save": "Enregistrer"
+    },
+    "messages": {
+      "unsavedChanges": "Vous avez des modifications non sauvegardées. Êtes-vous sûr de vouloir quitter ?",
+      "step1Description": "Renseignez les informations générales de la transaction",
+      "step2Description": "Ajoutez les produits concernés par cette transaction",
+      "step3Description": "Ajoutez les documents justificatifs (optionnel)",
+      "step4Description": "Vérifiez les informations avant de finaliser"
+    },
+    "summary": {
+      "product": "Produit",
+      "totalWeight": "Poids total",
+      "totalPrice": "Prix total",
+      "documentsCount": "Nombre de documents",
+      "documents": "document(s)",
+      "confirmInformation": "Je confirme que les informations saisies sont correctes"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "page": {
+    "loading": "Chargement du tableau de bord..."
+  },
+  "header": {
+    "title": "Tableau de bord",
+    "subtitle": "Bienvenue sur votre tableau de bord"
+  },
+  "welcome": {
+    "greeting": "Bienvenue, {{firstName}} {{lastName}} !",
+    "role": "Rôle",
+    "username": "@{{username}}",
+    "lastLogin": "Dernière connexion",
+    "firstLogin": "Première connexion"
+  },
+  "stats": {
+    "loading": "Chargement des statistiques...",
+    "error": "Erreur de chargement",
+    "title": "Indicateurs de Performance du Bassin",
+    "subtitle": "Données actualisées au {{date}} - Indicateurs clés pour piloter la performance quotidienne du bassin de production",
+    "consult": "Consulter",
+    "viewReports": "Voir rapports"
+  },
+  "basin": {
+    "totalActorsZone": "Nombre total d'acteurs enregistrés dans la zone",
+    "totalActorsBasin": "Nombre total d'acteurs enregistrés dans le bassin",
+    "marketShare": "Part de marché du bassin dans la production nationale",
+    "totalProduction": "Production totale du bassin"
+  },
+  "admin": {
+    "generalStats": "Statistiques générales",
+    "generalStatsSubtitle": "Aperçu global des données système",
+    "totalStores": "Total des magasins",
+    "activeStoresPercentage": "{{percentage}}% de magasins actifs",
+    "users": "Utilisateurs",
+    "activeUsers": "{{count}} utilisateurs actifs",
+    "activeUsersDescription": "Utilisateurs actifs du système",
+    "productionBasins": "Bassins de production",
+    "activeBasins": "{{count}} bassins actifs",
+    "basinsConfigured": "Bassins configurés",
+    "currentCampaign": "Campagne en cours",
+    "campaignStatus": "Statut de la campagne",
+    "campaignActive": "Active",
+    "campaignInactive": "Inactive",
+    "campaignCurrentState": "État actuel de la campagne",
+    "trend": {
+      "active": "{{active}}/{{total}}",
+      "activeLabel": "actifs",
+      "thisMonth": "ce mois"
+    }
+  },
+  "quickActions": {
+    "title": "Actions rapides",
+    "manageUsers": "Gérer les utilisateurs",
+    "manageUsersDescription": "Ajouter, modifier ou supprimer des utilisateurs",
+    "manageBasins": "Gérer les bassins",
+    "manageBasinsDescription": "Configurer les bassins de production"
+  }
+}

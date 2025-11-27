@@ -1,0 +1,4 @@
+# Fichiers générés automatiquement par scripts/generate-types.ts
+# Ne pas commiter ces fichiers - ils sont régénérés avant chaque build
+*.types.ts
+*.json

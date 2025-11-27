@@ -1,0 +1,50 @@
+{
+  "search": {
+    "placeholder": "Rechercher une localisation..."
+  },
+  "table": {
+    "name": "Nom",
+    "code": "Code",
+    "hierarchy": "Hiérarchie",
+    "type": "Type",
+    "noLocations": "Aucune localisation trouvée.",
+    "noLocationsSearch": "Aucune localisation trouvée pour \"{{search}}\"."
+  },
+  "hierarchy": {
+    "region": "Région",
+    "department": "Département",
+    "district": "District",
+    "village": "Village",
+    "loading": "Chargement..."
+  },
+  "form": {
+    "locationLabel": "Localisation",
+    "locationsLabel": "Localisations",
+    "regionLabel": "Région",
+    "departmentLabel": "Département",
+    "districtLabel": "District",
+    "selectRegion": "Choisir une région",
+    "selectDepartment": "Choisir un département",
+    "selectDistrict": "Choisir un district"
+  },
+  "validation": {
+    "regionRequired": "La région est requise",
+    "departmentRequired": "Le département est requis",
+    "districtRequired": "Le district est requis"
+  },
+  "empty": {
+    "noRegions": "Aucune région disponible",
+    "noDepartments": "Aucun département disponible",
+    "noDistricts": "Aucun district disponible"
+  },
+  "actions": {
+    "addRegion": "+ Ajouter région",
+    "addDepartment": "+ Ajouter département",
+    "addDistrict": "+ Ajouter district"
+  },
+  "selector": {
+    "selectedLocations": "Localisations sélectionnées :",
+    "loading": "Chargement en cours...",
+    "offlineMode": "Mode hors ligne - Données locales uniquement"
+  }
+}

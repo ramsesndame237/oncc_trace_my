@@ -1,0 +1,68 @@
+{
+  "title": "Production Basins",
+  "singular": "Production Basin",
+  "add": "Add Basin",
+  "edit": "Edit Basin",
+  "view": "View Basin",
+  "delete": "Delete Basin",
+  "list": "Production Basins List",
+  "noData": "No production basins found",
+  "search": "Search Basin",
+  "filters": "Filters",
+  "resetFilters": "Reset Filters",
+
+  "fields": {
+    "code": "Code",
+    "name": "Name",
+    "description": "Description",
+    "region": "Region",
+    "department": "Department",
+    "municipality": "Municipality",
+    "location": "Location",
+    "status": "Status",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At"
+  },
+
+  "placeholders": {
+    "code": "Enter code",
+    "name": "Enter name",
+    "description": "Enter description",
+    "search": "Search by code or name"
+  },
+
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+
+  "toast": {
+    "processing": "Production basin is being processed...",
+    "created": "Production basin created",
+    "createdDescription": "The production basin has been created successfully",
+    "updated": "Production basin updated",
+    "updatedDescription": "The production basin has been updated successfully",
+    "deleted": "Production basin deleted",
+    "deletedDescription": "The production basin has been deleted successfully"
+  },
+
+  "errors": {
+    "loadFailed": "Failed to load basins",
+    "loadFailedDescription": "An error occurred while loading production basins",
+    "createFailed": "Failed to create",
+    "createFailedDescription": "An error occurred while creating the production basin",
+    "updateFailed": "Failed to update",
+    "updateFailedDescription": "An error occurred while updating the production basin",
+    "deleteFailed": "Failed to delete",
+    "deleteFailedDescription": "An error occurred while deleting the production basin",
+    "codeRequired": "Code is required",
+    "nameRequired": "Name is required",
+    "codeExists": "This code already exists",
+    "nameExists": "This name already exists"
+  },
+
+  "confirmation": {
+    "delete": "Delete Production Basin",
+    "deleteMessage": "Are you sure you want to delete this production basin? This action is irreversible."
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "form": {
+    "editUser": "Edit user",
+    "createUser": "Create new user",
+    "familyName": "Last name",
+    "givenName": "First name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "role": "Role",
+    "position": "Position",
+    "productionBasin": "Production basin",
+    "username": "Username",
+    "preferredLanguage": "Preferred language",
+    "noRoles": "No roles available",
+    "noBasins": "No basins found",
+    "selectUser": "Select a user",
+    "selectUserPlaceholder": "Choose a user"
+  },
+  "empty": {
+    "noUsers": "No users available",
+    "noUsersWithRole": "No users with this role"
+  },
+  "view": {
+    "title": "User details",
+    "personalInfo": "Personal information",
+    "contactInfo": "Contact information",
+    "rolePermissions": "Role and permissions",
+    "accountInfo": "Account information",
+    "lastLogin": "Last login",
+    "createdAt": "Created at",
+    "updatedAt": "Last updated",
+    "history": "History",
+    "notFound": "User not found",
+    "notFoundDescription": "The user was not found",
+    "invalidId": "Invalid user ID",
+    "loadingDetails": "Loading user details...",
+    "backToList": "Back to list",
+    "associatedActor": "Associated actor",
+    "actorType": "Actor type",
+    "actorName": "Actor name",
+    "viewActorDetails": "View actor details"
+  },
+  "actions": {
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "resetPassword": "Reset password",
+    "saving": "Saving...",
+    "save": "Save",
+    "saveChanges": "Save changes",
+    "retry": "Retry"
+  },
+  "messages": {
+    "processing": "User is being processed...",
+    "createProcessing": "User is being processed...",
+    "updateProcessing": "User is being processed...",
+    "activationSuccess": "User activated successfully",
+    "activationError": "Error during activation",
+    "deactivationSuccess": "User deactivated successfully",
+    "deactivationError": "Error during deactivation",
+    "blockSuccess": "User blocked successfully",
+    "passwordResetSuccess": "Password reset successfully",
+    "passwordResetError": "Error resetting password",
+    "statusUpdateError": "Error updating status",
+    "updateError": "An error occurred while updating the user",
+    "createError": "An error occurred while creating the user",
+    "loadError": "Error loading users",
+    "loadByIdError": "Error loading user",
+    "requiresInternet": "This operation requires an internet connection.",
+    "nameUpdated": "Name updated successfully!",
+    "phoneUpdated": "Phone number updated successfully!",
+    "passwordUpdated": "Password updated successfully!",
+    "infoUpdated": "Information updated successfully!",
+    "actorManagerRestriction": "The role and position of an actor manager cannot be modified"
+  },
+  "table": {
+    "title": "User list",
+    "noUsers": "No users found",
+    "noUsersForSearch": "No users found for \"{{search}}\".",
+    "searchPlaceholder": "Search for a user...",
+    "columns": {
+      "fullName": "Full name",
+      "role": "Role",
+      "status": "Status",
+      "users": "Users",
+      "actions": "Actions"
+    },
+    "statusLabels": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "blocked": "Blocked"
+    }
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English"
+  },
+  "page": {
+    "title": "Users",
+    "loading": "Loading users page...",
+    "editTitle": "Edit user",
+    "createTitle": "Create user"
+  },
+  "validation": {
+    "familyNameRequired": "Last name is required",
+    "familyNameMaxLength": "Last name must not exceed {{max}} characters",
+    "givenNameRequired": "First name is required",
+    "givenNameMaxLength": "First name must not exceed {{max}} characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email format",
+    "phoneInvalid": "Phone number is invalid",
+    "positionMinLength": "Position must contain at least {{min}} characters",
+    "positionMaxLength": "Position cannot exceed {{max}} characters",
+    "productionBasinRequired": "A production basin is required for this role",
+    "currentPasswordRequired": "Current password is required",
+    "newPasswordMinLength": "Password must contain at least 8 characters",
+    "newPasswordUpperCase": "Password must contain at least one uppercase letter",
+    "newPasswordLowerCase": "Password must contain at least one lowercase letter",
+    "newPasswordNumber": "Password must contain at least one number",
+    "confirmPasswordRequired": "Password confirmation is required",
+    "passwordMismatch": "Passwords do not match",
+    "userIdRequired": "User ID is required to confirm",
+    "userIdMismatch": "The entered user ID does not match"
+  },
+  "modals": {
+    "changeStatus": {
+      "activateTitle": "Activate user account",
+      "deactivateTitle": "Deactivate user account",
+      "activateDescription": "This action will activate the user account. The user will receive a notification email and will be able to log into the system.",
+      "deactivateDescription": "This action will temporarily deactivate the user account. The user will no longer be able to log in and will receive a notification email.",
+      "confirmInstruction": "To confirm, please enter the username:",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "Enter \"{{username}}\"",
+      "reasonLabel": "Deactivation reason (optional)",
+      "reasonPlaceholder": "Indicate the reason for this deactivation...",
+      "reasonDescription": "This reason will be included in the email sent to the user.",
+      "activateButton": "Activate",
+      "deactivateButton": "Deactivate"
+    },
+    "resetPassword": {
+      "title": "Reset password",
+      "description": "This action will reset the password of <b>{{userFullName}}</b> to the default password. The user will receive an email with the new login information and will need to change their password on next login.",
+      "confirmInstruction": "To confirm, please enter the username:",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "Enter \"{{username}}\"",
+      "resetButton": "Reset"
+    },
+    "editName": {
+      "title": "Edit Name",
+      "description": "Edit the first name and last name of",
+      "confirmInstruction": "To confirm this action, please enter your user ID:",
+      "givenNamePlaceholder": "Enter first name",
+      "familyNamePlaceholder": "Enter last name",
+      "userIdLabel": "User ID (confirmation)",
+      "userIdPlaceholder": "Enter \"{{userId}}\""
+    },
+    "editPhone": {
+      "title": "Edit Phone Number",
+      "description": "Edit the phone number",
+      "currentPhone": "current: {{phone}}",
+      "confirmInstruction": "To confirm this action, please enter your user ID:",
+      "phonePlaceholder": "Enter phone number",
+      "userIdLabel": "User ID (confirmation)",
+      "userIdPlaceholder": "Enter \"{{userId}}\""
+    },
+    "editPassword": {
+      "title": "Edit Password",
+      "description": "Change your password by entering your current password and your new password.",
+      "confirmInstruction": "To confirm this action, please enter your user ID:",
+      "currentPasswordPlaceholder": "Enter your current password",
+      "newPasswordPlaceholder": "Enter your new password",
+      "confirmPasswordPlaceholder": "Confirm your new password",
+      "userIdLabel": "User ID (confirmation)",
+      "userIdPlaceholder": "Enter \"{{userId}}\""
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "form": {
+    "editStore": "Modifier le magasin",
+    "createStore": "Créer un nouveau magasin",
+    "storeName": "Nom du magasin",
+    "storeCode": "Code du magasin",
+    "storeType": "Type de magasin",
+    "capacity": "Capacité",
+    "surfaceArea": "Superficie",
+    "location": "Adresse du magasin",
+    "selectStoreType": "Sélectionnez un type de magasin",
+    "noTypesAvailable": "Aucun type disponible"
+  },
+  "storeTypes": {
+    "EXPORT": "Export",
+    "GROUPING": "Groupage",
+    "GROUPING_AND_MACHINING": "Groupage et usinage"
+  },
+  "view": {
+    "title": "Détails du magasin",
+    "generalInfo": "Informations générales",
+    "characteristics": "Caractéristiques",
+    "systemInfo": "Informations système",
+    "occupants": "Occupants",
+    "history": "Historique",
+    "otherInfo": "Autres informations",
+    "storeName": "Nom du magasin",
+    "code": "Code",
+    "storeType": "Type de magasin",
+    "location": "Localisation",
+    "capacity": "Capacité",
+    "surfaceArea": "Superficie",
+    "createdAt": "Date de création",
+    "updatedAt": "Dernière mise à jour",
+    "notFound": "Magasin non trouvé",
+    "notFoundDescription": "Le magasin n'a pas été trouvé",
+    "invalidId": "ID magasin invalide",
+    "loadingDetails": "Chargement des détails du magasin...",
+    "backToList": "Retour à la liste",
+    "error": "Erreur"
+  },
+  "actions": {
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "edit": "Modifier",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "saveChanges": "Enregistrer les modifications",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "activateTooltipOffline": "Connexion requise pour activer le magasin",
+    "deactivateTooltipOffline": "Connexion requise pour désactiver le magasin",
+    "activateTooltip": "Activer le magasin",
+    "deactivateTooltip": "Désactiver le magasin"
+  },
+  "messages": {
+    "activationSuccess": "Magasin activé avec succès",
+    "activationError": "Erreur lors de l'activation",
+    "deactivationSuccess": "Magasin désactivé avec succès",
+    "deactivationError": "Erreur lors de la désactivation",
+    "updateError": "Une erreur est survenue lors de la modification du magasin",
+    "createError": "Une erreur est survenue lors de la création du magasin"
+  },
+  "table": {
+    "title": "Liste des magasins",
+    "noStores": "Aucun magasin trouvé.",
+    "noStoresForSearch": "Aucun magasin trouvé pour \"{{search}}\".",
+    "searchPlaceholder": "Rechercher un magasin...",
+    "columns": {
+      "name": "Nom",
+      "code": "Code",
+      "type": "Type",
+      "status": "Statut",
+      "stores": "Magasins",
+      "actions": "Actions"
+    },
+    "statusLabels": {
+      "active": "Actif",
+      "inactive": "Inactif"
+    },
+    "viewDetails": "Voir détails"
+  },
+  "page": {
+    "title": "Magasins",
+    "loading": "Chargement de la page magasins...",
+    "editTitle": "Éditer un magasin",
+    "createTitle": "Créer un magasin"
+  },
+  "modals": {
+    "changeStatus": {
+      "activateTitle": "Activer le magasin",
+      "deactivateTitle": "Désactiver le magasin",
+      "activateDescription": "Cette action activera le magasin pour la campagne en cours.",
+      "deactivateDescription": "Cette action désactivera le magasin pour la campagne en cours.",
+      "confirmInstruction": "Pour confirmer, veuillez saisir le code du magasin :",
+      "storeCodeLabel": "Code du magasin",
+      "storeCodePlaceholder": "Saisissez \"{{storeCode}}\"",
+      "activateButton": "Activer",
+      "deactivateButton": "Désactiver",
+      "confirmButton": "Confirmer",
+      "cancelButton": "Annuler"
+    },
+    "removeOccupant": {
+      "title": "Retirer l'occupant",
+      "description": "Cette action retirera l'occupant de ce magasin. Cette opération est réversible.",
+      "confirmInstruction": "Pour confirmer, veuillez saisir l'ID de l'occupant :",
+      "occupantIdLabel": "ID de l'occupant",
+      "occupantIdPlaceholder": "Saisissez \"{{occupantId}}\"",
+      "confirmButton": "Retirer",
+      "cancelButton": "Annuler"
+    }
+  },
+  "units": {
+    "tons": "Tonnes",
+    "squareMeters": "m²"
+  },
+  "occupants": {
+    "manageButton": "Gérer les occupants",
+    "table": {
+      "columns": {
+        "name": "Nom",
+        "contact": "Contact",
+        "status": "Statut"
+      },
+      "empty": "Aucun occupant enregistré pour ce magasin"
+    },
+    "manage": {
+      "title": "Gérer les occupants de {{storeName}}",
+      "pageTitle": "Gérer les occupants",
+      "description": "Sélectionnez les acteurs à ajouter comme occupants de ce magasin.",
+      "currentOccupants": "Occupants actuels",
+      "availableActors": "Acteurs disponibles",
+      "actorsAvailable": "acteur(s) disponible(s)",
+      "searchPlaceholder": "Rechercher par nom, code ONCC ou type...",
+      "selectedCount": "{{count}} sélectionné(s)",
+      "addSelected": "Ajouter {{count}} occupant(s)",
+      "adding": "Ajout en cours...",
+      "processing": "Traitement en cours...",
+      "noAvailableActors": "Aucun acteur disponible à ajouter",
+      "noResultsForSearch": "Aucun acteur trouvé pour \"{{search}}\"",
+      "columns": {
+        "name": "Nom",
+        "onccId": "Code ONCC",
+        "location": "Localisation"
+      },
+      "addingOccupants": "Ajout de {{count}} occupant(s) en cours...",
+      "occupantAdded": "{{name}} ajouté avec succès",
+      "occupantAddFailed": "Échec de l'ajout de {{name}}",
+      "addedSummary": "{{success}}/{{total}} occupant(s) ajouté(s) avec succès",
+      "addFailedSummary": "{{failed}}/{{total}} occupant(s) n'ont pas pu être ajoutés"
+    },
+    "actions": {
+      "removeOccupant": "Retirer cet occupant"
+    },
+    "success": {
+      "occupantRemoved": "Occupant retiré avec succès"
+    },
+    "errors": {
+      "loadFailed": "Erreur lors du chargement des occupants",
+      "missingOccupantId": "ID de l'occupant manquant",
+      "removeOccupantFailed": "Erreur lors du retrait de l'occupant"
+    }
+  },
+  "actorTypes": {
+    "PRODUCER": "Producteur",
+    "TRANSFORMER": "Transformateur",
+    "PRODUCERS": "OPA",
+    "BUYER": "Acheteur",
+    "EXPORTER": "Exportateur"
+  },
+  "status": {
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+  "validation": {
+    "occupantIdRequired": "L'ID de l'occupant est requis",
+    "occupantIdMismatch": "L'ID saisi ne correspond pas à l'ID de l'occupant"
+  },
+  "missingEntityId": "ID du magasin manquant"
+}

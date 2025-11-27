@@ -1,0 +1,1 @@
+export { StoreRepository } from './storeRepository';

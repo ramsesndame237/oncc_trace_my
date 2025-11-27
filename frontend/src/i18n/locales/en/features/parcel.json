@@ -1,0 +1,54 @@
+{
+  "messages": {
+    "processing": "Parcels are being processed....",
+    "processingOne": "Parcel is being processed ...."
+  },
+  "section": {
+    "loading": "Loading parcels...",
+    "noParcels": "No parcels registered for this producer",
+    "select": "Select a parcel",
+    "placeholder": "Select a parcel",
+    "noAvailable": "No parcel available",
+    "parcelNumber": "Parcel {{number}}"
+  },
+  "actions": {
+    "modify": "Modify",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "activatedSuccess": "Parcel activated successfully",
+    "deactivatedSuccess": "Parcel deactivated successfully",
+    "activationError": "Error during activation",
+    "deactivationError": "Error during deactivation"
+  },
+  "details": {
+    "location": "Location",
+    "plantationLocation": "Plantation location",
+    "parcelType": "Parcel type",
+    "surfaceArea": "Surface area",
+    "creationDate": "Creation date",
+    "identificationId": "Unique identification",
+    "onccId": "ONCC Code",
+    "plantationCode": "Plantation code",
+    "mapLocation": "Location on map"
+  },
+  "modal": {
+    "activateTitle": "Activate parcel",
+    "deactivateTitle": "Deactivate parcel",
+    "activateDescription": "This action will activate the parcel.",
+    "deactivateDescription": "This action will deactivate the parcel.",
+    "confirmPrompt": "To confirm, please enter the parcel ID: ",
+    "parcelIdLabel": "Parcel ID",
+    "parcelIdPlaceholder": "Enter \"{{parcelId}}\"",
+    "processing": "Processing...",
+    "cancel": "Cancel"
+  },
+  "view": {
+    "title": "Parcel list",
+    "error": "Error",
+    "invalidActorId": "Invalid producer ID",
+    "backToProducers": "Back to producers list",
+    "noParcelsFound": "No parcels found for this producer",
+    "noParcels": "No parcels",
+    "back": "Back"
+  }
+}

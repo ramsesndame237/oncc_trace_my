@@ -1,0 +1,155 @@
+{
+  "page": {
+    "title": "Synchronization Queue",
+    "description": "Manage operations pending synchronization with the server"
+  },
+  "list": {
+    "errorTitle": "Error loading",
+    "refreshPage": "Refresh page",
+    "noOperationsDefault": "No operations in queue. All data is synchronized!",
+    "noOperationsType": "No operations found for type \"{{type}}\".",
+    "noOperationsFailed": "No failed operations found.",
+    "noOperationsPending": "No pending operations found."
+  },
+  "table": {
+    "record": "Record",
+    "status": "Status",
+    "createdAt": "Created on",
+    "operations": "Operations"
+  },
+  "status": {
+    "failed": "Failed",
+    "pending": "Pending",
+    "attempts": "{{count}} attempt",
+    "attempts_plural": "{{count}} attempts",
+    "syncError": "Synchronization error"
+  },
+  "entityTypes": {
+    "productionBasin": "Production Basin",
+    "campaign": "Campaign",
+    "location": "Location",
+    "user": "User",
+    "store": "Store",
+    "actor": "Actor",
+    "parcel": "Parcel",
+    "convention": "Convention",
+    "document": "Document",
+    "calendar": "Calendar",
+    "product-transfer": "Product Transfer",
+    "transaction": "Transaction",
+    "entity": "Entity"
+  },
+  "operations": {
+    "create": "creation",
+    "update": "update",
+    "delete": "deletion",
+    "create_bulk": "bulk creation",
+    "create_parcel": "parcel creation",
+    "update_parcel": "parcel update",
+    "operation": "operation"
+  },
+  "sync": {
+    "successTitle": "{{entityName}}: {{operationName}} operation successful",
+    "errorTitle": "{{entityName}}: Error during {{operationName}} operation"
+  },
+  "mobile": {
+    "code": "Code:"
+  },
+  "actions": {
+    "modify": "Modify",
+    "retry": "Retry",
+    "delete": "Delete",
+    "viewDetails": "View details"
+  },
+  "entityInfo": {
+    "detailsTitle": "Entity Details",
+    "fields": {
+      "type": "Type",
+      "name": "Name",
+      "onccId": "ONCC ID",
+      "status": "Status",
+      "code": "Code",
+      "signature": "Signature",
+      "location": "Location",
+      "date": "Date",
+      "period": "Period",
+      "description": "Description",
+      "storeType": "Type",
+      "capacity": "Capacity",
+      "username": "Username",
+      "role": "Role",
+      "email": "Email",
+      "phone": "Phone",
+      "amount": "Amount",
+      "producersAdded": "Producers added",
+      "buyersAdded": "Buyers added"
+    },
+    "actorTypes": {
+      "PRODUCER": "Producer",
+      "PRODUCERS": "OPA",
+      "BUYER": "Buyer",
+      "EXPORTER": "Exporter",
+      "TRANSFORMER": "Transformer"
+    },
+    "calendarTypes": {
+      "MARCHE": "Market",
+      "ENLEVEMENT": "Pickup"
+    },
+    "transactionTypes": {
+      "SALE": "Sale",
+      "PURCHASE": "Purchase"
+    },
+    "storeTypes": {
+      "EXPORT": "Export",
+      "GROUPING": "Grouping",
+      "GROUPING_AND_MACHINING": "Grouping and Processing"
+    },
+    "userRoles": {
+      "admin": "Administrator",
+      "manager": "Manager",
+      "field_agent": "Field Agent",
+      "store_manager": "Store Manager",
+      "accountant": "Accountant",
+      "analyst": "Analyst",
+      "auditor": "Auditor"
+    },
+    "statuses": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "blocked": "Blocked"
+    }
+  },
+  "deleteModal": {
+    "titleSingle": "Delete operation",
+    "titleMultiple": "Delete {{count}} operations",
+    "descriptionSingle": "This action will permanently delete the operation for <b>{{name}}</b>. To confirm, please copy and paste the following ID: <SelectableText>{{entityId}}</SelectableText>",
+    "descriptionMultiple": "You are about to delete <b>{{count}} operations</b> from the queue. This action is irreversible. To confirm, please enter the number of operations.",
+    "confirmLabel": "Type to confirm",
+    "confirmPlaceholder": "Enter \"{{value}}\"",
+    "confirmError": "Input does not match expected value.",
+    "deleteButton": "Delete",
+    "deleting": "Deleting...",
+    "operationsCount": "{{count}} operations"
+  },
+  "toast": {
+    "error": "Error",
+    "loadError": "Error loading operations",
+    "loadErrorDefault": "Error loading outbox operations",
+    "deleteSuccess": "Deletion successful",
+    "deleteSuccessDescription": "The operation was successfully deleted",
+    "deleteError": "Deletion error",
+    "deleteErrorDefault": "Error during deletion",
+    "retryInfo": "Synchronization attempt",
+    "retryInfoDescription": "The operation has been added to the synchronization queue",
+    "retryError": "Error during retry",
+    "syncSuccess": "Synchronization",
+    "syncSuccessDescription": "Synchronization attempt performed",
+    "syncSuccessEntityType": "Synchronization of {{entityType}} completed",
+    "syncSuccessGeneral": "General synchronization completed",
+    "syncError": "Synchronization error",
+    "syncErrorDefault": "Error during synchronization",
+    "userNotConnected": "User not connected",
+    "operationNotFound": "Operation not found",
+    "accessDenied": "Unauthorized access to this operation"
+  }
+}

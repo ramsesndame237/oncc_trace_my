@@ -1,0 +1,12 @@
+familyName,givenName,email,phone,role
+Administrateur,Système,admin@sifc.cm,237600000001,technical_admin
+Mballa,Jean-Pierre,centre@sifc.cm,237600000002,bassin_admin
+Kamga,Marie-Claire,ouest@sifc.cm,237600000003,bassin_admin
+Epie,John,sudouest@sifc.cm,237600000004,bassin_admin
+Douala,Françoise,littoral@sifc.cm,237600000005,bassin_admin
+Fouda,Paul,agent.centre1@sifc.cm,237600000006,field_agent
+Nana,Sylvie,agent.centre2@sifc.cm,237600000007,field_agent
+Tchuente,Michel,agent.ouest1@sifc.cm,237600000008,field_agent
+Ngole,Grace,agent.sudouest1@sifc.cm,237600000009,field_agent
+Bassa,André,agent.littoral1@sifc.cm,237600000010,field_agent
+Gérant,Démo,gerant.demo@sifc.cm,237600000011,gerant

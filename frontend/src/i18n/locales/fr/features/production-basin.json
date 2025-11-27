@@ -1,0 +1,68 @@
+{
+  "title": "Bassins de production",
+  "singular": "Bassin de production",
+  "add": "Ajouter un bassin",
+  "edit": "Modifier le bassin",
+  "view": "Voir le bassin",
+  "delete": "Supprimer le bassin",
+  "list": "Liste des bassins de production",
+  "noData": "Aucun bassin de production trouvé",
+  "search": "Rechercher un bassin",
+  "filters": "Filtres",
+  "resetFilters": "Réinitialiser les filtres",
+
+  "fields": {
+    "code": "Code",
+    "name": "Nom",
+    "description": "Description",
+    "region": "Région",
+    "department": "Département",
+    "municipality": "Commune",
+    "location": "Localisation",
+    "status": "Statut",
+    "createdAt": "Créé le",
+    "updatedAt": "Modifié le"
+  },
+
+  "placeholders": {
+    "code": "Entrez le code",
+    "name": "Entrez le nom",
+    "description": "Entrez la description",
+    "search": "Rechercher par code ou nom"
+  },
+
+  "status": {
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+
+  "toast": {
+    "processing": "Bassin de production en cours de traitement...",
+    "created": "Bassin de production créé",
+    "createdDescription": "Le bassin de production a été créé avec succès",
+    "updated": "Bassin de production modifié",
+    "updatedDescription": "Le bassin de production a été modifié avec succès",
+    "deleted": "Bassin de production supprimé",
+    "deletedDescription": "Le bassin de production a été supprimé avec succès"
+  },
+
+  "errors": {
+    "loadFailed": "Échec du chargement des bassins",
+    "loadFailedDescription": "Une erreur s'est produite lors du chargement des bassins de production",
+    "createFailed": "Échec de la création",
+    "createFailedDescription": "Une erreur s'est produite lors de la création du bassin de production",
+    "updateFailed": "Échec de la modification",
+    "updateFailedDescription": "Une erreur s'est produite lors de la modification du bassin de production",
+    "deleteFailed": "Échec de la suppression",
+    "deleteFailedDescription": "Une erreur s'est produite lors de la suppression du bassin de production",
+    "codeRequired": "Le code est requis",
+    "nameRequired": "Le nom est requis",
+    "codeExists": "Ce code existe déjà",
+    "nameExists": "Ce nom existe déjà"
+  },
+
+  "confirmation": {
+    "delete": "Supprimer le bassin de production",
+    "deleteMessage": "Êtes-vous sûr de vouloir supprimer ce bassin de production ? Cette action est irréversible."
+  }
+}

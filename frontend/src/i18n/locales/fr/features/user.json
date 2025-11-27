@@ -1,0 +1,169 @@
+{
+  "form": {
+    "editUser": "Modifier l'utilisateur",
+    "createUser": "Créer un nouvel utilisateur",
+    "familyName": "Nom de famille",
+    "givenName": "Prénom",
+    "email": "Adresse email",
+    "phone": "Numéro de téléphone",
+    "role": "Rôle",
+    "position": "Poste",
+    "productionBasin": "Bassin de production",
+    "username": "Nom d'utilisateur",
+    "preferredLanguage": "Langue préférée",
+    "noRoles": "Aucun rôle disponible",
+    "noBasins": "Aucun bassin trouvé",
+    "selectUser": "Sélectionner un utilisateur",
+    "selectUserPlaceholder": "Choisissez un utilisateur"
+  },
+  "empty": {
+    "noUsers": "Aucun utilisateur disponible",
+    "noUsersWithRole": "Aucun utilisateur avec ce rôle"
+  },
+  "view": {
+    "title": "Détails de l'utilisateur",
+    "personalInfo": "Informations personnelles",
+    "contactInfo": "Informations de contact",
+    "rolePermissions": "Rôle et permissions",
+    "accountInfo": "Informations du compte",
+    "lastLogin": "Dernière connexion",
+    "createdAt": "Date de création",
+    "updatedAt": "Dernière modification",
+    "history": "Historique",
+    "notFound": "Utilisateur non trouvé",
+    "notFoundDescription": "L'utilisateur n'a pas été trouvé",
+    "invalidId": "ID utilisateur invalide",
+    "loadingDetails": "Chargement des détails de l'utilisateur...",
+    "backToList": "Retour à la liste",
+    "associatedActor": "Acteur associé",
+    "actorType": "Type d'acteur",
+    "actorName": "Nom de l'acteur",
+    "viewActorDetails": "Voir les détails de l'acteur"
+  },
+  "actions": {
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "resetPassword": "Réinitialiser le mot de passe",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "saveChanges": "Enregistrer les modifications",
+    "retry": "Réessayer"
+  },
+  "messages": {
+    "processing": "Utilisateur en cours de traitement...",
+    "createProcessing": "Utilisateur en cours de traitement...",
+    "updateProcessing": "Utilisateur en cours de traitement...",
+    "activationSuccess": "Utilisateur activé avec succès",
+    "activationError": "Erreur lors de l'activation",
+    "deactivationSuccess": "Utilisateur désactivé avec succès",
+    "deactivationError": "Erreur lors de la désactivation",
+    "blockSuccess": "Utilisateur bloqué avec succès",
+    "passwordResetSuccess": "Mot de passe réinitialisé avec succès",
+    "passwordResetError": "Erreur lors de la réinitialisation du mot de passe",
+    "statusUpdateError": "Erreur lors de la mise à jour du statut",
+    "updateError": "Une erreur est survenue lors de la modification de l'utilisateur",
+    "createError": "Une erreur est survenue lors de la création de l'utilisateur",
+    "loadError": "Erreur lors du chargement des utilisateurs",
+    "loadByIdError": "Erreur lors du chargement de l'utilisateur",
+    "requiresInternet": "Cette opération nécessite une connexion internet.",
+    "nameUpdated": "Nom et prénom mis à jour avec succès !",
+    "phoneUpdated": "Numéro de téléphone mis à jour avec succès !",
+    "passwordUpdated": "Mot de passe mis à jour avec succès !",
+    "infoUpdated": "Informations mises à jour avec succès !",
+    "actorManagerRestriction": "Le rôle et la position d'un gestionnaire d'acteur ne peuvent pas être modifiés"
+  },
+  "table": {
+    "title": "Liste des utilisateurs",
+    "noUsers": "Aucun utilisateur trouvé",
+    "noUsersForSearch": "Aucun utilisateur trouvé pour \"{{search}}\".",
+    "searchPlaceholder": "Rechercher un utilisateur...",
+    "columns": {
+      "fullName": "Nom complet",
+      "role": "Rôle",
+      "status": "Statut",
+      "users": "Utilisateurs",
+      "actions": "Actions"
+    },
+    "statusLabels": {
+      "active": "Actif",
+      "inactive": "Inactif",
+      "blocked": "Bloqué"
+    }
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English"
+  },
+  "page": {
+    "title": "Utilisateurs",
+    "loading": "Chargement de la page utilisateurs...",
+    "editTitle": "Éditer un utilisateur",
+    "createTitle": "Créer un utilisateur"
+  },
+  "validation": {
+    "familyNameRequired": "Le nom de famille est requis",
+    "familyNameMaxLength": "Le nom ne doit pas dépasser {{max}} caractères",
+    "givenNameRequired": "Le prénom est requis",
+    "givenNameMaxLength": "Le prénom ne doit pas dépasser {{max}} caractères",
+    "emailRequired": "L'email est requis",
+    "emailInvalid": "Format d'email invalide",
+    "phoneInvalid": "Le numéro de téléphone n'est pas valide",
+    "positionMinLength": "Le poste doit contenir au moins {{min}} caractères",
+    "positionMaxLength": "Le poste ne peut dépasser {{max}} caractères",
+    "productionBasinRequired": "Un bassin de production est requis pour ce rôle",
+    "userIdRequired": "L'ID utilisateur est requis pour confirmer",
+    "userIdMismatch": "L'ID utilisateur saisi ne correspond pas"
+  },
+  "modals": {
+    "changeStatus": {
+      "activateTitle": "Activer le compte utilisateur",
+      "deactivateTitle": "Désactiver le compte utilisateur",
+      "activateDescription": "Cette action activera le compte utilisateur. L'utilisateur recevra un email de notification et pourra se connecter au système.",
+      "deactivateDescription": "Cette action désactivera temporairement le compte utilisateur. L'utilisateur ne pourra plus se connecter et recevra un email de notification.",
+      "confirmInstruction": "Pour confirmer, veuillez saisir le nom d'utilisateur :",
+      "usernameLabel": "Nom d'utilisateur",
+      "usernamePlaceholder": "Saisissez \"{{username}}\"",
+      "reasonLabel": "Raison de la désactivation (optionnel)",
+      "reasonPlaceholder": "Indiquez la raison de cette désactivation...",
+      "reasonDescription": "Cette raison sera incluse dans l'email envoyé à l'utilisateur.",
+      "activateButton": "Activer",
+      "deactivateButton": "Désactiver"
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "description": "Cette action réinitialisera le mot de passe de <b>{{userFullName}}</b> au mot de passe par défaut. L'utilisateur recevra un email avec les nouvelles informations de connexion et devra changer son mot de passe à sa prochaine connexion.",
+      "confirmInstruction": "Pour confirmer, veuillez saisir le nom d'utilisateur :",
+      "usernameLabel": "Nom d'utilisateur",
+      "usernamePlaceholder": "Saisissez \"{{username}}\"",
+      "resetButton": "Réinitialiser"
+    },
+    "editName": {
+      "title": "Modifier le nom et prénom",
+      "description": "Modifiez le prénom et le nom de",
+      "confirmInstruction": "Pour confirmer cette action, veuillez saisir votre ID utilisateur :",
+      "givenNamePlaceholder": "Saisissez le prénom",
+      "familyNamePlaceholder": "Saisissez le nom",
+      "userIdLabel": "ID utilisateur (confirmation)",
+      "userIdPlaceholder": "Saisissez \"{{userId}}\""
+    },
+    "editPhone": {
+      "title": "Modifier le numéro de téléphone",
+      "description": "Modifiez le numéro de téléphone",
+      "currentPhone": "actuel : {{phone}}",
+      "confirmInstruction": "Pour confirmer cette action, veuillez saisir votre ID utilisateur :",
+      "phonePlaceholder": "Saisissez le numéro de téléphone",
+      "userIdLabel": "ID utilisateur (confirmation)",
+      "userIdPlaceholder": "Saisissez \"{{userId}}\""
+    },
+    "editPassword": {
+      "title": "Modifier le mot de passe",
+      "description": "Modifiez votre mot de passe en saisissant votre mot de passe actuel et votre nouveau mot de passe.",
+      "confirmInstruction": "Pour confirmer cette action, veuillez saisir votre ID utilisateur :",
+      "currentPasswordPlaceholder": "Saisissez votre mot de passe actuel",
+      "newPasswordPlaceholder": "Saisissez votre nouveau mot de passe",
+      "confirmPasswordPlaceholder": "Confirmez votre nouveau mot de passe",
+      "userIdLabel": "ID utilisateur (confirmation)",
+      "userIdPlaceholder": "Saisissez \"{{userId}}\""
+    }
+  }
+}

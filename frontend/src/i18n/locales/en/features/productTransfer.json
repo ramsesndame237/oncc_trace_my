@@ -1,0 +1,281 @@
+{
+  "title": "Product Transfers",
+  "groupageTitle": "Product Groupage",
+  "standardTitle": "Standard Transfers",
+  "singular": "Product Transfer",
+  "page": {
+    "title": "Product Transfers"
+  },
+  "tabs": {
+    "standard": "Transfer",
+    "groupage": "Groupage"
+  },
+  "fields": {
+    "code": "Code",
+    "transferType": "Transfer Type",
+    "transferDate": "Transfer Date",
+    "status": "Status",
+    "senderActor": "Sender Actor",
+    "senderStore": "Sender Store",
+    "receiverActor": "Receiver Actor",
+    "receiverStore": "Receiver Store",
+    "campaign": "Campaign",
+    "products": "Products",
+    "driverInfo": "Driver Information",
+    "fullName": "Full Name",
+    "vehicleRegistration": "Vehicle Registration",
+    "drivingLicenseNumber": "Driving License",
+    "routeSheetCode": "Route Sheet Code",
+    "quality": "Quality",
+    "weight": "Weight (kg)",
+    "numberOfBags": "Number of Bags",
+    "createdAt": "Created at",
+    "updatedAt": "Updated at"
+  },
+  "transferTypes": {
+    "GROUPAGE": "Groupage",
+    "STANDARD": "Standard"
+  },
+  "statuses": {
+    "pending": "Pending",
+    "validated": "Validated",
+    "cancelled": "Cancelled"
+  },
+  "actions": {
+    "view": "View Transfer",
+    "viewDetails": "View Details",
+    "validate": "Validate",
+    "cancel": "Cancel",
+    "filterByType": "Filter by Type",
+    "filterByStatus": "Filter by Status",
+    "searchByCode": "Search by Code"
+  },
+  "messages": {
+    "noTransfers": "No product transfers found",
+    "loading": "Loading transfers...",
+    "loadError": "Error loading documents",
+    "statusUpdated": "Transfer status updated successfully",
+    "validated": "Transfer validated successfully",
+    "cancelled": "Transfer cancelled successfully",
+    "cancelSuccess": "Transfer cancelled successfully",
+    "cancelError": "Error cancelling transfer"
+  },
+  "errors": {
+    "loadFailed": "Error loading product transfers",
+    "statusUpdateFailed": "Error updating status",
+    "notFound": "Product transfer not found",
+    "unauthorized": "You are not authorized to perform this action",
+    "offline": "This operation requires an internet connection"
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "transferDate": "Date",
+      "sender": "Sender",
+      "receiver": "Receiver",
+      "status": "Status",
+      "actions": "Actions"
+    }
+  },
+  "types": {
+    "GROUPAGE": "Groupage",
+    "STANDARD": "Standard"
+  },
+  "view": {
+    "transferTitle": "Transfer",
+    "invalidId": "Invalid transfer ID",
+    "backToList": "Back to list",
+    "loadingDetails": "Loading transfer details...",
+    "notFound": "Transfer not found",
+    "notFoundDescription": "The requested product transfer does not exist or has been deleted.",
+    "basicInfo": "Basic information",
+    "code": "Code",
+    "transferType": "Transfer type",
+    "transferDate": "Transfer date",
+    "status": "Status",
+    "sender": "Sender",
+    "receiver": "Receiver",
+    "actor": "Actor",
+    "store": "Store",
+    "driverInfo": {
+      "title": "Driver information",
+      "fullName": "Full name",
+      "vehicleRegistration": "Vehicle registration",
+      "drivingLicenseNumber": "Driving license",
+      "routeSheetCode": "Route sheet code"
+    },
+    "products": {
+      "title": "Products",
+      "quality": "Quality",
+      "weight": "Weight",
+      "kg": "kg",
+      "numberOfBags": "Number of bags",
+      "empty": "No products"
+    },
+    "campaign": "Campaign",
+    "campaignCode": "Campaign code",
+    "campaignName": "Campaign name",
+    "metadata": "Metadata",
+    "createdAt": "Created at",
+    "updatedAt": "Updated at",
+    "documents": "Documents",
+    "otherInfo": "Other information",
+    "history": "History",
+    "backToDetails": "Back to details"
+  },
+  "form": {
+    "title": "Edit transfer",
+    "create": "Create GROUPAGE transfer",
+    "createStandard": "Create STANDARD transfer",
+    "edit": {
+      "title": "Edit transfer",
+      "pageTitle": "Edit transfer",
+      "description": "Edit the transfer date. Actors and store cannot be modified.",
+      "onlyGroupageError": "Only GROUPAGE type transfers can be edited.",
+      "onlyStandardError": "Only STANDARD type transfers can be edited."
+    },
+    "steps": {
+      "generalInfo": "General information",
+      "products": "Products",
+      "summary": "Summary"
+    },
+    "step1": {
+      "title": "General information",
+      "description": "Fill in the basic transfer information",
+      "cardTitle": "General information",
+      "sender": "Sender",
+      "senderActor": "Sender",
+      "senderPlaceholder": "Select a producer",
+      "senderStore": "Sender store",
+      "senderStorePlaceholder": "Select a store",
+      "receiver": "Receiver",
+      "receiverActor": "Receiver",
+      "receiverPlaceholder": "Select an OPA",
+      "receiverStore": "Receiver store",
+      "receiverStorePlaceholder": "Select a store",
+      "transferDate": "Transfer date",
+      "driverSection": "Driver information",
+      "driverInfo": "Driver information",
+      "driverFullName": "Driver full name",
+      "vehicleRegistration": "Vehicle registration",
+      "driverVehicleRegistration": "Vehicle registration",
+      "drivingLicense": "Driving license number",
+      "driverDrivingLicenseNumber": "Driving license number",
+      "routeSheetCode": "Route sheet code",
+      "driverRouteSheetCode": "Route sheet code",
+      "hasNoDriver": "Transfer has no driver",
+      "validation": {
+        "transferDateRequired": "Transfer date is required"
+      }
+    },
+    "step2": {
+      "title": "Products to transfer",
+      "description": "Add the products to transfer",
+      "cardTitle": "Products to transfer",
+      "addProductTitle": "Add a product",
+      "productList": "Product list",
+      "addButton": "Add",
+      "addProduct": "Add a product",
+      "quality": "Quality",
+      "qualityPlaceholder": "Ex: AA, A, B",
+      "qualityOptions": {
+        "grade1": "Grade 1",
+        "grade2": "Grade 2",
+        "hs": "Off Standard"
+      },
+      "weight": "Weight (kg)",
+      "numberOfBags": "Number of bags",
+      "noProducts": "No products added",
+      "productAdded": "Product added successfully",
+      "productRemoved": "Product removed",
+      "totalWeight": "Total weight",
+      "totalBags": "Total bags",
+      "removeProduct": "Remove",
+      "editProduct": "Edit",
+      "validation": {
+        "atLeastOneProduct": "You must add at least one product"
+      }
+    },
+    "step3": {
+      "title": "Summary",
+      "description": "Review the information before submitting",
+      "cardTitle": "Transfer summary",
+      "generalInfo": "General information",
+      "productsTitle": "Products",
+      "products": "Products",
+      "totalWeight": "Total weight",
+      "totalBags": "Total bags",
+      "confirm": "Create transfer",
+      "confirmation": "I confirm that the information is correct",
+      "confirmationRequired": "You must confirm before submitting",
+      "validation": {
+        "confirmCheckbox": "I confirm that the information is correct",
+        "confirmRequired": "You must confirm before submitting"
+      }
+    },
+    "step4": {
+      "title": "Supporting Documents",
+      "description": "Upload documents (optional)",
+      "cardTitle": "Supporting Documents",
+      "routeSheetDocuments": "Route Sheets (optional)",
+      "routeSheetDescription": "You can upload one or more route sheets",
+      "routeSheetType": "Route Sheet",
+      "validation": {
+        "atLeastOneDocument": "At least one document is required"
+      }
+    },
+    "step5": {
+      "title": "Summary",
+      "description": "Review the information before submitting",
+      "cardTitle": "Transfer summary",
+      "generalInfo": "General information",
+      "productsTitle": "Products",
+      "products": "Products",
+      "driverInfo": "Driver Information",
+      "documents": "Documents",
+      "noDocuments": "No documents added",
+      "totalWeight": "Total weight",
+      "totalBags": "Total bags",
+      "confirm": "Create transfer",
+      "confirmation": "I confirm that the information is correct",
+      "confirmationRequired": "You must confirm before submitting",
+      "validation": {
+        "confirmCheckbox": "I confirm that the information is correct",
+        "confirmRequired": "You must confirm before submitting"
+      }
+    },
+    "actions": {
+      "next": "Next",
+      "previous": "Previous",
+      "cancel": "Cancel",
+      "submit": "Create transfer",
+      "submitting": "Creating...",
+      "save": "Save"
+    },
+    "messages": {
+      "unsavedChanges": "You have unsaved changes",
+      "createSuccess": "Transfer created successfully",
+      "createError": "Error creating transfer",
+      "updateSuccess": "Transfer updated successfully",
+      "updateSuccessOffline": "Transfer updated successfully (offline)",
+      "updateError": "Error updating transfer",
+      "validationError": "Please correct the errors before continuing",
+      "confirmCancel": "Are you sure you want to cancel? All data will be lost."
+    }
+  },
+  "modals": {
+    "cancel": {
+      "title": "Cancel Transfer",
+      "description": "Are you sure you want to cancel this transfer? This action is irreversible and the transfer will be marked as 'Cancelled'.",
+      "confirmInstruction": "To confirm, please enter the transfer code:",
+      "transferCodeLabel": "Transfer Code",
+      "transferCodePlaceholder": "Enter {{transferCode}}",
+      "confirmButton": "Cancel Transfer",
+      "cancelButton": "Go Back",
+      "validation": {
+        "required": "Transfer code is required",
+        "mismatch": "The entered code does not match"
+      }
+    }
+  }
+}

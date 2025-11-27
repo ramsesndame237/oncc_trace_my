@@ -1,0 +1,54 @@
+{
+  "messages": {
+    "processing": "Les parcelles sont en cours de traitement....",
+    "processingOne": "La parcelle est en cours de traitement ...."
+  },
+  "section": {
+    "loading": "Chargement des parcelles...",
+    "noParcels": "Aucune parcelle enregistrée pour ce producteur",
+    "select": "Sélectionner une parcelle",
+    "placeholder": "Sélectionner une parcelle",
+    "noAvailable": "Aucune parcelle disponible",
+    "parcelNumber": "Parcelle {{number}}"
+  },
+  "actions": {
+    "modify": "Modifier",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "activatedSuccess": "Parcelle activée avec succès",
+    "deactivatedSuccess": "Parcelle désactivée avec succès",
+    "activationError": "Erreur lors de l'activation",
+    "deactivationError": "Erreur lors de la désactivation"
+  },
+  "details": {
+    "location": "Localisation",
+    "plantationLocation": "Localisation de la plantation",
+    "parcelType": "Type de parcelle",
+    "surfaceArea": "Superficie",
+    "creationDate": "Date de création",
+    "identificationId": "Identification unique",
+    "onccId": "Code ONCC",
+    "plantationCode": "Code plantation",
+    "mapLocation": "Localisation sur la carte"
+  },
+  "modal": {
+    "activateTitle": "Activer la parcelle",
+    "deactivateTitle": "Désactiver la parcelle",
+    "activateDescription": "Cette action activera la parcelle.",
+    "deactivateDescription": "Cette action désactivera la parcelle.",
+    "confirmPrompt": "Pour confirmer, veuillez saisir l'ID de la parcelle : ",
+    "parcelIdLabel": "ID de la parcelle",
+    "parcelIdPlaceholder": "Saisissez \"{{parcelId}}\"",
+    "processing": "Traitement...",
+    "cancel": "Annuler"
+  },
+  "view": {
+    "title": "Liste des parcelles",
+    "error": "Erreur",
+    "invalidActorId": "ID producteur invalide",
+    "backToProducers": "Retour à la liste des producteurs",
+    "noParcelsFound": "Aucune parcelle trouvée pour ce producteur",
+    "noParcels": "Aucune parcelle",
+    "back": "Retour"
+  }
+}

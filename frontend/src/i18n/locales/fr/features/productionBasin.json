@@ -1,0 +1,95 @@
+{
+  "form": {
+    "editBasin": "Modifier le bassin de production",
+    "createBasin": "Détails du bassin de production",
+    "basinName": "Nom du bassin",
+    "description": "Description",
+    "associatedLocations": "Localisation associée",
+    "selectLocationsDescription": "Sélectionnez les localisations associées à ce bassin de production"
+  },
+  "view": {
+    "title": "Détails du bassin de production",
+    "basinName": "Nom du bassin",
+    "description": "Description",
+    "createdAt": "Date de création",
+    "locations": "Localisations",
+    "assignedUsers": "Utilisateurs assignés",
+    "history": "Historique",
+    "notFound": "Bassin non trouvé",
+    "notFoundDescription": "Le bassin de production demandé n'a pas été trouvé",
+    "invalidId": "ID du bassin invalide",
+    "loadingDetails": "Chargement du bassin de production...",
+    "loadingBasinInfo": "Chargement des informations du bassin...",
+    "backToList": "Retour à la liste"
+  },
+  "actions": {
+    "edit": "Modifier",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "saveChanges": "Enregistrer les modifications",
+    "retry": "Réessayer",
+    "cancel": "Annuler"
+  },
+  "messages": {
+    "updateError": "Une erreur est survenue lors de la modification du bassin",
+    "createError": "Une erreur est survenue lors de la création du bassin"
+  },
+  "toast": {
+    "processing": "Bassin de production en cours de traitement...",
+    "created": "Bassin de production créé",
+    "createdDescription": "Le bassin de production a été créé avec succès",
+    "updated": "Bassin de production modifié",
+    "updatedDescription": "Le bassin de production a été modifié avec succès"
+  },
+  "errors": {
+    "loadFailed": "Erreur lors du chargement des bassins",
+    "createFailed": "Erreur lors de la création du bassin",
+    "updateFailed": "Erreur lors de la modification du bassin"
+  },
+  "table": {
+    "title": "Bassins de production",
+    "noBasins": "Aucun bassin de production trouvé.",
+    "noBasinsForSearch": "Aucun bassin de production trouvé pour \"{{search}}\".",
+    "searchPlaceholder": "Rechercher un bassin de production...",
+    "columns": {
+      "basinName": "Nom du bassin",
+      "locationsCount": "Nombre de localisations",
+      "fullName": "Nom complet",
+      "username": "Nom d'utilisateur",
+      "role": "Rôle",
+      "name": "Nom",
+      "hierarchy": "Hiérarchie",
+      "viewDetails": "Voir détails",
+      "seeDetails": "Voir les détails"
+    },
+    "emptyMessages": {
+      "noLocations": "Aucune localisation associée à ce bassin",
+      "noUsers": "Aucun utilisateur assigné à ce bassin"
+    }
+  },
+  "page": {
+    "title": "Bassins de production",
+    "loading": "Chargement de la page de bassins...",
+    "editTitle": "Éditer un bassin de production"
+  },
+  "syncErrors": {
+    "locationConflicts": {
+      "title": "Conflits de localisation détectés",
+      "count_one": "{{count}} conflit de localisation",
+      "count_other": "{{count}} conflits de localisation",
+      "modifyBasin": "Modifier le bassin"
+    },
+    "hierarchicalConflicts": {
+      "title": "Conflits hiérarchiques détectés",
+      "regionDepartment": "région-département",
+      "departmentDistrict": "département-arrondissement",
+      "count_one": "{{count}} conflit hiérarchique ({{type}})",
+      "count_other": "{{count}} conflits hiérarchiques ({{type}})",
+      "attemptToAdd": "Tentative d'ajout de :",
+      "departmentsInConflict": "Départements en conflit :",
+      "districtsInConflict": "Arrondissements en conflit :",
+      "alreadyIn": "déjà dans :",
+      "modifyBasin": "Modifier ce bassin"
+    }
+  }
+}

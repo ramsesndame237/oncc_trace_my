@@ -1,0 +1,46 @@
+services:
+  # Service Next.js Frontend
+  frontend:
+    image: sgpn_frontend:latest
+    build:
+      context: .. # Contexte parent pour accéder à backend/
+      dockerfile: frontend/Dockerfile
+      network: host
+      target: runner
+      args:
+        - BUILDKIT_INLINE_CACHE=1
+        - PORT=${PORT:-3000}
+        - NEXT_PUBLIC_APP_NAME=${NEXT_PUBLIC_APP_NAME}
+        - NEXT_PUBLIC_APP_DESCRIPTION=${NEXT_PUBLIC_APP_DESCRIPTION}
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+        - NEXT_PUBLIC_API_VERSION=${NEXT_PUBLIC_API_VERSION}
+        - NEXT_PUBLIC_INDEXEDDB_NAME=${NEXT_PUBLIC_INDEXEDDB_NAME}
+        - NEXTAUTH_URL=${NEXTAUTH_URL}
+        - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+    container_name: sgpn_frontend_prod
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - PORT=${PORT:-3000}
+      - HOSTNAME=0.0.0.0
+      # Variables publiques Next.js
+      - NEXT_PUBLIC_APP_NAME=${NEXT_PUBLIC_APP_NAME}
+      - NEXT_PUBLIC_APP_DESCRIPTION=${NEXT_PUBLIC_APP_DESCRIPTION}
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+      - NEXT_PUBLIC_API_VERSION=${NEXT_PUBLIC_API_VERSION}
+      - NEXT_PUBLIC_INDEXEDDB_NAME=${NEXT_PUBLIC_INDEXEDDB_NAME}
+      # Variables NextAuth
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      # Desactiver la telemetrie
+      - NEXT_TELEMETRY_DISABLED=1
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${PORT:-3000}/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

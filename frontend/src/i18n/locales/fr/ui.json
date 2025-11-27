@@ -1,0 +1,8 @@
+{
+  "button": {
+    "loading": "Chargement..."
+  },
+  "input": {
+    "placeholder": "Entrez une valeur..."
+  }
+}

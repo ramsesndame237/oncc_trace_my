@@ -1,0 +1,122 @@
+services:
+  # Service AdonisJS pour le développement
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: sifc_api_dev
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - DEPLOY_MODE=${DEPLOY_MODE:-qa}
+      - PORT=${PORT:-3333}
+      - HOST=${HOST:-0.0.0.0}
+      - APP_KEY=${APP_KEY}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - TZ=${TZ:-UTC}
+      - DB_HOST=${DB_HOST:-postgres}
+      - DB_PORT=${DB_PORT:-5432}
+      - DB_USER=${DB_USER:-sgpn_user}
+      - DB_PASSWORD=${DB_PASSWORD:-sgpn_password}
+      - DB_DATABASE=${DB_DATABASE:-sgpn_db}
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+      - MINIO_ENDPOINT=${MINIO_ENDPOINT:-minio}
+      - MINIO_PORT=${MINIO_PORT:-9000}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY:-sgpn_minio_user}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY:-sgpn_minio_password}
+      - MINIO_USE_SSL=${MINIO_USE_SSL:-false}
+      - MINIO_BUCKET=${MINIO_BUCKET:-sgpn-documents}
+      - RUN_SEEDERS=${RUN_SEEDERS:-true}
+      - SEED_MODE=${SEED_MODE:-dev}
+      - RESET_DATABASE=${RESET_DATABASE:-false}
+      - DEFAULT_PASSWORD=${DEFAULT_PASSWORD:-12345678}
+      - SMTP_HOST=${SMTP_HOST:-mailhog}
+      - SMTP_PORT=${SMTP_PORT:-1025}
+      - APP_NAME=${APP_NAME:-ONCC TRACE}
+      - SUPPORT_EMAIL=${SUPPORT_EMAIL:-support@oncc.cm}
+      - SUPPORT_PHONE=${SUPPORT_PHONE:-+237 XXX XXX XXX}
+      - FRONTEND_URL=${FRONTEND_URL:-http://localhost:3000}
+      - SENDGRID_FROM_EMAIL=${SENDGRID_FROM_EMAIL:-noreply@oncc.cm}
+      - SENDGRID_FROM_NAME=${SENDGRID_FROM_NAME:-ONCC TRACE}
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-3333}:${PORT:-3333}"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./uploads:/app/uploads
+      - ./logs:/app/logs
+    networks:
+      - sifc_network
+    depends_on:
+      - postgres
+      - redis
+      - minio
+      - mailhog
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: sifc_postgres_dev
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-sifc_db}
+      POSTGRES_USER: ${DB_USER:-sifc_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-sifc_password}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_oncc_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    networks:
+      - sifc_network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.2
+    container_name: sifc_redis_dev
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_oncc_data:/data
+    networks:
+      - sifc_network
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+
+  minio:
+    image: quay.io/minio/minio
+    container_name: sifc_minio_dev
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-sifc_minio_user}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-sifc_minio_password}
+    ports:
+      - "${MINIO_PORT:-9000}:9000"
+      - "${MINIO_CONSOLE_PORT:-9001}:9003"
+    volumes:
+      - minio_oncc_data:/data
+    networks:
+      - sifc_network
+    command: server /data --console-address ":9003"
+    restart: unless-stopped
+
+  # MailHog - Capture d'emails pour le développement
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: sifc_mailhog_dev
+    ports:
+      - "1025:1025" # SMTP server
+      - "8025:8025" # Web UI
+    networks:
+      - sifc_network
+    restart: unless-stopped
+
+volumes:
+  postgres_oncc_data:
+  redis_oncc_data:
+  minio_oncc_data:
+
+networks:
+  sifc_network:
+    driver: bridge

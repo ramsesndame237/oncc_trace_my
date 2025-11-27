@@ -1,0 +1,135 @@
+{
+  "auth": {
+    "AUTH_LOGIN_SUCCESS": "Login successful",
+    "AUTH_LOGIN_OTP_SENT": "Verification code sent by email",
+    "AUTH_OTP_VERIFIED": "Verification code validated successfully",
+    "AUTH_LOGOUT_SUCCESS": "Logout successful",
+    "AUTH_PASSWORD_CHANGED": "Password changed successfully",
+    "AUTH_PASSWORD_RESET_EMAIL_SENT": "Password reset email sent",
+    "AUTH_PASSWORD_RESET_SUCCESS": "Password reset successfully",
+    "AUTH_ACCOUNT_INITIALIZED": "Account initialized successfully",
+    "AUTH_ACCOUNT_TO_BE_INITIALIZED": "Account to be initialized",
+    "AUTH_SECURITY_QUESTIONS_SETUP": "Security questions configured successfully"
+  },
+  "user": {
+    "USER_CREATED": "User created successfully",
+    "USER_UPDATED": "User updated successfully",
+    "USER_STATUS_UPDATED": "User status updated successfully",
+    "USER_PASSWORD_RESET": "User password reset successfully",
+    "USER_DELETED": "User deleted successfully",
+    "USER_LIST_SUCCESS": "User list retrieved successfully",
+    "USER_DETAILS_SUCCESS": "User details retrieved successfully",
+    "USER_AUDIT_HISTORY_SUCCESS": "Audit history retrieved successfully"
+  },
+  "actor": {
+    "ACTOR_LIST_SUCCESS": "Actor list retrieved successfully.",
+    "ACTOR_FETCH_SUCCESS": "Actor details retrieved successfully.",
+    "ACTOR_CREATED": "Actor created successfully.",
+    "ACTOR_UPDATED": "Actor updated successfully.",
+    "ACTOR_DELETED": "Actor deleted successfully.",
+    "ACTOR_ACTIVATED": "Actor activated successfully.",
+    "ACTOR_DEACTIVATED": "Actor deactivated successfully.",
+    "ACTOR_STATUS_UPDATED": "Actor status updated successfully."
+  },
+  "parcel": {
+    "PARCEL_LIST_SUCCESS": "Parcel list retrieved successfully",
+    "PARCEL_FETCH_SUCCESS": "Parcel details retrieved successfully",
+    "PARCEL_CREATED": "Parcel created successfully",
+    "PARCEL_UPDATED": "Parcel updated successfully",
+    "PARCEL_DELETED": "Parcel deleted successfully",
+    "PARCEL_ACTIVATED": "Parcel activated successfully",
+    "PARCEL_DEACTIVATED": "Parcel deactivated successfully",
+    "PARCEL_COORDINATES_ADDED": "Coordinates added successfully",
+    "PARCEL_COORDINATES_UPDATED": "Coordinates updated successfully",
+    "PARCEL_COORDINATES_REMOVED": "Coordinates removed successfully",
+    "PARCEL_STATS_SUCCESS": "Parcel statistics retrieved successfully"
+  },
+  "campaign": {
+    "CAMPAIGN_CREATED": "Campaign created successfully.",
+    "CAMPAIGN_UPDATED": "Campaign updated successfully.",
+    "CAMPAIGN_ACTIVATED": "Campaign activated successfully.",
+    "CAMPAIGN_DEACTIVATED": "Campaign deactivated successfully.",
+    "CAMPAIGN_LIST_SUCCESS": "Campaign list retrieved successfully.",
+    "CAMPAIGN_FETCH_SUCCESS": "Campaign details retrieved successfully.",
+    "CAMPAIGN_COUNT_SUCCESS": "Campaign count retrieved successfully.",
+    "CAMPAIGN_SYNC_CHECK_SUCCESS": "Campaign synchronization check completed successfully."
+  },
+  "productionBasin": {
+    "PRODUCTION_BASIN_LIST_SUCCESS": "Production basin list retrieved successfully",
+    "PRODUCTION_BASIN_CREATED": "Production basin created successfully",
+    "PRODUCTION_BASIN_UPDATED": "Production basin updated successfully",
+    "PRODUCTION_BASIN_DELETED": "Production basin deleted successfully",
+    "PRODUCTION_BASIN_USERS_ASSIGNED": "Users assigned to basin successfully",
+    "PRODUCTION_BASIN_USERS_UNASSIGNED": "Users unassigned from basin successfully",
+    "PRODUCTION_BASIN_STATS_SUCCESS": "Basin statistics retrieved successfully",
+    "PRODUCTION_BASIN_OPERATION_SUCCESS": "Production basin {{operation}} operation successful"
+  },
+  "store": {
+    "STORES_LIST_SUCCESS": "Store list retrieved successfully.",
+    "STORE_DETAILS_SUCCESS": "Store details retrieved successfully.",
+    "STORE_STATS_SUCCESS": "Store statistics retrieved successfully.",
+    "STORE_CREATED": "Store created successfully.",
+    "STORE_UPDATED": "Store updated successfully.",
+    "STORE_DELETED": "Store deleted successfully.",
+    "STORE_STATUS_UPDATED": "Store status updated successfully.",
+    "STORE_ACTIVATED": "Store activated successfully for the current campaign.",
+    "STORE_DEACTIVATED": "Store deactivated successfully for the current campaign.",
+    "STORE_OCCUPANT_REMOVED": "Occupant removed successfully."
+  },
+  "document": {
+    "DOCUMENT_LIST_SUCCESS": "Document list retrieved successfully",
+    "DOCUMENT_DETAILS_SUCCESS": "Document details retrieved successfully",
+    "DOCUMENT_FETCH_SUCCESS": "Document retrieved successfully",
+    "DOCUMENT_CREATED": "Document created successfully",
+    "DOCUMENT_UPDATED": "Document updated successfully",
+    "DOCUMENT_DELETED": "Document deleted successfully",
+    "DOCUMENT_DOWNLOADED": "Document downloaded successfully",
+    "DOCUMENT_PREVIEWED": "Document preview displayed successfully",
+    "DOCUMENT_UPLOADED": "Document uploaded successfully",
+    "DOCUMENTS_FETCHED": "Documents retrieved successfully",
+    "DOCUMENT_SYNC_SUCCESS": "Documents synchronized successfully"
+  },
+  "location": {
+    "LOCATION_LIST_SUCCESS": "Location list retrieved successfully",
+    "LOCATION_HIERARCHY_SUCCESS": "Location hierarchy retrieved successfully",
+    "LOCATION_CHILDREN_SUCCESS": "Sub-locations retrieved successfully"
+  },
+  "auditLog": {
+    "AUDIT_LOG_LIST_SUCCESS": "Audit history retrieved successfully",
+    "AUDIT_LOG_DETAILS_SUCCESS": "Audit log details retrieved successfully",
+    "AUDIT_LOG_STATS_SUCCESS": "Audit statistics retrieved successfully"
+  },
+  "sync": {
+    "SYNC_CHECK_SUCCESS": "Synchronization check successful"
+  },
+  "outbox": {
+    "OUTBOX_OPERATION_DELETED": "Operation successfully deleted from queue",
+    "OUTBOX_BULK_OPERATIONS_DELETED": "Operations successfully deleted from queue",
+    "OUTBOX_SYNC_SUCCESS": "Synchronization completed successfully",
+    "OUTBOX_RETRY_SUCCESS": "Retry synchronization launched successfully"
+  },
+  "productTransfer": {
+    "PRODUCT_TRANSFER_LIST_SUCCESS": "Product transfers list retrieved successfully",
+    "PRODUCT_TRANSFER_FETCH_SUCCESS": "Product transfer retrieved successfully",
+    "PRODUCT_TRANSFER_CREATE_SUCCESS": "Product transfer created successfully",
+    "PRODUCT_TRANSFER_UPDATE_SUCCESS": "Product transfer updated successfully",
+    "PRODUCT_TRANSFER_DELETE_SUCCESS": "Product transfer deleted successfully",
+    "PRODUCT_TRANSFER_CREATED": "Product transfer created successfully",
+    "PRODUCT_TRANSFER_UPDATED": "Product transfer updated successfully",
+    "PRODUCT_TRANSFER_STATUS_UPDATED": "Transfer status updated successfully",
+    "PRODUCT_TRANSFER_DELETED": "Product transfer deleted successfully",
+    "PRODUCT_TRANSFER_DETAILS_SUCCESS": "Transfer details retrieved successfully"
+  },
+  "calendar": {
+    "CALENDAR_CREATED": "Calendar created successfully",
+    "CALENDAR_UPDATED": "Calendar updated successfully",
+    "CALENDAR_STATUS_UPDATED": "Calendar status updated successfully",
+    "CALENDAR_DELETED": "Calendar deleted successfully",
+    "CALENDAR_LIST_SUCCESS": "Calendar list retrieved successfully",
+    "CALENDAR_DETAILS_SUCCESS": "Calendar details retrieved successfully",
+    "CALENDAR_AUDIT_HISTORY_SUCCESS": "Audit history retrieved successfully"
+  },
+  "common": {
+    "OPERATION_SUCCESS": "Operation successful"
+  }
+}

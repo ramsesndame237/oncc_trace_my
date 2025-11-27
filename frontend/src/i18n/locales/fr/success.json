@@ -1,0 +1,135 @@
+{
+  "auth": {
+    "AUTH_LOGIN_SUCCESS": "Connexion réussie",
+    "AUTH_LOGIN_OTP_SENT": "Code de vérification envoyé par email",
+    "AUTH_OTP_VERIFIED": "Code de vérification validé avec succès",
+    "AUTH_LOGOUT_SUCCESS": "Déconnexion réussie",
+    "AUTH_PASSWORD_CHANGED": "Mot de passe modifié avec succès",
+    "AUTH_PASSWORD_RESET_EMAIL_SENT": "Email de réinitialisation envoyé",
+    "AUTH_PASSWORD_RESET_SUCCESS": "Mot de passe réinitialisé avec succès",
+    "AUTH_ACCOUNT_INITIALIZED": "Compte initialisé avec succès",
+    "AUTH_ACCOUNT_TO_BE_INITIALIZED": "Compte à initialiser",
+    "AUTH_SECURITY_QUESTIONS_SETUP": "Questions de sécurité configurées avec succès"
+  },
+  "user": {
+    "USER_CREATED": "Utilisateur créé avec succès",
+    "USER_UPDATED": "Utilisateur mis à jour avec succès",
+    "USER_STATUS_UPDATED": "Statut utilisateur mis à jour avec succès",
+    "USER_PASSWORD_RESET": "Mot de passe utilisateur réinitialisé avec succès",
+    "USER_DELETED": "Utilisateur supprimé avec succès",
+    "USER_LIST_SUCCESS": "Liste des utilisateurs récupérée avec succès",
+    "USER_DETAILS_SUCCESS": "Détails de l'utilisateur récupérés avec succès",
+    "USER_AUDIT_HISTORY_SUCCESS": "Historique d'audit récupéré avec succès"
+  },
+  "actor": {
+    "ACTOR_LIST_SUCCESS": "Liste des acteurs récupérée avec succès.",
+    "ACTOR_FETCH_SUCCESS": "Détails de l'acteur récupérés avec succès.",
+    "ACTOR_CREATED": "Acteur créé avec succès.",
+    "ACTOR_UPDATED": "Acteur mis à jour avec succès.",
+    "ACTOR_DELETED": "Acteur supprimé avec succès.",
+    "ACTOR_ACTIVATED": "Acteur activé avec succès.",
+    "ACTOR_DEACTIVATED": "Acteur désactivé avec succès.",
+    "ACTOR_STATUS_UPDATED": "Statut de l'acteur mis à jour avec succès."
+  },
+  "parcel": {
+    "PARCEL_LIST_SUCCESS": "Liste des parcelles récupérée avec succès",
+    "PARCEL_FETCH_SUCCESS": "Détails de la parcelle récupérés avec succès",
+    "PARCEL_CREATED": "Parcelle créée avec succès",
+    "PARCEL_UPDATED": "Parcelle mise à jour avec succès",
+    "PARCEL_DELETED": "Parcelle supprimée avec succès",
+    "PARCEL_ACTIVATED": "Parcelle activée avec succès",
+    "PARCEL_DEACTIVATED": "Parcelle désactivée avec succès",
+    "PARCEL_COORDINATES_ADDED": "Coordonnées ajoutées avec succès",
+    "PARCEL_COORDINATES_UPDATED": "Coordonnées mises à jour avec succès",
+    "PARCEL_COORDINATES_REMOVED": "Coordonnées supprimées avec succès",
+    "PARCEL_STATS_SUCCESS": "Statistiques des parcelles récupérées avec succès"
+  },
+  "campaign": {
+    "CAMPAIGN_CREATED": "Campagne créée avec succès.",
+    "CAMPAIGN_UPDATED": "Campagne mise à jour avec succès.",
+    "CAMPAIGN_ACTIVATED": "Campagne activée avec succès.",
+    "CAMPAIGN_DEACTIVATED": "Campagne désactivée avec succès.",
+    "CAMPAIGN_LIST_SUCCESS": "Liste des campagnes récupérée avec succès.",
+    "CAMPAIGN_FETCH_SUCCESS": "Détails de la campagne récupérés avec succès.",
+    "CAMPAIGN_COUNT_SUCCESS": "Nombre de campagnes récupéré avec succès.",
+    "CAMPAIGN_SYNC_CHECK_SUCCESS": "Vérification de synchronisation des campagnes effectuée avec succès."
+  },
+  "productionBasin": {
+    "PRODUCTION_BASIN_LIST_SUCCESS": "Liste des bassins de production récupérée avec succès",
+    "PRODUCTION_BASIN_CREATED": "Bassin de production créé avec succès",
+    "PRODUCTION_BASIN_UPDATED": "Bassin de production mis à jour avec succès",
+    "PRODUCTION_BASIN_DELETED": "Bassin de production supprimé avec succès",
+    "PRODUCTION_BASIN_USERS_ASSIGNED": "Utilisateurs assignés au bassin avec succès",
+    "PRODUCTION_BASIN_USERS_UNASSIGNED": "Utilisateurs désassignés du bassin avec succès",
+    "PRODUCTION_BASIN_STATS_SUCCESS": "Statistiques des bassins récupérées avec succès",
+    "PRODUCTION_BASIN_OPERATION_SUCCESS": "Opération {{operation}} du bassin de production réussie"
+  },
+  "store": {
+    "STORES_LIST_SUCCESS": "Liste des magasins récupérée avec succès.",
+    "STORE_DETAILS_SUCCESS": "Détails du magasin récupérés avec succès.",
+    "STORE_STATS_SUCCESS": "Statistiques des magasins récupérées avec succès.",
+    "STORE_CREATED": "Magasin créé avec succès.",
+    "STORE_UPDATED": "Magasin mis à jour avec succès.",
+    "STORE_DELETED": "Magasin supprimé avec succès.",
+    "STORE_STATUS_UPDATED": "Statut du magasin mis à jour avec succès.",
+    "STORE_ACTIVATED": "Magasin activé avec succès pour la campagne en cours.",
+    "STORE_DEACTIVATED": "Magasin désactivé avec succès pour la campagne en cours.",
+    "STORE_OCCUPANT_REMOVED": "Occupant retiré avec succès."
+  },
+  "document": {
+    "DOCUMENT_LIST_SUCCESS": "Liste des documents récupérée avec succès",
+    "DOCUMENT_DETAILS_SUCCESS": "Détails du document récupérés avec succès",
+    "DOCUMENT_FETCH_SUCCESS": "Document récupéré avec succès",
+    "DOCUMENT_CREATED": "Document créé avec succès",
+    "DOCUMENT_UPDATED": "Document mis à jour avec succès",
+    "DOCUMENT_DELETED": "Document supprimé avec succès",
+    "DOCUMENT_DOWNLOADED": "Document téléchargé avec succès",
+    "DOCUMENT_PREVIEWED": "Prévisualisation du document affichée avec succès",
+    "DOCUMENT_UPLOADED": "Document uploadé avec succès",
+    "DOCUMENTS_FETCHED": "Documents récupérés avec succès",
+    "DOCUMENT_SYNC_SUCCESS": "Documents synchronisés avec succès"
+  },
+  "location": {
+    "LOCATION_LIST_SUCCESS": "Liste des localisations récupérée avec succès",
+    "LOCATION_HIERARCHY_SUCCESS": "Hiérarchie des localisations récupérée avec succès",
+    "LOCATION_CHILDREN_SUCCESS": "Sous-localisations récupérées avec succès"
+  },
+  "auditLog": {
+    "AUDIT_LOG_LIST_SUCCESS": "Historique d'audit récupéré avec succès",
+    "AUDIT_LOG_DETAILS_SUCCESS": "Détails du log d'audit récupérés avec succès",
+    "AUDIT_LOG_STATS_SUCCESS": "Statistiques d'audit récupérées avec succès"
+  },
+  "sync": {
+    "SYNC_CHECK_SUCCESS": "Vérification de synchronisation réussie"
+  },
+  "outbox": {
+    "OUTBOX_OPERATION_DELETED": "Opération supprimée avec succès de la file d'attente",
+    "OUTBOX_BULK_OPERATIONS_DELETED": "Opérations supprimées avec succès de la file d'attente",
+    "OUTBOX_SYNC_SUCCESS": "Synchronisation effectuée avec succès",
+    "OUTBOX_RETRY_SUCCESS": "Nouvelle tentative de synchronisation lancée avec succès"
+  },
+  "productTransfer": {
+    "PRODUCT_TRANSFER_LIST_SUCCESS": "Liste des transferts récupérée avec succès",
+    "PRODUCT_TRANSFER_FETCH_SUCCESS": "Transfert de produit récupéré avec succès",
+    "PRODUCT_TRANSFER_CREATE_SUCCESS": "Transfert de produit créé avec succès",
+    "PRODUCT_TRANSFER_UPDATE_SUCCESS": "Transfert de produit mis à jour avec succès",
+    "PRODUCT_TRANSFER_DELETE_SUCCESS": "Transfert de produit supprimé avec succès",
+    "PRODUCT_TRANSFER_CREATED": "Transfert de produit créé avec succès",
+    "PRODUCT_TRANSFER_UPDATED": "Transfert de produit mis à jour avec succès",
+    "PRODUCT_TRANSFER_STATUS_UPDATED": "Statut du transfert mis à jour avec succès",
+    "PRODUCT_TRANSFER_DELETED": "Transfert de produit supprimé avec succès",
+    "PRODUCT_TRANSFER_DETAILS_SUCCESS": "Détails du transfert récupérés avec succès"
+  },
+  "calendar": {
+    "CALENDAR_CREATED": "Calendrier créé avec succès",
+    "CALENDAR_UPDATED": "Calendrier mis à jour avec succès",
+    "CALENDAR_STATUS_UPDATED": "Statut du calendrier mis à jour avec succès",
+    "CALENDAR_DELETED": "Calendrier supprimé avec succès",
+    "CALENDAR_LIST_SUCCESS": "Liste des calendriers récupérée avec succès",
+    "CALENDAR_DETAILS_SUCCESS": "Détails du calendrier récupérés avec succès",
+    "CALENDAR_AUDIT_HISTORY_SUCCESS": "Historique d'audit récupéré avec succès"
+  },
+  "common": {
+    "OPERATION_SUCCESS": "Opération réussie"
+  }
+}

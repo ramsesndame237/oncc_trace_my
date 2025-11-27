@@ -1,0 +1,192 @@
+{
+  "page": {
+    "title": "Conventions"
+  },
+  "table": {
+    "searchPlaceholder": "Search for a convention...",
+    "noConventions": "No conventions registered",
+    "noConventionsForSearch": "No conventions found for \"{{search}}\"",
+    "columns": {
+      "code": "Code",
+      "buyerExporter": "Exporter/Buyer",
+      "opa": "OPA",
+      "signatureDate": "Signature Date",
+      "status": "Status"
+    }
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "associated": "Associated",
+    "notAssociated": "Not associated"
+  },
+  "form": {
+    "title": "New Convention",
+    "editTitle": "Edit Convention",
+    "unsavedChangesWarning": "You have unsaved changes. Do you really want to leave?",
+    "cancelButton": "Cancel",
+    "step1": {
+      "cardTitle": "Basic Information",
+      "cardDescription": "Select the exporter/buyer, OPA and signature date",
+      "buyerExporter": "Exporter / Buyer",
+      "selectBuyerExporter": "Select an exporter or buyer",
+      "opa": "OPA (Producer)",
+      "selectOpa": "Select an OPA",
+      "signatureDate": "Signature Date",
+      "stepIndicator": "Step {{current}} of {{total}}",
+      "validation": {
+        "allFieldsRequired": "All fields are required",
+        "buyerExporterRequired": "Exporter/Buyer is required",
+        "producerRequired": "OPA is required",
+        "signatureDateRequired": "Signature date is required"
+      }
+    },
+    "step2": {
+      "cardTitle": "Contractual Information",
+      "cardDescription": "Add convention products",
+      "addProductTitle": "Add a product",
+      "quality": "Quality",
+      "selectQuality": "Choose a quality",
+      "standard": "Cocoa Standard",
+      "selectStandard": "Choose a standard",
+      "weight": "Weight",
+      "enterWeight": "Enter unit weight in Kg",
+      "bags": "No. of bags",
+      "enterBags": "Enter number of bags",
+      "humidity": "Humidity Rate",
+      "enterHumidity": "e.g.: 7.5",
+      "pricePerKg": "Price per Kg",
+      "enterPrice": "Enter price",
+      "addButton": "Add",
+      "productList": "Product List",
+      "qualityOptions": {
+        "grade1": "Grade 1",
+        "grade2": "Grade 2",
+        "hs": "HS"
+      },
+      "standardOptions": {
+        "certifie": "Certified",
+        "excellent": "Excellent",
+        "fin": "Fine",
+        "conventionnel": "Conventional"
+      },
+      "tableHeaders": {
+        "quality": "Quality",
+        "standard": "Standard",
+        "weight": "Weight",
+        "bags": "No. of bags",
+        "humidity": "Humidity",
+        "pricePerKg": "Price per Kg",
+        "actions": "Actions"
+      },
+      "validation": {
+        "invalidProduct": "Please fill all fields correctly",
+        "atLeastOneProduct": "You must add at least one product",
+        "qualityRequired": "Quality is required",
+        "standardRequired": "Standard is required",
+        "weightRequired": "Weight is required and must be greater than 0",
+        "bagsRequired": "Number of bags is required and must be greater than 0",
+        "humidityInvalid": "Humidity rate must be between 0 and 100",
+        "priceRequired": "Price per Kg is required"
+      }
+    },
+    "step3": {
+      "cardTitle": "Documents",
+      "cardDescription": "Add convention documents",
+      "contract": "Purchase Contract",
+      "contractDescription": "Required convention document",
+      "identificationDocs": "Identification Documents",
+      "identificationDocsDescription": "Buyer/exporter identification documents (optional)",
+      "selectFile": "Select a file",
+      "selectFiles": "Select files",
+      "addMore": "Add another document",
+      "uploadContractPrompt": "Drag and drop your contract here or click to select",
+      "uploadIdentificationPrompt": "Drag and drop your documents here or click to select",
+      "uploadedFiles": "Uploaded files",
+      "validation": {
+        "contractRequired": "Purchase contract is required",
+        "pdfOnly": "Only PDF files are accepted for the contract",
+        "fileTooLarge": "File is too large",
+        "invalidFileType": "Invalid file type. Use PDF, JPG or PNG",
+        "fileRequired": "File is required"
+      }
+    },
+    "summary": {
+      "cardTitle": "Summary",
+      "cardDescription": "Review information before creating the convention",
+      "basicInfo": "Basic Information",
+      "products": "product(s)",
+      "productsCount": "Number of products",
+      "productsTitle": "Convention Products",
+      "totalWeight": "Total Weight",
+      "totalAmount": "Total Amount",
+      "documents": "Documents",
+      "attachmentsTitle": "Attachments",
+      "addAttachment": "Add attachment",
+      "noAttachments": "No attachments",
+      "confirm": "Create Convention",
+      "submitting": "Creating...",
+      "success": "Convention created successfully",
+      "error": "Error creating convention",
+      "validation": {
+        "confirmCheckbox": "I confirm that all the information entered is accurate and complete",
+        "confirmRequired": "You must confirm the information to continue"
+      }
+    }
+  },
+  "view": {
+    "invalidId": "Invalid convention ID",
+    "backToList": "Back to list",
+    "loadingDetails": "Loading convention details...",
+    "notFound": "Convention not found",
+    "notFoundDescription": "The requested convention does not exist or has been deleted.",
+    "conventionTitle": "Convention Details",
+    "associatedCampaigns": "Associated Campaigns",
+    "metadata": "Metadata",
+    "createdAt": "Created on",
+    "updatedAt": "Updated on",
+    "history": "History",
+    "otherInfo": "Other Information"
+  },
+  "messages": {
+    "loadError": "Error loading conventions",
+    "loadByIdError": "Error loading convention",
+    "createdSuccessOnline": "Convention created successfully",
+    "createdSuccessOffline": "Convention saved. It will be synchronized when you are online",
+    "creationError": "Error creating convention",
+    "processing": "Processing...",
+    "updateSuccess": "Convention updated successfully",
+    "updateError": "Error updating convention",
+    "updatedSuccessOnline": "Convention updated successfully",
+    "updatedSuccessOffline": "Convention updated. It will be synchronized when you are online"
+  },
+  "modals": {
+    "associateCampaign": {
+      "title": "Associate to Active Campaign",
+      "description": "You are about to associate this convention to the <strong>{{campaignName}}</strong> campaign.",
+      "noCampaignDescription": "No active campaign is available at the moment.",
+      "noCampaignError": "No active campaign found. Please activate a campaign before associating conventions.",
+      "confirmInstruction": "To confirm, please enter the convention ID:",
+      "campaignLabel": "Active Campaign",
+      "conventionIdLabel": "Convention ID",
+      "conventionIdPlaceholder": "Enter {{conventionId}}",
+      "confirmButton": "Associate to Campaign",
+      "cancelButton": "Cancel",
+      "loadingCampaign": "Loading active campaign..."
+    },
+    "dissociateCampaign": {
+      "title": "Dissociate from Campaign",
+      "description": "You are about to dissociate this convention from the <strong>{{campaignName}}</strong> campaign.",
+      "confirmInstruction": "To confirm, please enter the convention ID:",
+      "campaignLabel": "Associated Campaign",
+      "conventionIdLabel": "Convention ID",
+      "conventionIdPlaceholder": "Enter {{conventionId}}",
+      "confirmButton": "Dissociate from Campaign",
+      "cancelButton": "Cancel"
+    }
+  },
+  "validation": {
+    "conventionIdRequired": "Convention ID is required",
+    "conventionIdMismatch": "The entered ID does not match the convention ID"
+  }
+}

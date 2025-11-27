@@ -1,0 +1,281 @@
+{
+  "title": "Transferts de Produit",
+  "groupageTitle": "Groupage de Produit",
+  "standardTitle": "Transferts Standard",
+  "singular": "Transfert de Produit",
+  "page": {
+    "title": "Transferts de Produit"
+  },
+  "tabs": {
+    "standard": "Transfert",
+    "groupage": "Groupage"
+  },
+  "fields": {
+    "code": "Code",
+    "transferType": "Type de Transfert",
+    "transferDate": "Date de Transfert",
+    "status": "Statut",
+    "senderActor": "Acteur Expéditeur",
+    "senderStore": "Magasin Expéditeur",
+    "receiverActor": "Acteur Destinataire",
+    "receiverStore": "Magasin Destinataire",
+    "campaign": "Campagne",
+    "products": "Produits",
+    "driverInfo": "Informations du Chauffeur",
+    "fullName": "Nom Complet",
+    "vehicleRegistration": "Immatriculation",
+    "drivingLicenseNumber": "Permis de Conduire",
+    "routeSheetCode": "Code Feuille de Route",
+    "quality": "Qualité",
+    "weight": "Poids (kg)",
+    "numberOfBags": "Nombre de Sacs",
+    "createdAt": "Créé le",
+    "updatedAt": "Mis à jour le"
+  },
+  "transferTypes": {
+    "GROUPAGE": "Groupage",
+    "STANDARD": "Standard"
+  },
+  "statuses": {
+    "pending": "En Attente",
+    "validated": "Validé",
+    "cancelled": "Annulé"
+  },
+  "actions": {
+    "view": "Voir le Transfert",
+    "viewDetails": "Voir les Détails",
+    "validate": "Valider",
+    "cancel": "Annuler",
+    "filterByType": "Filtrer par Type",
+    "filterByStatus": "Filtrer par Statut",
+    "searchByCode": "Rechercher par Code"
+  },
+  "messages": {
+    "noTransfers": "Aucun transfert de produit trouvé",
+    "loading": "Chargement des transferts...",
+    "loadError": "Erreur lors du chargement des documents",
+    "statusUpdated": "Statut du transfert mis à jour avec succès",
+    "validated": "Transfert validé avec succès",
+    "cancelled": "Transfert annulé avec succès",
+    "cancelSuccess": "Transfert annulé avec succès",
+    "cancelError": "Erreur lors de l'annulation du transfert"
+  },
+  "errors": {
+    "loadFailed": "Erreur lors du chargement des transferts de produit",
+    "statusUpdateFailed": "Erreur lors de la mise à jour du statut",
+    "notFound": "Transfert de produit non trouvé",
+    "unauthorized": "Vous n'êtes pas autorisé à effectuer cette action",
+    "offline": "Cette opération nécessite une connexion internet"
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "transferDate": "Date",
+      "sender": "Expéditeur",
+      "receiver": "Destinataire",
+      "status": "Statut",
+      "actions": "Actions"
+    }
+  },
+  "types": {
+    "GROUPAGE": "Groupage",
+    "STANDARD": "Standard"
+  },
+  "view": {
+    "transferTitle": "Transfert",
+    "invalidId": "ID du transfert invalide",
+    "backToList": "Retour à la liste",
+    "loadingDetails": "Chargement des détails du transfert...",
+    "notFound": "Transfert non trouvé",
+    "notFoundDescription": "Le transfert de produit demandé n'existe pas ou a été supprimé.",
+    "basicInfo": "Informations de base",
+    "code": "Code",
+    "transferType": "Type de transfert",
+    "transferDate": "Date de transfert",
+    "status": "Statut",
+    "sender": "Expéditeur",
+    "receiver": "Destinataire",
+    "actor": "Acteur",
+    "store": "Magasin",
+    "driverInfo": {
+      "title": "Informations du chauffeur",
+      "fullName": "Nom complet",
+      "vehicleRegistration": "Immatriculation",
+      "drivingLicenseNumber": "Permis de conduire",
+      "routeSheetCode": "Code feuille de route"
+    },
+    "products": {
+      "title": "Produits",
+      "quality": "Qualité",
+      "weight": "Poids",
+      "kg": "kg",
+      "numberOfBags": "Nombre de sacs",
+      "empty": "Aucun produit"
+    },
+    "campaign": "Campagne",
+    "campaignCode": "Code campagne",
+    "campaignName": "Nom campagne",
+    "metadata": "Métadonnées",
+    "createdAt": "Créé le",
+    "updatedAt": "Mis à jour le",
+    "documents": "Documents",
+    "otherInfo": "Autres informations",
+    "history": "Historique",
+    "backToDetails": "Retour aux détails"
+  },
+  "form": {
+    "title": "Modifier le transfert",
+    "create": "Créer un transfert GROUPAGE",
+    "createStandard": "Créer un transfert STANDARD",
+    "edit": {
+      "title": "Modifier le transfert",
+      "pageTitle": "Modifier le transfert",
+      "description": "Modifiez la date du transfert. Les acteurs et le magasin ne peuvent pas être modifiés.",
+      "onlyGroupageError": "Seuls les transferts de type GROUPAGE peuvent être modifiés.",
+      "onlyStandardError": "Seuls les transferts de type STANDARD peuvent être modifiés."
+    },
+    "steps": {
+      "generalInfo": "Informations générales",
+      "products": "Produits",
+      "summary": "Récapitulatif"
+    },
+    "step1": {
+      "title": "Informations générales",
+      "description": "Renseignez les informations de base du transfert",
+      "cardTitle": "Informations générales",
+      "sender": "Expéditeur",
+      "senderActor": "Expéditeur",
+      "senderPlaceholder": "Sélectionner un producteur",
+      "senderStore": "Magasin expéditeur",
+      "senderStorePlaceholder": "Sélectionner un magasin",
+      "receiver": "Destinataire",
+      "receiverActor": "Destinataire",
+      "receiverPlaceholder": "Sélectionner une OPA",
+      "receiverStore": "Magasin destinataire",
+      "receiverStorePlaceholder": "Sélectionner un magasin",
+      "transferDate": "Date du transfert",
+      "driverSection": "Informations du chauffeur",
+      "driverInfo": "Informations du chauffeur",
+      "driverFullName": "Nom complet du chauffeur",
+      "vehicleRegistration": "Immatriculation du véhicule",
+      "driverVehicleRegistration": "Immatriculation du véhicule",
+      "drivingLicense": "Numéro de permis de conduire",
+      "driverDrivingLicenseNumber": "Numéro de permis de conduire",
+      "routeSheetCode": "Code feuille de route",
+      "driverRouteSheetCode": "Code feuille de route",
+      "hasNoDriver": "Le transfert n'a pas de chauffeur",
+      "validation": {
+        "transferDateRequired": "La date de transfert est requise"
+      }
+    },
+    "step2": {
+      "title": "Produits à transférer",
+      "description": "Ajoutez les produits à transférer",
+      "cardTitle": "Produits à transférer",
+      "addProductTitle": "Ajouter un produit",
+      "productList": "Liste des produits",
+      "addButton": "Ajouter",
+      "addProduct": "Ajouter un produit",
+      "quality": "Qualité",
+      "qualityPlaceholder": "Ex: AA, A, B",
+      "qualityOptions": {
+        "grade1": "Grade 1",
+        "grade2": "Grade 2",
+        "hs": "Hors Standard"
+      },
+      "weight": "Poids (kg)",
+      "numberOfBags": "Nombre de sacs",
+      "noProducts": "Aucun produit ajouté",
+      "productAdded": "Produit ajouté avec succès",
+      "productRemoved": "Produit retiré",
+      "totalWeight": "Poids total",
+      "totalBags": "Total sacs",
+      "removeProduct": "Retirer",
+      "editProduct": "Modifier",
+      "validation": {
+        "atLeastOneProduct": "Vous devez ajouter au moins un produit"
+      }
+    },
+    "step3": {
+      "title": "Récapitulatif",
+      "description": "Vérifiez les informations avant de soumettre",
+      "cardTitle": "Récapitulatif du transfert",
+      "generalInfo": "Informations générales",
+      "productsTitle": "Produits",
+      "products": "Produits",
+      "totalWeight": "Poids total",
+      "totalBags": "Total sacs",
+      "confirm": "Créer le transfert",
+      "confirmation": "Je confirme que les informations sont correctes",
+      "confirmationRequired": "Vous devez confirmer avant de soumettre",
+      "validation": {
+        "confirmCheckbox": "Je confirme que les informations sont correctes",
+        "confirmRequired": "Vous devez confirmer avant de soumettre"
+      }
+    },
+    "step4": {
+      "title": "Documents justificatifs",
+      "description": "Téléchargez les documents (optionnel)",
+      "cardTitle": "Documents justificatifs",
+      "routeSheetDocuments": "Bordereaux de route (optionnel)",
+      "routeSheetDescription": "Vous pouvez télécharger un ou plusieurs bordereaux de route",
+      "routeSheetType": "Bordereau de route",
+      "validation": {
+        "atLeastOneDocument": "Au moins un document est requis"
+      }
+    },
+    "step5": {
+      "title": "Récapitulatif",
+      "description": "Vérifiez les informations avant de soumettre",
+      "cardTitle": "Récapitulatif du transfert",
+      "generalInfo": "Informations générales",
+      "productsTitle": "Produits",
+      "products": "Produits",
+      "driverInfo": "Informations du chauffeur",
+      "documents": "Documents",
+      "noDocuments": "Aucun document ajouté",
+      "totalWeight": "Poids total",
+      "totalBags": "Total sacs",
+      "confirm": "Créer le transfert",
+      "confirmation": "Je confirme que les informations sont correctes",
+      "confirmationRequired": "Vous devez confirmer avant de soumettre",
+      "validation": {
+        "confirmCheckbox": "Je confirme que les informations sont correctes",
+        "confirmRequired": "Vous devez confirmer avant de soumettre"
+      }
+    },
+    "actions": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "cancel": "Annuler",
+      "submit": "Créer le transfert",
+      "submitting": "Création en cours...",
+      "save": "Enregistrer"
+    },
+    "messages": {
+      "unsavedChanges": "Vous avez des modifications non enregistrées",
+      "createSuccess": "Transfert créé avec succès",
+      "createError": "Erreur lors de la création du transfert",
+      "updateSuccess": "Transfert modifié avec succès",
+      "updateSuccessOffline": "Transfert modifié avec succès (hors ligne)",
+      "updateError": "Erreur lors de la modification du transfert",
+      "validationError": "Veuillez corriger les erreurs avant de continuer",
+      "confirmCancel": "Êtes-vous sûr de vouloir annuler ? Toutes les données seront perdues."
+    }
+  },
+  "modals": {
+    "cancel": {
+      "title": "Annuler le transfert",
+      "description": "Êtes-vous sûr de vouloir annuler ce transfert ? Cette action est irréversible et le transfert passera au statut 'Annulé'.",
+      "confirmInstruction": "Pour confirmer, veuillez saisir le code du transfert :",
+      "transferCodeLabel": "Code du transfert",
+      "transferCodePlaceholder": "Saisissez {{transferCode}}",
+      "confirmButton": "Annuler le transfert",
+      "cancelButton": "Retour",
+      "validation": {
+        "required": "Le code du transfert est requis",
+        "mismatch": "Le code saisi ne correspond pas"
+      }
+    }
+  }
+}

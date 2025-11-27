@@ -1,0 +1,1 @@
+export { RegisterPWA } from './RegisterPWA'

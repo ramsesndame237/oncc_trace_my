@@ -1,0 +1,7 @@
+{
+  "messages": {
+    "required": "This field is required",
+    "emailInvalid": "Invalid email",
+    "phoneInvalid": "Invalid phone number"
+  }
+}
