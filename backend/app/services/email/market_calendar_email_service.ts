@@ -403,7 +403,10 @@ export class MarketCalendarEmailService extends BaseEmailService {
 
       return true
     } catch (error) {
-      logger.error("Erreur lors de l'envoi des emails de modification de calendrier de marché:", error)
+      logger.error(
+        "Erreur lors de l'envoi des emails de modification de calendrier de marché:",
+        error
+      )
       return false
     }
   }

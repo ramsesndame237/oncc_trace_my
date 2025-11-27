@@ -559,10 +559,7 @@ import { CampaignErrorMessages, CampaignSuccessMessages } from './campaign.js'
 import { DocumentErrorMessages, DocumentSuccessMessages } from './document.js'
 import { LocationErrorMessages, LocationSuccessMessages } from './location.js'
 import { ParcelErrorMessages, ParcelSuccessMessages } from './parcel.js'
-import {
-  ProductTransferErrorMessages,
-  ProductTransferSuccessMessages,
-} from './product_transfer.js'
+import { ProductTransferErrorMessages, ProductTransferSuccessMessages } from './product_transfer.js'
 import { ProductionBasinErrorMessages, ProductionBasinSuccessMessages } from './production_basin.js'
 import { StoreErrorMessages, StoreSuccessMessages } from './store.js'
 import { SyncErrorMessages, SyncSuccessMessages } from './sync.js'

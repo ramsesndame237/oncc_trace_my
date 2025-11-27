@@ -169,7 +169,8 @@ export default class ProductionBasinsController {
           409,
           error.message,
           {
-            districtParentConflicts: (error as any).hierarchicalResult?.districtParentConflicts || [],
+            districtParentConflicts:
+              (error as any).hierarchicalResult?.districtParentConflicts || [],
           }
         )
       }
@@ -182,7 +183,8 @@ export default class ProductionBasinsController {
           409,
           error.message,
           {
-            departmentParentConflicts: (error as any).hierarchicalResult?.departmentParentConflicts || [],
+            departmentParentConflicts:
+              (error as any).hierarchicalResult?.departmentParentConflicts || [],
           }
         )
       }
@@ -334,7 +336,8 @@ export default class ProductionBasinsController {
           409,
           error.message,
           {
-            districtParentConflicts: (error as any).hierarchicalResult?.districtParentConflicts || [],
+            districtParentConflicts:
+              (error as any).hierarchicalResult?.districtParentConflicts || [],
           }
         )
       }
@@ -347,7 +350,8 @@ export default class ProductionBasinsController {
           409,
           error.message,
           {
-            departmentParentConflicts: (error as any).hierarchicalResult?.departmentParentConflicts || [],
+            departmentParentConflicts:
+              (error as any).hierarchicalResult?.departmentParentConflicts || [],
           }
         )
       }

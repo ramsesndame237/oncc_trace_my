@@ -24,10 +24,7 @@ async function cleanProducersData() {
     console.log('📦 Étape 1: Suppression des fichiers Minio...')
 
     // Récupérer tous les documents liés aux producteurs (actors de type PRODUCER)
-    const producerIds = await db
-      .from('actors')
-      .where('actor_type', 'PRODUCER')
-      .select('id')
+    const producerIds = await db.from('actors').where('actor_type', 'PRODUCER').select('id')
 
     const producerIdsList = producerIds.map((p) => p.id)
 
@@ -55,10 +52,7 @@ async function cleanProducersData() {
       }
 
       // Récupérer les documents liés aux parcelles des producteurs
-      const parcels = await db
-        .from('parcels')
-        .whereIn('producer_id', producerIdsList)
-        .select('id')
+      const parcels = await db.from('parcels').whereIn('producer_id', producerIdsList).select('id')
 
       const parcelIdsList = parcels.map((p) => p.id)
 
@@ -170,17 +164,11 @@ async function cleanProducersData() {
       console.log(`   ✓ ${productQuantitiesDeleted} quantité(s) de produit supprimée(s)`)
 
       // 10. Supprimer les utilisateurs liés aux producteurs
-      const usersDeleted = await trx
-        .from('users')
-        .whereIn('actor_id', producerIdsList)
-        .delete()
+      const usersDeleted = await trx.from('users').whereIn('actor_id', producerIdsList).delete()
       console.log(`   ✓ ${usersDeleted} utilisateur(s) supprimé(s)`)
 
       // 11. Finalement, supprimer les producteurs
-      const actorsDeleted = await trx
-        .from('actors')
-        .where('actor_type', 'PRODUCER')
-        .delete()
+      const actorsDeleted = await trx.from('actors').where('actor_type', 'PRODUCER').delete()
       console.log(`   ✓ ${actorsDeleted} producteur(s) supprimé(s)`)
     })
 

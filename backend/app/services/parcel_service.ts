@@ -336,7 +336,7 @@ export default class ParcelService {
         const newIds = coordinates.filter((coord) => coord.id).map((coord) => coord.id!)
 
         // Supprimer les coordonnées qui ne sont plus dans la liste
-        const idsToDelete = existingIds.filter((id) => !newIds.includes(id))
+        const idsToDelete = existingIds.filter((coordId) => !newIds.includes(coordId))
         if (idsToDelete.length > 0) {
           await ParcelCoordinate.query({ client: trx }).whereIn('id', idsToDelete).delete()
         }

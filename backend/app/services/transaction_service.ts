@@ -514,7 +514,10 @@ export default class TransactionService {
 
     // Vérifier que la transaction est en pending pour modifier les champs principaux
     if (
-      (data.sellerId || data.buyerId || data.calendarId !== undefined || data.conventionId !== undefined) &&
+      (data.sellerId ||
+        data.buyerId ||
+        data.calendarId !== undefined ||
+        data.conventionId !== undefined) &&
       transaction.status !== 'pending'
     ) {
       throw new Exception('Seule une transaction en attente peut être modifiée', {
@@ -731,7 +734,9 @@ export default class TransactionService {
       await trx.commit()
 
       // Recharger avec les relations
-      await transaction.load('products', (query) => query.whereNull('deleted_at').preload('producer'))
+      await transaction.load('products', (query) =>
+        query.whereNull('deleted_at').preload('producer')
+      )
       await transaction.load('seller')
       await transaction.load('buyer')
       await transaction.load('createdByActor')
@@ -1051,7 +1056,7 @@ export default class TransactionService {
     }
 
     const transactions = await query
-      .preload('products', (query) => query.whereNull('deleted_at'))
+      .preload('products', (productsQuery) => productsQuery.whereNull('deleted_at'))
       .preload('seller')
       .preload('buyer')
       .preload('createdByActor')

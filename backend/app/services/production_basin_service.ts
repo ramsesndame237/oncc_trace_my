@@ -206,7 +206,8 @@ export default class ProductionBasinService {
           if (hierarchicalValidation.departmentParentConflicts.length > 0) {
             const firstConflict = hierarchicalValidation.departmentParentConflicts[0]
             const basinName = firstConflict.conflictingChildren[0]?.basinName || 'un autre bassin'
-            const departmentName = firstConflict.conflictingChildren[0]?.locationName || 'le département'
+            const departmentName =
+              firstConflict.conflictingChildren[0]?.locationName || 'le département'
 
             const error = new Exception(
               `Impossible d'associer le département ${departmentName} car sa région parente ${firstConflict.parentLocationName} est déjà dans le bassin "${basinName}"`,
@@ -333,7 +334,8 @@ export default class ProductionBasinService {
             if (hierarchicalValidation.departmentConflicts.length > 0) {
               const firstConflict = hierarchicalValidation.departmentConflicts[0]
               const basinName = firstConflict.conflictingChildren[0]?.basinName || 'un autre bassin'
-              const districtName = firstConflict.conflictingChildren[0]?.locationName || 'un district'
+              const districtName =
+                firstConflict.conflictingChildren[0]?.locationName || 'un district'
 
               const error = new Exception(
                 `Impossible d'associer le département ${firstConflict.parentLocationName} car son district ${districtName} est déjà dans le bassin "${basinName}"`,
@@ -350,7 +352,8 @@ export default class ProductionBasinService {
             if (hierarchicalValidation.districtParentConflicts.length > 0) {
               const firstConflict = hierarchicalValidation.districtParentConflicts[0]
               const basinName = firstConflict.conflictingChildren[0]?.basinName || 'un autre bassin'
-              const districtName = firstConflict.conflictingChildren[0]?.locationName || 'le district'
+              const districtName =
+                firstConflict.conflictingChildren[0]?.locationName || 'le district'
 
               const error = new Exception(
                 `Impossible d'associer le district ${districtName} car son département parent ${firstConflict.parentLocationName} est déjà dans le bassin "${basinName}"`,
@@ -367,7 +370,8 @@ export default class ProductionBasinService {
             if (hierarchicalValidation.departmentParentConflicts.length > 0) {
               const firstConflict = hierarchicalValidation.departmentParentConflicts[0]
               const basinName = firstConflict.conflictingChildren[0]?.basinName || 'un autre bassin'
-              const departmentName = firstConflict.conflictingChildren[0]?.locationName || 'le département'
+              const departmentName =
+                firstConflict.conflictingChildren[0]?.locationName || 'le département'
 
               const error = new Exception(
                 `Impossible d'associer le département ${departmentName} car sa région parente ${firstConflict.parentLocationName} est déjà dans le bassin "${basinName}"`,
@@ -426,10 +430,7 @@ export default class ProductionBasinService {
               .whereIn('code', addedLocationCodes)
               .update({ updatedAt: DateTime.now().toJSDate() })
 
-            console.log(
-              `➕ Localisations ajoutées au bassin "${basin.name}":`,
-              addedLocationCodes
-            )
+            console.log(`➕ Localisations ajoutées au bassin "${basin.name}":`, addedLocationCodes)
           }
 
           // Mettre à jour la date updated_at des localisations supprimées
@@ -655,7 +656,9 @@ export default class ProductionBasinService {
       const departmentCodes = locations
         .filter((loc) => loc.type === 'department')
         .map((loc) => loc.code)
-      const districtCodes = locations.filter((loc) => loc.type === 'district').map((loc) => loc.code)
+      const districtCodes = locations
+        .filter((loc) => loc.type === 'district')
+        .map((loc) => loc.code)
 
       // Valider les conflits pour chaque type (validations descendantes et ascendantes)
       const [

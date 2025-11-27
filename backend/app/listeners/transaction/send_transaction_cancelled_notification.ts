@@ -9,9 +9,7 @@ import logger from '@adonisjs/core/services/logger'
 export default class SendTransactionCancelledNotification {
   async handle(payload: TransactionCancelledPayload) {
     try {
-      logger.info(
-        `📧 [Background] Envoi email de transaction annulée ${payload.transactionCode}`
-      )
+      logger.info(`📧 [Background] Envoi email de transaction annulée ${payload.transactionCode}`)
 
       const success = await TransactionEmailService.sendTransactionCancelledNotification(
         payload.transactionCode,

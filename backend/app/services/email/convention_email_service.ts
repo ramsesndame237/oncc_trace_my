@@ -89,7 +89,9 @@ export class ConventionEmailService extends BaseEmailService {
         message
           .to(email)
           .from(config.fromEmail, config.fromName)
-          .subject(`Confirmation de création de convention : ${convention.code} - ${config.appName}`)
+          .subject(
+            `Confirmation de création de convention : ${convention.code} - ${config.appName}`
+          )
           .htmlView('emails/convention/convention_created_summary', {
             userName,
             conventionCode: convention.code,
@@ -206,9 +208,7 @@ export class ConventionEmailService extends BaseEmailService {
         message
           .to(email)
           .from(config.fromEmail, config.fromName)
-          .subject(
-            `Convention associée à la campagne ${campaign.code} - ${config.appName}`
-          )
+          .subject(`Convention associée à la campagne ${campaign.code} - ${config.appName}`)
           .htmlView('emails/convention/convention_associated_to_campaign', {
             userName,
             conventionCode: convention.code,
@@ -266,9 +266,7 @@ export class ConventionEmailService extends BaseEmailService {
         message
           .to(email)
           .from(config.fromEmail, config.fromName)
-          .subject(
-            `Convention dissociée de la campagne ${campaign.code} - ${config.appName}`
-          )
+          .subject(`Convention dissociée de la campagne ${campaign.code} - ${config.appName}`)
           .htmlView('emails/convention/convention_dissociated_from_campaign', {
             userName,
             conventionCode: convention.code,

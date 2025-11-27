@@ -66,6 +66,10 @@ jobs:
         working-directory: backend
         run: npm ci
 
+      - name: Format code
+        working-directory: backend
+        run: npm run format
+
       - name: Run linter
         working-directory: backend
         run: npm run lint

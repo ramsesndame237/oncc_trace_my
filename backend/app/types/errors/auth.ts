@@ -50,9 +50,11 @@ export enum AuthErrorCodes {
 export const AuthErrorMessages: Record<AuthErrorCodes, string> = {
   // Connexion
   [AuthErrorCodes.LOGIN_INVALID_CREDENTIALS]: 'Identifiants invalides',
-  [AuthErrorCodes.LOGIN_ACCOUNT_INACTIVE]: 'Votre compte utilisateur est désactivé. Contactez un administrateur',
+  [AuthErrorCodes.LOGIN_ACCOUNT_INACTIVE]:
+    'Votre compte utilisateur est désactivé. Contactez un administrateur',
   [AuthErrorCodes.LOGIN_ACCOUNT_BLOCKED]: 'Compte bloqué. Contactez un administrateur',
-  [AuthErrorCodes.LOGIN_ACTOR_INACTIVE]: 'Votre organisation est désactivée. Vous ne pouvez pas vous connecter',
+  [AuthErrorCodes.LOGIN_ACTOR_INACTIVE]:
+    'Votre organisation est désactivée. Vous ne pouvez pas vous connecter',
   [AuthErrorCodes.LOGIN_DEFAULT_PASSWORD]:
     'Mot de passe par défaut utilisé, veuillez initialiser votre compte',
   [AuthErrorCodes.LOGIN_FAILED]: 'Erreur lors de la connexion',

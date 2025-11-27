@@ -32,7 +32,9 @@ export class PickupCalendarEmailService extends BaseEmailService {
         .whereNull('deleted_at')
         .exec()
 
-      logger.info(`📧 Envoi emails calendrier enlèvement à ${opaUsers.length} utilisateur(s) de l'OPA`)
+      logger.info(
+        `📧 Envoi emails calendrier enlèvement à ${opaUsers.length} utilisateur(s) de l'OPA`
+      )
 
       // Envoyer email à l'OPA propriétaire
       for (const user of opaUsers) {
@@ -210,7 +212,10 @@ export class PickupCalendarEmailService extends BaseEmailService {
 
       return true
     } catch (error) {
-      logger.error("Erreur lors de l'envoi des emails de modification de calendrier d'enlèvement:", error)
+      logger.error(
+        "Erreur lors de l'envoi des emails de modification de calendrier d'enlèvement:",
+        error
+      )
       return false
     }
   }
@@ -315,7 +320,10 @@ export class PickupCalendarEmailService extends BaseEmailService {
 
       return true
     } catch (error) {
-      logger.error("Erreur lors de l'envoi des emails d'annulation de calendrier d'enlèvement:", error)
+      logger.error(
+        "Erreur lors de l'envoi des emails d'annulation de calendrier d'enlèvement:",
+        error
+      )
       return false
     }
   }

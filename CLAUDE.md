@@ -164,7 +164,27 @@ La documentation est organisée en fichiers thématiques pour faciliter la navig
     - Value Object Pattern
     - Workflow d'ajout de nouveaux types
 
-17. **[PWA.md](./.claude/PWA.md)** 📱 **PROGRESSIVE WEB APP**
+17. **[CI-CD-QUICKSTART.md](./CI-CD-QUICKSTART.md)** 🚀 **CI/CD & DÉPLOIEMENT**
+    - Configuration GitHub Actions en 5 minutes
+    - Build, test et dockerisation automatiques
+    - Publication sur GitHub Container Registry (GHCR)
+    - Déploiement sur Dokploy
+    - Versioning avec tags
+
+18. **[DEPLOYMENT.md](./DEPLOYMENT.md)** 🐳 **GUIDE COMPLET DÉPLOIEMENT**
+    - Configuration complète GitHub Secrets
+    - Docker Compose de production
+    - Variables d'environnement détaillées
+    - Reverse proxy Nginx
+    - Monitoring et troubleshooting
+
+19. **[LINT-FIX-SUMMARY.md](./LINT-FIX-SUMMARY.md)** 🔧 **QUALITÉ DU CODE**
+    - Corrections lint et formatage
+    - Règles ESLint et Prettier
+    - Commandes de vérification
+    - Workflow de formatage automatique
+
+20. **[PWA.md](./.claude/PWA.md)** 📱 **PROGRESSIVE WEB APP**
     - Configuration PWA complète
     - Installation de l'application (desktop/mobile)
     - Mode offline total (142 routes précachées)
@@ -174,7 +194,7 @@ La documentation est organisée en fichiers thématiques pour faciliter la navig
 
 ### ⚠️ Pièges et Bonnes Pratiques
 
-18. **[COMMON-PITFALLS.md](./.claude/COMMON-PITFALLS.md)** ⚠️ **LIRE EN PRIORITÉ**
+21. **[COMMON-PITFALLS.md](./.claude/COMMON-PITFALLS.md)** ⚠️ **LIRE EN PRIORITÉ**
     - Transactions database (db vs trx)
     - Sérialisation LucidORM des relations
     - Traductions backend/frontend manquantes

@@ -14,6 +14,7 @@
  */
 export function encodeContentDispositionFilename(fileName: string): string {
   // Check if filename contains non-ASCII characters
+  // eslint-disable-next-line no-control-regex
   const hasNonAscii = /[^\x00-\x7F]/.test(fileName)
 
   if (!hasNonAscii) {
@@ -30,6 +31,7 @@ export function encodeContentDispositionFilename(fileName: string): string {
   // Return both formats for maximum compatibility:
   // - filename="..." for old browsers (with non-ASCII replaced by underscore)
   // - filename*=UTF-8''... for modern browsers (RFC 5987)
+  // eslint-disable-next-line no-control-regex
   const asciiName = fileName.replace(/[^\x00-\x7F]/g, '_')
   return `filename="${asciiName}"; filename*=UTF-8''${encodedFileName}`
 }

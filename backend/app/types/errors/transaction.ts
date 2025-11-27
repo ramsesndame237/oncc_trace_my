@@ -46,15 +46,13 @@ export enum TransactionErrorCodes {
  */
 export const TransactionErrorMessages: Record<TransactionErrorCodes, string> = {
   [TransactionErrorCodes.TRANSACTION_NOT_FOUND]: 'La transaction est introuvable.',
-  [TransactionErrorCodes.TRANSACTION_CREATE_SELLER_NOT_FOUND]:
-    "Le vendeur spécifié n'existe pas.",
+  [TransactionErrorCodes.TRANSACTION_CREATE_SELLER_NOT_FOUND]: "Le vendeur spécifié n'existe pas.",
   [TransactionErrorCodes.TRANSACTION_CREATE_BUYER_NOT_FOUND]: "L'acheteur spécifié n'existe pas.",
   [TransactionErrorCodes.TRANSACTION_CREATE_SELLER_BUYER_SAME]:
     "Le vendeur et l'acheteur ne peuvent pas être identiques.",
   [TransactionErrorCodes.TRANSACTION_CREATE_CAMPAIGN_NOT_FOUND]:
     "La campagne spécifiée n'existe pas.",
-  [TransactionErrorCodes.TRANSACTION_CREATE_MARKET_NOT_FOUND]:
-    "Le marché spécifié n'existe pas.",
+  [TransactionErrorCodes.TRANSACTION_CREATE_MARKET_NOT_FOUND]: "Le marché spécifié n'existe pas.",
   [TransactionErrorCodes.TRANSACTION_CREATE_CONVENTION_NOT_FOUND]:
     "La convention spécifiée n'existe pas.",
   [TransactionErrorCodes.TRANSACTION_CREATE_PRINCIPAL_EXPORTER_NOT_FOUND]:
@@ -79,16 +77,13 @@ export const TransactionErrorMessages: Record<TransactionErrorCodes, string> = {
     'La transaction à confirmer est introuvable.',
   [TransactionErrorCodes.TRANSACTION_CONFIRM_NOT_PENDING]:
     'Seules les transactions en attente peuvent être confirmées.',
-  [TransactionErrorCodes.TRANSACTION_CANCEL_NOT_FOUND]:
-    'La transaction à annuler est introuvable.',
+  [TransactionErrorCodes.TRANSACTION_CANCEL_NOT_FOUND]: 'La transaction à annuler est introuvable.',
   [TransactionErrorCodes.TRANSACTION_UPDATE_NOT_FOUND]:
     'La transaction à mettre à jour est introuvable.',
   [TransactionErrorCodes.TRANSACTION_UPDATE_NOT_PENDING]:
     'Seules les transactions en attente peuvent être modifiées.',
-  [TransactionErrorCodes.TRANSACTION_UPDATE_SELLER_NOT_FOUND]:
-    "Le vendeur spécifié n'existe pas.",
-  [TransactionErrorCodes.TRANSACTION_UPDATE_BUYER_NOT_FOUND]:
-    "L'acheteur spécifié n'existe pas.",
+  [TransactionErrorCodes.TRANSACTION_UPDATE_SELLER_NOT_FOUND]: "Le vendeur spécifié n'existe pas.",
+  [TransactionErrorCodes.TRANSACTION_UPDATE_BUYER_NOT_FOUND]: "L'acheteur spécifié n'existe pas.",
   [TransactionErrorCodes.TRANSACTION_UPDATE_CALENDAR_NOT_FOUND]:
     "Le calendrier spécifié n'existe pas.",
   [TransactionErrorCodes.TRANSACTION_UPDATE_CONVENTION_NOT_FOUND]:
@@ -98,13 +93,10 @@ export const TransactionErrorMessages: Record<TransactionErrorCodes, string> = {
   [TransactionErrorCodes.TRANSACTION_LIST_FAILED]:
     'Échec de la récupération de la liste des transactions.',
   [TransactionErrorCodes.TRANSACTION_CREATION_FAILED]: 'Échec de la création de la transaction.',
-  [TransactionErrorCodes.TRANSACTION_UPDATE_FAILED]:
-    'Échec de la mise à jour de la transaction.',
-  [TransactionErrorCodes.TRANSACTION_CONFIRM_FAILED]:
-    'Échec de la confirmation de la transaction.',
+  [TransactionErrorCodes.TRANSACTION_UPDATE_FAILED]: 'Échec de la mise à jour de la transaction.',
+  [TransactionErrorCodes.TRANSACTION_CONFIRM_FAILED]: 'Échec de la confirmation de la transaction.',
   [TransactionErrorCodes.TRANSACTION_CANCEL_FAILED]: "Échec de l'annulation de la transaction.",
-  [TransactionErrorCodes.TRANSACTION_DELETE_FAILED]:
-    'Échec de la suppression de la transaction.',
+  [TransactionErrorCodes.TRANSACTION_DELETE_FAILED]: 'Échec de la suppression de la transaction.',
   [TransactionErrorCodes.TRANSACTION_UPDATE_PRODUCTS_NOT_FOUND]:
     'La transaction dont vous souhaitez modifier les produits est introuvable.',
   [TransactionErrorCodes.TRANSACTION_UPDATE_PRODUCTS_NOT_PENDING]:

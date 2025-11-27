@@ -3,7 +3,7 @@ import Document from '#models/document'
 import MinioService from '#services/minio_service'
 import { MultipartFile } from '@adonisjs/core/bodyparser'
 import app from '@adonisjs/core/services/app'
-import fs from 'fs/promises'
+import fs from 'node:fs/promises'
 import { DateTime } from 'luxon'
 
 export interface DocumentValidationError {

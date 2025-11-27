@@ -56,7 +56,6 @@ export const updateParcelValidator = vine.compile(
   })
 )
 
-
 /**
  * Validator to validate the payload when creating
  * multiple parcels for a specific producer.

@@ -9,9 +9,7 @@ import logger from '@adonisjs/core/services/logger'
 export default class SendStandardTransferCreatedNotification {
   async handle(payload: StandardTransferCreatedPayload) {
     try {
-      logger.info(
-        `📧 [Background] Envoi emails de transfert standard ${payload.transferCode}`
-      )
+      logger.info(`📧 [Background] Envoi emails de transfert standard ${payload.transferCode}`)
 
       const success = await ProductTransferEmailService.sendStandardTransferCreatedNotifications(
         payload.transferCode,

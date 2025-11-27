@@ -47,7 +47,7 @@ export default class UserService {
     // Vérifier l'unicité de l'email
     const existingUser = await User.query().where('email', data.email).first()
     if (existingUser) {
-      throw new Exception("Un utilisateur avec cet email existe déjà", {
+      throw new Exception('Un utilisateur avec cet email existe déjà', {
         code: UserErrorCodes.CREATE_EMAIL_EXISTS,
         status: 400,
       })
@@ -168,13 +168,10 @@ export default class UserService {
 
     // Vérifier l'unicité de l'email si modifié
     if (data.email && data.email !== user.email) {
-      const existingUser = await User.query()
-        .where('email', data.email)
-        .whereNot('id', id)
-        .first()
+      const existingUser = await User.query().where('email', data.email).whereNot('id', id).first()
 
       if (existingUser) {
-        throw new Exception("Un utilisateur avec cet email existe déjà", {
+        throw new Exception('Un utilisateur avec cet email existe déjà', {
           code: UserErrorCodes.UPDATE_EMAIL_EXISTS,
           status: 400,
         })
@@ -377,7 +374,7 @@ export default class UserService {
         emailSent = true
       }
     } catch (emailError) {
-      console.error('Erreur lors de l\'événement de changement de statut:', emailError)
+      console.error("Erreur lors de l'événement de changement de statut:", emailError)
     }
 
     return { user, emailSent }

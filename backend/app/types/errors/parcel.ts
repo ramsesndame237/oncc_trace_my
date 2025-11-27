@@ -35,14 +35,16 @@ export const ParcelErrorMessages: Record<ParcelErrorCodes, string> = {
   [ParcelErrorCodes.PARCEL_DEACTIVATION_FAILED]: 'Échec de la désactivation de la parcelle',
   [ParcelErrorCodes.PARCEL_NOT_AUTHORIZED]: 'Action non autorisée sur cette parcelle',
   [ParcelErrorCodes.PARCEL_ONCC_ID_EXISTS]: 'Un ID ONCC existe déjà pour cette parcelle',
-  [ParcelErrorCodes.PARCEL_IDENTIFICATION_ID_EXISTS]: 'Un ID d\'identification existe déjà pour cette parcelle',
+  [ParcelErrorCodes.PARCEL_IDENTIFICATION_ID_EXISTS]:
+    "Un ID d'identification existe déjà pour cette parcelle",
   [ParcelErrorCodes.PARCEL_COORDINATES_FAILED]: 'Échec de la gestion des coordonnées',
   [ParcelErrorCodes.PARCEL_COORDINATES_INVALID]: 'Coordonnées GPS invalides',
   [ParcelErrorCodes.PARCEL_STATS_FAILED]: 'Échec de la récupération des statistiques',
   [ParcelErrorCodes.PARCEL_PRODUCER_NOT_FOUND]: 'Producteur non trouvé',
   [ParcelErrorCodes.PARCEL_PRODUCER_INVALID]: 'Producteur invalide pour cette parcelle',
   [ParcelErrorCodes.PARCEL_VALIDATION_FAILED]: 'Échec de la validation des parcelles',
-  [ParcelErrorCodes.PARCEL_DUPLICATE_IDENTIFIERS]: 'Certaines parcelles utilisent des identifiants déjà existants',
+  [ParcelErrorCodes.PARCEL_DUPLICATE_IDENTIFIERS]:
+    'Certaines parcelles utilisent des identifiants déjà existants',
   [ParcelErrorCodes.PARCEL_REQUIRED_FOR_PRODUCER]: 'Un producteur doit avoir au moins une parcelle',
 }
 

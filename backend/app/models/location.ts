@@ -119,9 +119,8 @@ export default class Location extends BaseModel {
     const baseSerialized = super.serialize()
 
     // Bassins directement associés à cette localisation
-    const directBasins = this.productionBasins && this.productionBasins.length > 0
-      ? this.productionBasins
-      : []
+    const directBasins =
+      this.productionBasins && this.productionBasins.length > 0 ? this.productionBasins : []
 
     // 🔥 PROPAGATION ASCENDANTE : Si pas de bassins directs ET que le parent est chargé avec ses bassins
     let allBasins = [...directBasins]
@@ -137,11 +136,13 @@ export default class Location extends BaseModel {
       ...baseSerialized,
       isInProductionBasin: hasBasin,
       // Retourner tous les bassins sous forme de tableau (support propagation multi-bassins)
-      productionBasinIds: hasBasin ? allBasins.map(basin => basin.id) : [],
-      productionBasins: hasBasin ? allBasins.map(basin => ({
-        id: basin.id,
-        name: basin.name
-      })) : [],
+      productionBasinIds: hasBasin ? allBasins.map((basin) => basin.id) : [],
+      productionBasins: hasBasin
+        ? allBasins.map((basin) => ({
+            id: basin.id,
+            name: basin.name,
+          }))
+        : [],
     }
   }
 }

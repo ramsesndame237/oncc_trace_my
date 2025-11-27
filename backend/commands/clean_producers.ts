@@ -6,7 +6,8 @@ import env from '#start/env'
 
 export default class CleanProducers extends BaseCommand {
   static commandName = 'clean:producers'
-  static description = 'Supprimer tous les producteurs et leurs données associées (documents, parcelles, audit logs)'
+  static description =
+    'Supprimer tous les producteurs et leurs données associées (documents, parcelles, audit logs)'
 
   static options: CommandOptions = {
     startApp: true,
@@ -121,7 +122,9 @@ export default class CleanProducers extends BaseCommand {
               .whereIn('parcel_id', parcelIdsList)
               .delete()
           }
-          const coordinatesCount = Array.isArray(coordinatesDeleted) ? coordinatesDeleted[0] : coordinatesDeleted
+          const coordinatesCount = Array.isArray(coordinatesDeleted)
+            ? coordinatesDeleted[0]
+            : coordinatesDeleted
           this.logger.info(`   ✓ ${coordinatesCount} coordonnée(s) de parcelles supprimée(s)`)
 
           // 2. Supprimer les documents des parcelles
@@ -133,7 +136,9 @@ export default class CleanProducers extends BaseCommand {
               .whereIn('documentable_id', parcelIdsList)
               .delete()
           }
-          const parcelDocsCount = Array.isArray(parcelDocsDeleted) ? parcelDocsDeleted[0] : parcelDocsDeleted
+          const parcelDocsCount = Array.isArray(parcelDocsDeleted)
+            ? parcelDocsDeleted[0]
+            : parcelDocsDeleted
           this.logger.info(`   ✓ ${parcelDocsCount} document(s) de parcelles supprimé(s)`)
 
           // 3. Supprimer les parcelles
@@ -176,8 +181,12 @@ export default class CleanProducers extends BaseCommand {
             .from('producer_opa')
             .whereIn('opa_id', producerIdsList)
             .delete()
-          const producerOpaAsProducer = Array.isArray(producerOpaAsProducerResult) ? producerOpaAsProducerResult[0] : producerOpaAsProducerResult
-          const producerOpaAsOpa = Array.isArray(producerOpaAsOpaResult) ? producerOpaAsOpaResult[0] : producerOpaAsOpaResult
+          const producerOpaAsProducer = Array.isArray(producerOpaAsProducerResult)
+            ? producerOpaAsProducerResult[0]
+            : producerOpaAsProducerResult
+          const producerOpaAsOpa = Array.isArray(producerOpaAsOpaResult)
+            ? producerOpaAsOpaResult[0]
+            : producerOpaAsOpaResult
           const producerOpaDeleted = producerOpaAsProducer + producerOpaAsOpa
           this.logger.info(`   ✓ ${producerOpaDeleted} relation(s) producer_opa supprimée(s)`)
 
@@ -196,10 +205,7 @@ export default class CleanProducers extends BaseCommand {
           this.logger.info(`   ✓ ${productQuantitiesDeleted} quantité(s) de produit supprimée(s)`)
 
           // 10. Supprimer les utilisateurs liés aux producteurs
-          const usersDeleted = await trx
-            .from('users')
-            .whereIn('actor_id', producerIdsList)
-            .delete()
+          const usersDeleted = await trx.from('users').whereIn('actor_id', producerIdsList).delete()
           this.logger.info(`   ✓ ${usersDeleted} utilisateur(s) supprimé(s)`)
 
           // 11. Finalement, supprimer les producteurs

@@ -1,0 +1,53 @@
+# Dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js
+.next
+out
+build
+dist
+
+# Testing
+coverage
+test-results
+playwright-report
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+
+# Logs
+logs
+*.log
+
+# Generated files
+package-lock.json
+public/icons/icon-*.png
+
+# Backend cache
+.backend-cache
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Documentation (preserve formatting)
+*.md

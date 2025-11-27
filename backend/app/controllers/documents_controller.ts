@@ -160,7 +160,10 @@ export default class DocumentsController {
 
         return response
           .header('Content-Type', document.mimeType || 'application/octet-stream')
-          .header('Content-Disposition', `attachment; ${encodeContentDispositionFilename(document.originalName)}`)
+          .header(
+            'Content-Disposition',
+            `attachment; ${encodeContentDispositionFilename(document.originalName)}`
+          )
           .header('Content-Length', fileBuffer.length.toString())
           .send(fileBuffer)
       } catch (minioError) {
@@ -220,7 +223,10 @@ export default class DocumentsController {
 
         return response
           .header('Content-Type', document.mimeType || 'application/octet-stream')
-          .header('Content-Disposition', `inline; ${encodeContentDispositionFilename(document.originalName)}`)
+          .header(
+            'Content-Disposition',
+            `inline; ${encodeContentDispositionFilename(document.originalName)}`
+          )
           .header('Content-Length', fileBuffer.length.toString())
           .send(fileBuffer)
       } catch (minioError) {

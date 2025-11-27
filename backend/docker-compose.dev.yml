@@ -42,7 +42,7 @@ services:
     env_file:
       - .env
     ports:
-      - "${PORT:-3333}:${PORT:-3333}"
+      - '${PORT:-3333}:${PORT:-3333}'
     volumes:
       - .:/app
       - /app/node_modules
@@ -65,7 +65,7 @@ services:
       POSTGRES_USER: ${DB_USER:-sifc_user}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-sifc_password}
     ports:
-      - "${DB_PORT:-5432}:5432"
+      - '${DB_PORT:-5432}:5432'
     volumes:
       - postgres_oncc_data:/var/lib/postgresql/data
       - ./database/init:/docker-entrypoint-initdb.d
@@ -77,7 +77,7 @@ services:
     image: redis:7.2
     container_name: sifc_redis_dev
     ports:
-      - "${REDIS_PORT:-6379}:6379"
+      - '${REDIS_PORT:-6379}:6379'
     volumes:
       - redis_oncc_data:/data
     networks:
@@ -92,8 +92,8 @@ services:
       MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-sifc_minio_user}
       MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-sifc_minio_password}
     ports:
-      - "${MINIO_PORT:-9000}:9000"
-      - "${MINIO_CONSOLE_PORT:-9001}:9003"
+      - '${MINIO_PORT:-9000}:9000'
+      - '${MINIO_CONSOLE_PORT:-9001}:9003'
     volumes:
       - minio_oncc_data:/data
     networks:
@@ -106,8 +106,8 @@ services:
     image: mailhog/mailhog:latest
     container_name: sifc_mailhog_dev
     ports:
-      - "1025:1025" # SMTP server
-      - "8025:8025" # Web UI
+      - '1025:1025' # SMTP server
+      - '8025:8025' # Web UI
     networks:
       - sifc_network
     restart: unless-stopped

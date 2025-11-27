@@ -22,6 +22,7 @@ Une fois les containers démarrés, accédez à l'interface web de MailHog :
 **URL** : http://localhost:8025
 
 L'interface affiche tous les emails capturés avec :
+
 - L'expéditeur
 - Le destinataire
 - Le sujet
@@ -35,6 +36,7 @@ L'interface affiche tous les emails capturés avec :
 ### Configuration automatique (docker-compose.dev.yml)
 
 MailHog est configuré automatiquement avec :
+
 - **SMTP Server** : `mailhog:1025` (interne au réseau Docker)
 - **Web UI** : `localhost:8025` (accessible depuis votre navigateur)
 
@@ -53,6 +55,7 @@ SMTP_PORT=1025
 ### 1. Via l'application
 
 Utilisez normalement les fonctionnalités qui envoient des emails :
+
 - Création d'un compte utilisateur
 - Réinitialisation de mot de passe
 - Code OTP pour l'authentification
@@ -78,6 +81,7 @@ Ou via un endpoint API (si créé).
 ## 🎯 Fonctionnalités de l'interface web
 
 ### Visualisation des emails
+
 - **Liste** : Tous les emails reçus
 - **Détails** : Cliquez sur un email pour voir son contenu complet
 - **HTML** : Prévisualisation du rendu HTML
@@ -85,11 +89,13 @@ Ou via un endpoint API (si créé).
 - **Headers** : En-têtes SMTP complets
 
 ### Actions disponibles
+
 - **Delete** : Supprimer un email spécifique
 - **Delete all** : Supprimer tous les emails
 - **Download** : Télécharger l'email au format .eml
 
 ### Recherche
+
 - Recherche par expéditeur, destinataire, ou sujet
 - Filtrage en temps réel
 
@@ -125,16 +131,19 @@ SENDGRID_FROM_NAME=ONCC TRACE
 ### MailHog ne capture pas les emails
 
 1. **Vérifier que le container est démarré** :
+
    ```bash
    docker ps | grep mailhog
    ```
 
 2. **Vérifier les logs** :
+
    ```bash
    docker logs sifc_mailhog_dev
    ```
 
 3. **Vérifier la configuration SMTP** :
+
    - SMTP_HOST doit être `mailhog` (nom du service Docker)
    - SMTP_PORT doit être `1025`
 
@@ -146,6 +155,7 @@ SENDGRID_FROM_NAME=ONCC TRACE
 ### L'interface web ne se charge pas
 
 1. **Vérifier que le port 8025 est disponible** :
+
    ```bash
    lsof -i :8025
    ```
@@ -169,18 +179,18 @@ SENDGRID_FROM_NAME=ONCC TRACE
 
 ## 📚 Emails disponibles dans l'application
 
-| Email | Fonction | Template |
-|-------|----------|----------|
-| Code OTP | `sendOTP()` | `otp.edge` |
-| Mot de passe modifié | `sendPasswordChangeNotification()` | `password_changed.edge` |
-| Bienvenue | `sendWelcomeEmail()` | `welcome.edge` |
-| Compte initialisé | `sendAccountInitializationNotification()` | `account_initialized.edge` |
-| Récupération pseudo | `sendUserNameRecoveryEmail()` | `pseudo_recovery.edge` |
-| Lien réinitialisation | `sendPasswordResetLinkEmail()` | `password_reset_link.edge` |
-| Compte activé | `sendAccountActivatedEmail()` | `account_activated.edge` |
-| Compte désactivé | `sendAccountDeactivatedEmail()` | `account_deactivated.edge` |
-| Réinitialisation admin | `sendAdminPasswordResetEmail()` | `admin_password_reset.edge` |
-| Bienvenue gestionnaire | `sendActorManagerWelcomeEmail()` | `actor_manager_welcome.edge` |
+| Email                  | Fonction                                  | Template                     |
+| ---------------------- | ----------------------------------------- | ---------------------------- |
+| Code OTP               | `sendOTP()`                               | `otp.edge`                   |
+| Mot de passe modifié   | `sendPasswordChangeNotification()`        | `password_changed.edge`      |
+| Bienvenue              | `sendWelcomeEmail()`                      | `welcome.edge`               |
+| Compte initialisé      | `sendAccountInitializationNotification()` | `account_initialized.edge`   |
+| Récupération pseudo    | `sendUserNameRecoveryEmail()`             | `pseudo_recovery.edge`       |
+| Lien réinitialisation  | `sendPasswordResetLinkEmail()`            | `password_reset_link.edge`   |
+| Compte activé          | `sendAccountActivatedEmail()`             | `account_activated.edge`     |
+| Compte désactivé       | `sendAccountDeactivatedEmail()`           | `account_deactivated.edge`   |
+| Réinitialisation admin | `sendAdminPasswordResetEmail()`           | `admin_password_reset.edge`  |
+| Bienvenue gestionnaire | `sendActorManagerWelcomeEmail()`          | `actor_manager_welcome.edge` |
 
 ---
 

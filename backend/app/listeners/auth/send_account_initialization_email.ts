@@ -16,9 +16,7 @@ export default class SendAccountInitializationEmail {
       if (success) {
         logger.info(`✅ [Background] Notification initialisation envoyée à ${payload.email}`)
       } else {
-        logger.warn(
-          `⚠️ [Background] Échec envoi notification initialisation à ${payload.email}`
-        )
+        logger.warn(`⚠️ [Background] Échec envoi notification initialisation à ${payload.email}`)
       }
     } catch (error) {
       logger.error(

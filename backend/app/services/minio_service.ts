@@ -2,7 +2,7 @@ import { Client } from 'minio'
 import minioConfig from '#config/minio'
 import logger from '@adonisjs/core/services/logger'
 import { v4 as uuidv4 } from 'uuid'
-import path from 'path'
+import path from 'node:path'
 import { encodeContentDispositionFilename } from '#utils/filename_encoder'
 
 export default class MinioService {
@@ -69,13 +69,17 @@ export default class MinioService {
 
         if (attempt === maxRetries) {
           console.warn(`Minio initialization failed after ${maxRetries} attempts: ${errorMessage}`)
-          console.warn(`Note: Minio may not be accessible from localhost in development mode. This is normal if running outside Docker.`)
+          console.warn(
+            `Note: Minio may not be accessible from localhost in development mode. This is normal if running outside Docker.`
+          )
           // Ne pas bloquer l'application si Minio n'est pas disponible
           return
         }
 
-        console.warn(`Minio initialization attempt ${attempt}/${maxRetries} failed, retrying in ${retryDelay}ms: ${errorMessage}`)
-        await new Promise(resolve => setTimeout(resolve, retryDelay))
+        console.warn(
+          `Minio initialization attempt ${attempt}/${maxRetries} failed, retrying in ${retryDelay}ms: ${errorMessage}`
+        )
+        await new Promise((resolve) => setTimeout(resolve, retryDelay))
       }
     }
   }

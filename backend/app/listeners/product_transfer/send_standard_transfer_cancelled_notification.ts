@@ -13,21 +13,20 @@ export default class SendStandardTransferCancelledNotification {
         `📧 [Background] Envoi emails d'annulation de transfert standard ${payload.transferCode}`
       )
 
-      const success =
-        await ProductTransferEmailService.sendStandardTransferCancelledNotifications(
-          payload.transferCode,
-          payload.transferDate,
-          payload.senderActorId,
-          payload.senderActorName,
-          payload.senderStoreName,
-          payload.receiverActorId,
-          payload.receiverActorName,
-          payload.receiverStoreName,
-          payload.campaignCode,
-          payload.products,
-          payload.driverInfo,
-          payload.cancellationReason
-        )
+      const success = await ProductTransferEmailService.sendStandardTransferCancelledNotifications(
+        payload.transferCode,
+        payload.transferDate,
+        payload.senderActorId,
+        payload.senderActorName,
+        payload.senderStoreName,
+        payload.receiverActorId,
+        payload.receiverActorName,
+        payload.receiverStoreName,
+        payload.campaignCode,
+        payload.products,
+        payload.driverInfo,
+        payload.cancellationReason
+      )
 
       if (success) {
         logger.info(

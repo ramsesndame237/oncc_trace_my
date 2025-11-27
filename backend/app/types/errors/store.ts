@@ -81,6 +81,5 @@ export const StoreSuccessMessages: Record<StoreSuccessCodes, string> = {
   [StoreSuccessCodes.STORE_DEACTIVATED]: 'Magasin désactivé avec succès pour la campagne en cours.',
   [StoreSuccessCodes.STORE_OCCUPANT_ADDED]: 'Occupant ajouté avec succès au magasin.',
   [StoreSuccessCodes.STORE_OCCUPANT_REMOVED]: 'Occupant retiré avec succès du magasin.',
-  [StoreSuccessCodes.STORE_OCCUPANTS_FETCH_SUCCESS]:
-    'Liste des occupants récupérée avec succès.',
+  [StoreSuccessCodes.STORE_OCCUPANTS_FETCH_SUCCESS]: 'Liste des occupants récupérée avec succès.',
 }

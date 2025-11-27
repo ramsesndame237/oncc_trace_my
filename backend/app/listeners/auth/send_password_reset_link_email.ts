@@ -15,9 +15,7 @@ export default class SendPasswordResetLinkEmail {
         payload.userName
       )
       if (success) {
-        logger.info(
-          `✅ [Background] Lien réinitialisation mot de passe envoyé à ${payload.email}`
-        )
+        logger.info(`✅ [Background] Lien réinitialisation mot de passe envoyé à ${payload.email}`)
       } else {
         logger.warn(
           `⚠️ [Background] Échec envoi lien réinitialisation mot de passe à ${payload.email}`

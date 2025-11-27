@@ -50,7 +50,7 @@ export default class SendStoreActivatedNotifications {
         const occupant = store.occupants.find((occ) => occ.id === manager.actorId)
         const occupantName = occupant
           ? `${occupant.givenName || ''} ${occupant.familyName || ''}`.trim()
-          : 'l\'acteur'
+          : "l'acteur"
 
         return StoreEmailService.sendStoreActivatedEmail(
           manager.email,

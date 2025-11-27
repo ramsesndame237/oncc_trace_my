@@ -20,10 +20,7 @@ export default class SendUsernameRecoveryEmail {
         logger.warn(`⚠️ [Background] Échec envoi récupération username à ${payload.email}`)
       }
     } catch (error) {
-      logger.error(
-        `❌ [Background] Erreur envoi récupération username à ${payload.email}:`,
-        error
-      )
+      logger.error(`❌ [Background] Erreur envoi récupération username à ${payload.email}:`, error)
     }
   }
 }

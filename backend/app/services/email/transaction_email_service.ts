@@ -209,7 +209,9 @@ export class TransactionEmailService extends BaseEmailService {
         })
       }
 
-      logger.info(`✅ Emails de transaction annulée envoyés à ${targetUsers.length} destinataire(s)`)
+      logger.info(
+        `✅ Emails de transaction annulée envoyés à ${targetUsers.length} destinataire(s)`
+      )
 
       return true
     } catch (error) {

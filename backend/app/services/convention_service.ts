@@ -47,8 +47,8 @@ export default class ConventionService {
     if (lastConvention) {
       // Extraire le numéro de séquence du dernier code
       const lastSequenceStr = lastConvention.code.replace(prefix, '')
-      const lastSequence = parseInt(lastSequenceStr, 10)
-      if (!isNaN(lastSequence)) {
+      const lastSequence = Number.parseInt(lastSequenceStr, 10)
+      if (!Number.isNaN(lastSequence)) {
         nextSequence = lastSequence + 1
       }
     }

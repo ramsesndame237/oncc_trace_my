@@ -16,31 +16,31 @@
         padding: 20px;
         background-color: #f5f5f5;
       }
-
+      
       .container {
         background-color: #ffffff;
         border-radius: 8px;
         padding: 30px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
-
+      
       .header {
         text-align: center;
         margin-bottom: 30px;
         padding-bottom: 20px;
         border-bottom: 2px solid #e0e0e0;
       }
-
+      
       h1 {
         color: #f59e0b;
         font-size: 24px;
         margin: 0;
       }
-
+      
       .content {
         margin: 30px 0;
       }
-
+      
       .alert-box {
         background-color: #fef3c7;
         border-left: 4px solid #f59e0b;
@@ -48,12 +48,12 @@
         margin: 20px 0;
         border-radius: 4px;
       }
-
+      
       .alert-box h3 {
         margin-top: 0;
         color: #92400e;
       }
-
+      
       .campaign-info {
         background: linear-gradient(135deg, #10B981 0%, #059669 100%);
         color: white;
@@ -62,25 +62,25 @@
         margin: 25px 0;
         text-align: center;
       }
-
+      
       .campaign-info h2 {
         margin: 0 0 15px 0;
         font-size: 28px;
         font-weight: bold;
       }
-
+      
       .campaign-info p {
         margin: 8px 0;
         font-size: 16px;
       }
-
+      
       .stats-container {
         display: flex;
         justify-content: space-around;
         margin: 25px 0;
         flex-wrap: wrap;
       }
-
+      
       .stat-box {
         background-color: #f9fafb;
         padding: 20px;
@@ -90,34 +90,34 @@
         margin: 10px;
         flex: 1;
       }
-
+      
       .stat-box.warning {
         background-color: #fef3c7;
         border: 2px solid #f59e0b;
       }
-
+      
       .stat-box.success {
         background-color: #d1fae5;
         border: 2px solid #10B981;
       }
-
+      
       .stat-box.neutral {
         background-color: #e0e7ff;
         border: 2px solid #6366f1;
       }
-
+      
       .stat-number {
         font-size: 36px;
         font-weight: bold;
         margin: 10px 0;
       }
-
+      
       .stat-label {
         font-size: 14px;
         color: #6b7280;
         font-weight: 500;
       }
-
+      
       .action-box {
         background-color: #eff6ff;
         border-left: 4px solid #3b82f6;
@@ -125,21 +125,21 @@
         margin: 20px 0;
         border-radius: 4px;
       }
-
+      
       .action-box h3 {
         margin-top: 0;
         color: #1e40af;
       }
-
+      
       .action-box ul {
         margin: 15px 0;
         padding-left: 25px;
       }
-
+      
       .action-box ul li {
         margin: 8px 0;
       }
-
+      
       .button {
         display: inline-block;
         background-color: #3b82f6;
@@ -150,23 +150,23 @@
         margin: 20px 0;
         font-weight: bold;
       }
-
+      
       .info-box {
         background-color: #f9fafb;
         padding: 20px;
         border-radius: 6px;
         margin: 20px 0;
       }
-
+      
       .info-box h3 {
         margin-top: 0;
         color: #4b5563;
       }
-
+      
       .info-box p {
         margin: 10px 0;
       }
-
+      
       .footer {
         margin-top: 40px;
         padding-top: 20px;
@@ -175,32 +175,32 @@
         color: #6b7280;
         font-size: 14px;
       }
-
+      
       .contact-info {
         margin: 15px 0;
       }
-
+      
       @media only screen and (max-width: 600px) {
         body {
           padding: 10px;
         }
-
+      
         .container {
           padding: 20px;
         }
-
+      
         h1 {
           font-size: 20px;
         }
-
+      
         .campaign-info h2 {
           font-size: 22px;
         }
-
+      
         .stats-container {
           flex-direction: column;
         }
-
+      
         .stat-box {
           margin: 10px 0;
         }
@@ -225,17 +225,19 @@
             🔔 Action importante
           </h3>
           <p>
-            Nous vous informons que la campagne <strong>{{ campaign.code }}</strong> vient d'être activée. Pour pouvoir enregistrer vos transactions, vous devez associer vos conventions à cette campagne.
+            Nous vous informons que la campagne <strong>{{ campaign.code }}</strong>vient d'être activée. Pour pouvoir enregistrer vos transactions, vous devez associer vos conventions à cette campagne.
           </p>
         </div>
 
         <div class="campaign-info">
-          <h2>📅 {{ campaign.code }}</h2>
+          <h2>
+            📅 {{ campaign.code }}
+          </h2>
           <p>
-            <strong>Date de début :</strong> {{ campaign.startDate }}
+            <strong>Date de début :</strong>{{ campaign.startDate }}
           </p>
           <p>
-            <strong>Date de fin :</strong> {{ campaign.endDate }}
+            <strong>Date de fin :</strong>{{ campaign.endDate }}
           </p>
           <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">
             Statut : <strong>ACTIVE</strong>
@@ -248,18 +250,30 @@
 
         <div class="stats-container">
           <div class="stat-box neutral">
-            <div class="stat-label">TOTAL CONVENTIONS</div>
-            <div class="stat-number" style="color: #6366f1;">{{ totalConventions }}</div>
+            <div class="stat-label">
+              TOTAL CONVENTIONS
+            </div>
+            <div class="stat-number" style="color: #6366f1;">
+              {{ totalConventions }}
+            </div>
           </div>
 
           <div class="stat-box success">
-            <div class="stat-label">ASSOCIÉES</div>
-            <div class="stat-number" style="color: #10B981;">{{ activeConventions }}</div>
+            <div class="stat-label">
+              ASSOCIÉES
+            </div>
+            <div class="stat-number" style="color: #10B981;">
+              {{ activeConventions }}
+            </div>
           </div>
 
           <div class="stat-box warning">
-            <div class="stat-label">NON ASSOCIÉES</div>
-            <div class="stat-number" style="color: #f59e0b;">{{ inactiveConventions }}</div>
+            <div class="stat-label">
+              NON ASSOCIÉES
+            </div>
+            <div class="stat-number" style="color: #f59e0b;">
+              {{ inactiveConventions }}
+            </div>
           </div>
         </div>
 
@@ -284,7 +298,7 @@
         </div>
 
         <p>
-          <strong>Important :</strong> Les conventions non associées à la campagne ne pourront pas être utilisées pour enregistrer des transactions. Associez-les rapidement pour éviter toute interruption de vos opérations.
+          <strong>Important :</strong>Les conventions non associées à la campagne ne pourront pas être utilisées pour enregistrer des transactions. Associez-les rapidement pour éviter toute interruption de vos opérations.
         </p>
 
         <div style="text-align: center;">
@@ -296,10 +310,10 @@
             ℹ️ Informations sur l'activation
           </h3>
           <p>
-            <strong>Campagne :</strong> {{ campaign.code }}
+            <strong>Campagne :</strong>{{ campaign.code }}
           </p>
           <p>
-            <strong>Activée par :</strong> {{ activatedBy }}
+            <strong>Activée par :</strong>{{ activatedBy }}
           </p>
           <p style="margin-top: 15px; font-size: 14px; color: #6b7280;">
             Cette notification a été générée automatiquement pour vous informer de la situation de vos conventions.
@@ -311,13 +325,13 @@
             Pour toute question ou assistance, contactez-nous :
           </p>
           <p>
-            <strong>Email :</strong> <a href="mailto:{{ supportEmail }}">{{ supportEmail }}</a>
+            <strong>Email :</strong>            <a href="mailto:{{ supportEmail }}">{{ supportEmail }}</a>
           </p>
           @if(supportPhone)
 
-          <p>
-            <strong>Téléphone :</strong> {{ supportPhone }}
-          </p>
+            <p>
+              <strong>Téléphone :</strong>{{ supportPhone }}
+            </p>
 
           @end
         </div>

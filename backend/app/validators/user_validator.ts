@@ -42,8 +42,18 @@ export const updateUserInfoValidator = vine.compile(
 export const updateSelfNameValidator = vine.compile(
   vine.object({
     type: vine.literal('name'),
-    givenName: vine.string().trim().minLength(2).maxLength(50).regex(/^[a-zA-ZÀ-ÿ\s'-]+$/),
-    familyName: vine.string().trim().minLength(2).maxLength(50).regex(/^[a-zA-ZÀ-ÿ\s'-]+$/),
+    givenName: vine
+      .string()
+      .trim()
+      .minLength(2)
+      .maxLength(50)
+      .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/),
+    familyName: vine
+      .string()
+      .trim()
+      .minLength(2)
+      .maxLength(50)
+      .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/),
   })
 )
 

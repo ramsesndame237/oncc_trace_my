@@ -1,7 +1,4 @@
-import {
-  PRODUCT_QUALITIES_ARRAY,
-  PRODUCT_STANDARDS_ARRAY,
-} from '#types/cacao_types'
+import { PRODUCT_QUALITIES_ARRAY, PRODUCT_STANDARDS_ARRAY } from '#types/cacao_types'
 import vine from '@vinejs/vine'
 
 /**

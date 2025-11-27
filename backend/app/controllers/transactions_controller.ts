@@ -344,8 +344,7 @@ export default class TransactionsController {
         // Si la transaction est confirmée, l'acteur est seller ou buyer, et n'est pas le créateur
         if (
           transaction.status === 'confirmed' &&
-          (transaction.sellerId === authUser.actorId ||
-            transaction.buyerId === authUser.actorId) &&
+          (transaction.sellerId === authUser.actorId || transaction.buyerId === authUser.actorId) &&
           transaction.createdByActorId !== authUser.actorId
         ) {
           // Vérifier s'il existe déjà une transaction complémentaire créée par cet acteur (peu importe le statut)

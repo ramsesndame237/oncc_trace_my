@@ -22,7 +22,7 @@ export default class SendCampaignNotificationEmails {
         .select('email', 'givenName', 'familyName')
 
       if (activeUsers.length === 0) {
-        logger.warn('⚠️ Aucun utilisateur actif trouvé pour l\'envoi de notifications')
+        logger.warn("⚠️ Aucun utilisateur actif trouvé pour l'envoi de notifications")
         return
       }
 
@@ -35,8 +35,7 @@ export default class SendCampaignNotificationEmails {
 
       // Envoyer les emails en parallèle
       const emailPromises = activeUsers.map(async (user) => {
-        const userName =
-          `${user.givenName || ''} ${user.familyName || ''}`.trim() || 'Utilisateur'
+        const userName = `${user.givenName || ''} ${user.familyName || ''}`.trim() || 'Utilisateur'
 
         try {
           const success = await CampaignEmailService.sendCampaignActivatedEmail(
@@ -74,10 +73,7 @@ export default class SendCampaignNotificationEmails {
         `✅ [Background] Notifications de campagne terminées en ${duration}ms - Succès: ${successCount}/${activeUsers.length}, Échecs: ${failCount}`
       )
     } catch (error) {
-      logger.error(
-        `❌ [Background] Erreur lors de l'envoi des notifications de campagne:`,
-        error
-      )
+      logger.error(`❌ [Background] Erreur lors de l'envoi des notifications de campagne:`, error)
     }
   }
 }

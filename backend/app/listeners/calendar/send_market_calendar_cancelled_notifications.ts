@@ -16,16 +16,17 @@ export default class SendMarketCalendarCancelledNotifications {
         `📧 [Background] Envoi emails d'annulation de calendrier de marché ${payload.calendarCode} pour l'OPA ${payload.opaName}`
       )
 
-      const success = await this.marketCalendarEmailService.sendMarketCalendarCancelledNotifications(
-        payload.calendarCode,
-        payload.startDate,
-        payload.endDate,
-        payload.location,
-        payload.hierarchicalLocation,
-        payload.opaId,
-        payload.opaName,
-        payload.productionBasinId
-      )
+      const success =
+        await this.marketCalendarEmailService.sendMarketCalendarCancelledNotifications(
+          payload.calendarCode,
+          payload.startDate,
+          payload.endDate,
+          payload.location,
+          payload.hierarchicalLocation,
+          payload.opaId,
+          payload.opaName,
+          payload.productionBasinId
+        )
 
       if (success) {
         logger.info(

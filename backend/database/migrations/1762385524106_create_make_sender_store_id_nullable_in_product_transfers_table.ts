@@ -19,7 +19,7 @@ export default class extends BaseSchema {
       WHERE sender_store_id IS NULL
     `)
 
-    const hasNullValues = parseInt(result.rows[0]?.count || '0') > 0
+    const hasNullValues = Number.parseInt(result.rows[0]?.count || '0') > 0
 
     if (hasNullValues) {
       // Si des valeurs NULL existent, ne pas restaurer NOT NULL

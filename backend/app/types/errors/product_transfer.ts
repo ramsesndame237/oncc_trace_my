@@ -53,8 +53,7 @@ export const ProductTransferErrorMessages: Record<ProductTransferErrorCodes, str
     'Échec de la récupération du transfert de produit',
   [ProductTransferErrorCodes.PRODUCT_TRANSFER_STATUS_UPDATE_FAILED]:
     'Échec de la mise à jour du statut du transfert',
-  [ProductTransferErrorCodes.PRODUCT_TRANSFER_CODE_EXISTS]:
-    'Un transfert avec ce code existe déjà',
+  [ProductTransferErrorCodes.PRODUCT_TRANSFER_CODE_EXISTS]: 'Un transfert avec ce code existe déjà',
   [ProductTransferErrorCodes.PRODUCT_TRANSFER_NOT_AUTHORIZED]:
     'Non autorisé à effectuer cette action sur le transfert',
   [ProductTransferErrorCodes.PRODUCT_TRANSFER_SENDER_ACTOR_NOT_FOUND]:
@@ -67,10 +66,8 @@ export const ProductTransferErrorMessages: Record<ProductTransferErrorCodes, str
     'Magasin destinataire non trouvé',
   [ProductTransferErrorCodes.PRODUCT_TRANSFER_SENDER_STORE_REQUIRED]:
     'Magasin expéditeur requis pour un transfert STANDARD',
-  [ProductTransferErrorCodes.PRODUCT_TRANSFER_NO_ACTIVE_CAMPAIGN]:
-    'Aucune campagne active trouvée',
-  [ProductTransferErrorCodes.PRODUCT_TRANSFER_CAMPAIGN_NOT_FOUND]:
-    'Campagne non trouvée',
+  [ProductTransferErrorCodes.PRODUCT_TRANSFER_NO_ACTIVE_CAMPAIGN]: 'Aucune campagne active trouvée',
+  [ProductTransferErrorCodes.PRODUCT_TRANSFER_CAMPAIGN_NOT_FOUND]: 'Campagne non trouvée',
   [ProductTransferErrorCodes.PRODUCT_TRANSFER_SENDER_ACTOR_NOT_ACTIVE]:
     "L'acteur expéditeur n'est pas actif",
   [ProductTransferErrorCodes.PRODUCT_TRANSFER_RECEIVER_ACTOR_NOT_ACTIVE]:

@@ -38,8 +38,7 @@ export const ConventionErrorMessages: Record<ConventionErrorCodes, string> = {
   [ConventionErrorCodes.CONVENTION_INVALID_BUYER_EXPORTER_TYPE]:
     "L'acteur sélectionné n'est pas un acheteur ou exportateur.",
   [ConventionErrorCodes.CONVENTION_OPA_NOT_FOUND]: "L'OPA est introuvable.",
-  [ConventionErrorCodes.CONVENTION_INVALID_OPA_TYPE]:
-    "L'acteur sélectionné n'est pas une OPA.",
+  [ConventionErrorCodes.CONVENTION_INVALID_OPA_TYPE]: "L'acteur sélectionné n'est pas une OPA.",
   [ConventionErrorCodes.CONVENTION_BUYER_EXPORTER_NOT_ACTIVE]:
     "L'acheteur/exportateur sélectionné n'est pas actif.",
   [ConventionErrorCodes.CONVENTION_OPA_NOT_ACTIVE]: "L'OPA sélectionnée n'est pas active.",
@@ -49,8 +48,7 @@ export const ConventionErrorMessages: Record<ConventionErrorCodes, string> = {
   [ConventionErrorCodes.CONVENTION_UPDATE_FAILED]: 'Échec de la mise à jour de la convention.',
   [ConventionErrorCodes.CONVENTION_STATUS_UPDATE_FAILED]:
     'Échec de la mise à jour du statut de la convention.',
-  [ConventionErrorCodes.CONVENTION_STATUS_UPDATE_INVALID]:
-    'La convention a déjà ce statut.',
+  [ConventionErrorCodes.CONVENTION_STATUS_UPDATE_INVALID]: 'La convention a déjà ce statut.',
   [ConventionErrorCodes.CONVENTION_STATUS_MISSING]: 'Le statut est requis.',
   [ConventionErrorCodes.CONVENTION_DELETE_FAILED]: 'Échec de la suppression de la convention.',
   [ConventionErrorCodes.CONVENTION_LIST_FAILED]:
@@ -70,8 +68,7 @@ export const ConventionErrorMessages: Record<ConventionErrorCodes, string> = {
     "Aucune campagne active n'est disponible pour activer cette convention.",
   [ConventionErrorCodes.CONVENTION_NOT_AUTHORIZED]:
     "Vous n'êtes pas autorisé à effectuer cette action.",
-  [ConventionErrorCodes.CONVENTION_SYNC_FAILED]:
-    'Échec de la synchronisation des conventions.',
+  [ConventionErrorCodes.CONVENTION_SYNC_FAILED]: 'Échec de la synchronisation des conventions.',
 }
 
 /**
@@ -99,13 +96,13 @@ export enum ConventionSuccessCodes {
 export const ConventionSuccessMessages: Record<ConventionSuccessCodes, string> = {
   [ConventionSuccessCodes.CONVENTION_CREATED]: 'Convention créée avec succès.',
   [ConventionSuccessCodes.CONVENTION_UPDATED]: 'Convention mise à jour avec succès.',
-  [ConventionSuccessCodes.CONVENTION_STATUS_UPDATED]: 'Statut de la convention mis à jour avec succès.',
+  [ConventionSuccessCodes.CONVENTION_STATUS_UPDATED]:
+    'Statut de la convention mis à jour avec succès.',
   [ConventionSuccessCodes.CONVENTION_STATUS_UPDATE_SUCCESS]:
     'Statut de la convention mis à jour avec succès.',
   [ConventionSuccessCodes.CONVENTION_DELETED]: 'Convention supprimée avec succès.',
   [ConventionSuccessCodes.CONVENTION_DELETE_SUCCESS]: 'Convention supprimée avec succès.',
-  [ConventionSuccessCodes.CONVENTION_LIST_SUCCESS]:
-    'Liste des conventions récupérée avec succès.',
+  [ConventionSuccessCodes.CONVENTION_LIST_SUCCESS]: 'Liste des conventions récupérée avec succès.',
   [ConventionSuccessCodes.CONVENTION_SHOW_SUCCESS]:
     'Détails de la convention récupérés avec succès.',
   [ConventionSuccessCodes.CONVENTION_UPDATE_SUCCESS]: 'Convention mise à jour avec succès.',
@@ -115,6 +112,5 @@ export const ConventionSuccessMessages: Record<ConventionSuccessCodes, string> =
     'Convention dissociée de la campagne avec succès.',
   [ConventionSuccessCodes.CONVENTION_ACTIVATE_TO_CAMPAIGN_SUCCESS]:
     'Convention activée à la campagne en cours avec succès.',
-  [ConventionSuccessCodes.CONVENTION_SYNC_SUCCESS]:
-    'Conventions synchronisées avec succès.',
+  [ConventionSuccessCodes.CONVENTION_SYNC_SUCCESS]: 'Conventions synchronisées avec succès.',
 }

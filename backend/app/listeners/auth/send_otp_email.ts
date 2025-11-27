@@ -9,7 +9,11 @@ export default class SendOtpEmail {
   async handle(payload: OtpEmailPayload) {
     try {
       logger.info(`📧 [Background] Envoi OTP à ${payload.email}`)
-      const success = await AuthEmailService.sendOTP(payload.email, payload.otpCode, payload.userName)
+      const success = await AuthEmailService.sendOTP(
+        payload.email,
+        payload.otpCode,
+        payload.userName
+      )
       if (success) {
         logger.info(`✅ [Background] OTP envoyé à ${payload.email}`)
       } else {

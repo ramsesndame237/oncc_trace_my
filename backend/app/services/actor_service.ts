@@ -237,7 +237,7 @@ export default class ActorService {
       }
 
       // Calculer la date d'expiration pour les OPA si une déclaration d'existence est fournie
-      let existenceExpiryDate: DateTime | null | undefined = undefined
+      let existenceExpiryDate: DateTime | null | undefined
       if (
         (data.actorType === ACTOR_TYPES_OBJECT.PRODUCERS ||
           data.actorType === ACTOR_TYPES_OBJECT.EXPORTER ||
@@ -462,7 +462,7 @@ export default class ActorService {
       }
 
       // Calculer la date d'expiration pour les OPA si les données de déclaration sont mises à jour
-      let existenceExpiryDate: DateTime | null | undefined = undefined
+      let existenceExpiryDate: DateTime | null | undefined
       if (data.existenceDeclarationDate && data.existenceDeclarationYears) {
         const declarationDate = DateTime.fromISO(data.existenceDeclarationDate)
         existenceExpiryDate = declarationDate.plus({ years: data.existenceDeclarationYears })
@@ -1129,7 +1129,9 @@ export default class ActorService {
           })
         }
 
-        const invalidProducers = producers.filter((p) => p.actorType !== ACTOR_TYPES_OBJECT.PRODUCER)
+        const invalidProducers = producers.filter(
+          (p) => p.actorType !== ACTOR_TYPES_OBJECT.PRODUCER
+        )
         if (invalidProducers.length > 0) {
           throw new Exception('Certains acteurs ne sont pas des producteurs.', {
             code: ActorErrorCodes.ACTOR_NOT_PRODUCER,
@@ -1817,8 +1819,8 @@ export default class ActorService {
           .whereNull('deleted_at')
           .where('status', 'active')
           .whereIn('type', ['MARCHE', 'ENLEVEMENT'])
-          .if(activeCampaign, (query) => {
-            query.where('campaign_id', activeCampaign!.id)
+          .if(activeCampaign, (calendarQuery) => {
+            calendarQuery.where('campaign_id', activeCampaign!.id)
           })
           .preload('convention')
       })
@@ -2060,8 +2062,8 @@ export default class ActorService {
           .whereNull('deleted_at')
           .where('status', 'active')
           .whereIn('type', ['MARCHE', 'ENLEVEMENT'])
-          .if(activeCampaign, (query) => {
-            query.where('campaign_id', activeCampaign!.id)
+          .if(activeCampaign, (calendarQuery) => {
+            calendarQuery.where('campaign_id', activeCampaign!.id)
           })
           .preload('convention')
       })

@@ -72,14 +72,19 @@ export const ActorErrorMessages: Record<ActorErrorCodes, string> = {
   [ActorErrorCodes.PRODUCER_NOT_IN_OPA]: "Ce producteur n'est pas membre de cet OPA.",
   [ActorErrorCodes.ADD_PRODUCER_TO_OPA_FAILED]: "Échec de l'ajout du producteur à l'OPA.",
   [ActorErrorCodes.REMOVE_PRODUCER_FROM_OPA_FAILED]: "Échec du retrait du producteur de l'OPA.",
-  [ActorErrorCodes.BUYER_ALREADY_IN_EXPORTER]: 'Cet acheteur est déjà mandataire de cet exportateur.',
-  [ActorErrorCodes.BUYER_ALREADY_ASSIGNED_TO_OTHER_EXPORTER]: "Cet acheteur est déjà mandataire d'un autre exportateur pour la campagne en cours.",
+  [ActorErrorCodes.BUYER_ALREADY_IN_EXPORTER]:
+    'Cet acheteur est déjà mandataire de cet exportateur.',
+  [ActorErrorCodes.BUYER_ALREADY_ASSIGNED_TO_OTHER_EXPORTER]:
+    "Cet acheteur est déjà mandataire d'un autre exportateur pour la campagne en cours.",
   [ActorErrorCodes.BUYER_NOT_IN_EXPORTER]: "Cet acheteur n'est pas mandataire de cet exportateur.",
-  [ActorErrorCodes.ADD_BUYER_TO_EXPORTER_FAILED]: "Échec de l'ajout de l'acheteur comme mandataire de l'exportateur.",
-  [ActorErrorCodes.REMOVE_BUYER_FROM_EXPORTER_FAILED]: "Échec du retrait de l'acheteur comme mandataire de l'exportateur.",
+  [ActorErrorCodes.ADD_BUYER_TO_EXPORTER_FAILED]:
+    "Échec de l'ajout de l'acheteur comme mandataire de l'exportateur.",
+  [ActorErrorCodes.REMOVE_BUYER_FROM_EXPORTER_FAILED]:
+    "Échec du retrait de l'acheteur comme mandataire de l'exportateur.",
   [ActorErrorCodes.NO_ACTIVE_CAMPAIGN]: "Aucune campagne active n'est disponible.",
-  [ActorErrorCodes.ACTOR_SYNC_FAILED]: "Échec de la synchronisation des acteurs.",
-  [ActorErrorCodes.ACTOR_MISSING_REQUIRED_DOCUMENTS]: "Documents justificatifs obligatoires manquants. Veuillez ajouter tous les documents requis avant de valider l'acteur.",
+  [ActorErrorCodes.ACTOR_SYNC_FAILED]: 'Échec de la synchronisation des acteurs.',
+  [ActorErrorCodes.ACTOR_MISSING_REQUIRED_DOCUMENTS]:
+    "Documents justificatifs obligatoires manquants. Veuillez ajouter tous les documents requis avant de valider l'acteur.",
 }
 
 /**
@@ -115,7 +120,9 @@ export const ActorSuccessMessages: Record<ActorSuccessCodes, string> = {
   [ActorSuccessCodes.ACTOR_STATUS_UPDATED]: "Statut de l'acteur mis à jour avec succès.",
   [ActorSuccessCodes.PRODUCER_ADDED_TO_OPA]: "Producteur ajouté à l'OPA avec succès.",
   [ActorSuccessCodes.PRODUCER_REMOVED_FROM_OPA]: "Producteur retiré de l'OPA avec succès.",
-  [ActorSuccessCodes.BUYER_ADDED_TO_EXPORTER]: "Acheteur ajouté comme mandataire de l'exportateur avec succès.",
-  [ActorSuccessCodes.BUYER_REMOVED_FROM_EXPORTER]: "Acheteur retiré comme mandataire de l'exportateur avec succès.",
-  [ActorSuccessCodes.ACTOR_SYNC_SUCCESS]: "Synchronisation des acteurs réussie.",
+  [ActorSuccessCodes.BUYER_ADDED_TO_EXPORTER]:
+    "Acheteur ajouté comme mandataire de l'exportateur avec succès.",
+  [ActorSuccessCodes.BUYER_REMOVED_FROM_EXPORTER]:
+    "Acheteur retiré comme mandataire de l'exportateur avec succès.",
+  [ActorSuccessCodes.ACTOR_SYNC_SUCCESS]: 'Synchronisation des acteurs réussie.',
 }

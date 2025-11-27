@@ -11,9 +11,7 @@ import logger from '@adonisjs/core/services/logger'
 export default class SendStoreDeactivatedNotifications {
   async handle(payload: StoreDeactivatedPayload) {
     try {
-      logger.info(
-        `📧 [Background] Envoi notifications désactivation magasin ${payload.store.name}`
-      )
+      logger.info(`📧 [Background] Envoi notifications désactivation magasin ${payload.store.name}`)
 
       // Récupérer le magasin avec ses occupants
       const store = await Store.query()
@@ -52,7 +50,7 @@ export default class SendStoreDeactivatedNotifications {
         const occupant = store.occupants.find((occ) => occ.id === manager.actorId)
         const occupantName = occupant
           ? `${occupant.givenName || ''} ${occupant.familyName || ''}`.trim()
-          : 'l\'acteur'
+          : "l'acteur"
 
         return StoreEmailService.sendStoreDeactivatedEmail(
           manager.email,

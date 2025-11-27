@@ -1120,7 +1120,11 @@ export default class ActorsController {
       }
 
       if (error.code === ErrorCodes.BUYER_ALREADY_ASSIGNED_TO_OTHER_EXPORTER) {
-        return ApiResponse.fromException(response, error, ErrorCodes.BUYER_ALREADY_ASSIGNED_TO_OTHER_EXPORTER)
+        return ApiResponse.fromException(
+          response,
+          error,
+          ErrorCodes.BUYER_ALREADY_ASSIGNED_TO_OTHER_EXPORTER
+        )
       }
 
       return ApiResponse.fromException(response, error, ErrorCodes.ADD_BUYER_TO_EXPORTER_FAILED)
@@ -1198,7 +1202,7 @@ export default class ActorsController {
       // }
 
       // Récupérer le paramètre actor_type (peut être un string ou un tableau)
-      let actorTypes: string[] | undefined = undefined
+      let actorTypes: string[] | undefined
       const actorTypeParam = request.input('actor_type')
 
       if (actorTypeParam) {

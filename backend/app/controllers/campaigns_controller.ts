@@ -267,7 +267,7 @@ export default class CampaignsController {
       })
 
       console.log(
-        '📧 Événement campaign:activated émis - notifications en cours d\'envoi en arrière-plan'
+        "📧 Événement campaign:activated émis - notifications en cours d'envoi en arrière-plan"
       )
 
       // Vérifier les magasins associés à la campagne et notifier les admins de bassin

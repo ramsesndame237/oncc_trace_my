@@ -345,10 +345,7 @@ export class ActorEmailService extends BaseEmailService {
       )
       return true
     } catch (error) {
-      logger.error(
-        "Erreur lors de l'envoi de l'email d'affectation comme mandataire:",
-        error
-      )
+      logger.error("Erreur lors de l'envoi de l'email d'affectation comme mandataire:", error)
       return false
     }
   }

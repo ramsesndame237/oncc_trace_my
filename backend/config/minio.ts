@@ -2,7 +2,7 @@ import env from '#start/env'
 
 export default {
   endPoint: env.get('MINIO_ENDPOINT') || 'localhost',
-  port: parseInt(env.get('MINIO_PORT') || '9000'),
+  port: Number.parseInt(env.get('MINIO_PORT') || '9000'),
   useSSL: env.get('MINIO_USE_SSL') === 'true',
   accessKey: env.get('MINIO_ACCESS_KEY') || 'minioadmin',
   secretKey: env.get('MINIO_SECRET_KEY') || 'minioadmin',

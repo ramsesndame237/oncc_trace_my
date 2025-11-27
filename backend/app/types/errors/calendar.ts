@@ -56,7 +56,7 @@ export const CalendarErrorMessages: Record<CalendarErrorCodes, string> = {
   [CalendarErrorCodes.CAMPAIGN_NOT_FOUND]: 'Campagne introuvable',
   [CalendarErrorCodes.CONVENTION_NOT_FOUND]: 'Convention introuvable',
   [CalendarErrorCodes.CONVENTION_REQUIRED]:
-    "Une convention est requise pour les événements de type ENLEVEMENT",
+    'Une convention est requise pour les événements de type ENLEVEMENT',
   [CalendarErrorCodes.OPA_NOT_FOUND]: 'OPA introuvable',
   [CalendarErrorCodes.OPA_NOT_ACTIVE]: "L'OPA sélectionné n'est pas actif",
   [CalendarErrorCodes.INVALID_DATE_RANGE]:
@@ -69,20 +69,18 @@ export const CalendarErrorMessages: Record<CalendarErrorCodes, string> = {
   // Erreurs de mise à jour
   [CalendarErrorCodes.UPDATE_FAILED]: 'Erreur lors de la mise à jour du calendrier',
   [CalendarErrorCodes.UPDATE_CODE_EXISTS]: 'Un autre calendrier utilise déjà ce code',
-  [CalendarErrorCodes.UPDATE_NOT_AUTHORIZED]:
-    "Vous n'êtes pas autorisé à modifier ce calendrier",
+  [CalendarErrorCodes.UPDATE_NOT_AUTHORIZED]: "Vous n'êtes pas autorisé à modifier ce calendrier",
 
   // Erreurs de statut
   [CalendarErrorCodes.STATUS_UPDATE_INVALID]: 'Statut invalide',
   [CalendarErrorCodes.STATUS_UPDATE_FAILED]: 'Erreur lors de la mise à jour du statut',
   [CalendarErrorCodes.CODE_MISMATCH]: 'Le code du calendrier saisi ne correspond pas',
   [CalendarErrorCodes.PAST_DATE_STATUS_CHANGE]:
-    'Impossible de modifier le statut d\'un calendrier dont la date de début est dans le passé',
+    "Impossible de modifier le statut d'un calendrier dont la date de début est dans le passé",
 
   // Erreurs de suppression
   [CalendarErrorCodes.DELETE_FAILED]: 'Erreur lors de la suppression du calendrier',
-  [CalendarErrorCodes.DELETE_NOT_AUTHORIZED]:
-    "Vous n'êtes pas autorisé à supprimer ce calendrier",
+  [CalendarErrorCodes.DELETE_NOT_AUTHORIZED]: "Vous n'êtes pas autorisé à supprimer ce calendrier",
 
   // Erreurs d'historique
   [CalendarErrorCodes.AUDIT_HISTORY_FAILED]:

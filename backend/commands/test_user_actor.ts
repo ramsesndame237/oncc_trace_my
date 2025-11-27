@@ -16,10 +16,7 @@ export default class TestUserActor extends BaseCommand {
     this.logger.info(`Testing user actor relation for user: ${userId}`)
 
     // Test 1: Load user with actor relation
-    const user = await User.query()
-      .where('id', userId)
-      .preload('actor')
-      .first()
+    const user = await User.query().where('id', userId).preload('actor').first()
 
     if (!user) {
       this.logger.error('User not found')

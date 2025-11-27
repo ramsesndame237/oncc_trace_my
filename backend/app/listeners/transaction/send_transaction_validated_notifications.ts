@@ -9,9 +9,7 @@ import logger from '@adonisjs/core/services/logger'
 export default class SendTransactionValidatedNotifications {
   async handle(payload: TransactionValidatedPayload) {
     try {
-      logger.info(
-        `📧 [Background] Envoi emails de transaction validée ${payload.transactionCode}`
-      )
+      logger.info(`📧 [Background] Envoi emails de transaction validée ${payload.transactionCode}`)
 
       const success = await TransactionEmailService.sendTransactionValidatedNotifications(
         payload.transactionCode,

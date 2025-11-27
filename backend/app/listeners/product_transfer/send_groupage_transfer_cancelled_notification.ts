@@ -12,18 +12,17 @@ export default class SendGroupageTransferCancelledNotification {
         `📧 [Background] Envoi email d'annulation de transfert groupage ${payload.transferCode} vers OPA ${payload.receiverActorName}`
       )
 
-      const success =
-        await ProductTransferEmailService.sendGroupageTransferCancelledNotification(
-          payload.transferCode,
-          payload.transferDate,
-          payload.senderActorName,
-          payload.receiverActorId,
-          payload.receiverActorName,
-          payload.receiverStoreName,
-          payload.campaignCode,
-          payload.products,
-          payload.cancellationReason
-        )
+      const success = await ProductTransferEmailService.sendGroupageTransferCancelledNotification(
+        payload.transferCode,
+        payload.transferDate,
+        payload.senderActorName,
+        payload.receiverActorId,
+        payload.receiverActorName,
+        payload.receiverStoreName,
+        payload.campaignCode,
+        payload.products,
+        payload.cancellationReason
+      )
 
       if (success) {
         logger.info(
